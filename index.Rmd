@@ -1,0 +1,40 @@
+--- 
+title: "A Reading Guide to Intuitive Biostatistics"
+author: "Nathan Brouwer"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: brouwern/IBSguide
+description: "This is a reading guide to Harvey Motulsky's Intuitive Biostatistics: A Nonmathematical Guide to Statistical Thinking, 4th edition."
+---
+
+# Preface {-}
+
+This is a reading guide to Harvey Motulsky's [Intuitive Biostatistics: A Nonmathematical Guide to Statistical Thinking](http://www.intuitivebiostatistics.com/), 4th edition.  More information about the book can be found at the [book's website](http://www.intuitivebiostatistics.com/), http://www.intuitivebiostatistics.com/, and it can be purchased from [Amazon.com](https://www.amazon.com/Intuitive-Biostatistics-Nonmathematical-Statistical-Thinking/dp/0190643560/ref=asap_bc?ie=UTF8).  Motulsky is the CEO and Founder of [GraphPad](https://www.graphpad.com/), a user-friendly statistical software popular in some branches of the life sciences.
+
+*Intutitive Biostatistics* is a fabulous book for researchers that need to understand or do basic statistics  and either need a concise primer on the key issues and/or are turned off by the equations underlying the statistical methods.  Instead of using math to explain statistical methods, Motulsky focuses on written explanations, real-world examples, and novel graphing approaches.  An excellent aspect of this book is that it unpacks common misunderstandings that researchers have, such as how to interpret p-values (Chapter 17), and signposts bad practices that must be avoided (like p-hacking).  Again, this is done by focusing on intuition, not math.  Motulsky also presents best practices in plotting, data presentation, and data reporting, emphasizing the key aspect of adequate and accurate presentation of results.
+
+This reading guide serves several purposes:
+
+* Highlight the parts of the book I focus on in my teaching (and so will be on any tests!)
+* Provide additional complementary examples
+* Indicate extensions or alternatives
+* Provide citations and links to resources for follow-up
+* Indicate where others (including myself, though I am not a trained statistician) might disagree with Motulsky
+
+Each part of the reading guide is essentially an outline of each chapter with commentary as needed. In some cases I have written a brief initial commentary to put the chapter in context.  I will often indicate the Excel or R functions related to methods or calculations; for a fuller treatment see my other guide *An R Companion to Motulsky's* Intuitive Biostatistics. At the end of each chapter are typically references, a list of R and Excel functions needed to carry out the analyses in the book, and study questions to consider. 
+
+My most important notes and comments are generally in **bold** or bulleted.  When I've riffed on an idea and its not necessarily key I've usually put in in a block quote, like the one below:
+
+> For example, sometimes I've written about a section, and my text is almost as long as the original section!
+
+This is a work in progress and many sections are not yet annotated; feel free to contact me with suggestions or corrections.
+
+Nathan Brouwer
+brouwern@gmail.com
+
+
