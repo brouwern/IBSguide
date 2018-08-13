@@ -1,0 +1,402 @@
+\documentclass[]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={A Reading Guide to Intuitive Biostatistics},
+            pdfauthor={Nathan Brouwer},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{natbib}
+\bibliographystyle{apalike}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{A Reading Guide to Intuitive Biostatistics}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Nathan Brouwer}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{2018-08-13}
+
+\usepackage{booktabs}
+\usepackage{amsthm}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter*{Preface}\label{preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+This is a reading guide to Harvey Motulsky's
+\href{http://www.intuitivebiostatistics.com/}{Intuitive Biostatistics: A
+Nonmathematical Guide to Statistical Thinking}, 4th edition. More
+information about the book can be found at the
+\href{http://www.intuitivebiostatistics.com/}{book's website},
+\url{http://www.intuitivebiostatistics.com/}, and it can be purchased
+from
+\href{https://www.amazon.com/Intuitive-Biostatistics-Nonmathematical-Statistical-Thinking/dp/0190643560/ref=asap_bc?ie=UTF8}{Amazon.com}.
+Motulsky is the CEO and Founder of
+\href{https://www.graphpad.com/}{GraphPad}, a user-friendly statistical
+software popular in some branches of the life sciences.
+
+\emph{Intutitive Biostatistics} is a fabulous book for researchers that
+need to understand or do basic statistics and either need a concise
+primer on the key issues and/or are turned off by the equations
+underlying the statistical methods. Instead of using math to explain
+statistical methods, Motulsky focuses on written explanations,
+real-world examples, and novel graphing approaches. An excellent aspect
+of this book is that it unpacks common misunderstandings that
+researchers have, such as how to interpret p-values (Chapter 17), and
+signposts bad practices that must be avoided (like p-hacking). Again,
+this is done by focusing on intuition, not math. Motulsky also presents
+best practices in plotting, data presentation, and data reporting,
+emphasizing the key aspect of adequate and accurate presentation of
+results.
+
+This reading guide serves several purposes:
+
+\begin{itemize}
+\tightlist
+\item
+  Highlight the parts of the book I focus on in my teaching (and so will
+  be on any tests!)
+\item
+  Provide additional complementary examples
+\item
+  Indicate extensions or alternatives
+\item
+  Provide citations and links to resources for follow-up
+\item
+  Indicate where others (including myself, though I am not a trained
+  statistician) might disagree with Motulsky
+\end{itemize}
+
+Each part of the reading guide is essentially an outline of each chapter
+with commentary as needed. In some cases I have written a brief initial
+commentary to put the chapter in context. I will often indicate the
+Excel or R functions related to methods or calculations; for a fuller
+treatment see my other guide \emph{An R Companion to Motulsky's}
+Intuitive Biostatistics. At the end of each chapter are typically
+references, a list of R and Excel functions needed to carry out the
+analyses in the book, and study questions to consider.
+
+My most important notes and comments are generally in \textbf{bold} or
+bulleted. When I've riffed on an idea and its not necessarily key I've
+usually put in in a block quote, like the one below:
+
+\begin{quote}
+For example, sometimes I've written about a section, and my text is
+almost as long as the original section!
+\end{quote}
+
+This is a work in progress and many sections are not yet annotated; feel
+free to contact me with suggestions or corrections.
+
+Nathan Brouwer
+\href{mailto:brouwern@gmail.com}{\nolinkurl{brouwern@gmail.com}}
+
+\chapter{\texorpdfstring{``Statistics \& Probablity Are Not
+Intuitive''}{Statistics \& Probablity Are Not Intuitive}}\label{intro1}
+
+\section*{Commentary}\label{commentary}
+\addcontentsline{toc}{section}{Commentary}
+
+In this introductory chapter Motulsky sketches out some major reasons
+why people struggle with statistics and probability. This chapter
+assumpes some basic familiarity with statistical ideas. Sometimes this
+chapter is a bit terse - its meant to highlight key ideas, not fully
+discuss or demonstate them.
+
+\section*{Vocabulary}\label{vocabulary}
+\addcontentsline{toc}{section}{Vocabulary}
+
+\subsection{Motulsky vocab}\label{motulsky-vocab}
+
+\begin{itemize}
+\tightlist
+\item
+  sample
+\item
+  population
+\item
+  Bayesian
+\item
+  multiple comparisons
+\item
+  regression to the mean
+\end{itemize}
+
+\subsection{Aditional vocab}\label{aditional-vocab}
+
+\begin{itemize}
+\tightlist
+\item
+  Bayes theorem
+\item
+  pre-registration
+\item
+  exploratory analyses
+\end{itemize}
+
+\subsection{Key functions}\label{key-functions}
+
+None
+
+\section*{Chapter Notes}\label{chapter-notes}
+\addcontentsline{toc}{section}{Chapter Notes}
+
+\subsection{We Tend to Jump to
+Conclusions}\label{we-tend-to-jump-to-conclusions}
+
+\begin{quote}
+Motulsky uses the phrase ``\textbf{generalize from a sample to a
+population}'' without defining what this means. In general, this means
+to look at some subset of the world - either something experienced in
+real life or generated using a scientific study - and conclude that what
+was seen in the subset occurs elsewhere. In the example he uses, his
+daughter experienced meeting doctors, and they all were male, so she
+generalized to the rest of the world that all doctors must be male.
+While this example is trivial, anytime we generalize from sample to
+population (or from a part to the whole) we run the risk that our sample
+is biased. It could be biased becauase we didn't take a good sample,
+such as relying just on personal experiencce. Or it could be a
+rigorously collected scientific sample, but still be non-representative.
+What if he wanted to prove his daughter wrong and so randomly selected
+10 doctor's offices for a web search and looked up who the senior
+physician is. If he happend to find my doctor's office, he'd see that
+its a women, Dr.~Cathy Lamb. However, it is possible that he could look
+up 10 doctor's and they could all still be male.
+\end{quote}
+
+\subsection{We Tend to Be
+Overconfident}\label{we-tend-to-be-overconfident}
+
+\subsection{We see Patterns in Random
+Data}\label{we-see-patterns-in-random-data}
+
+\subsection{We don't realize that coincidences are
+common}\label{we-dont-realize-that-coincidences-are-common}
+
+He doesn't use the specific term, but he is alluding to the concept of
+\textbf{hindsight bias}.
+
+\subsection{We don't expect variability to depend on sample
+size}\label{we-dont-expect-variability-to-depend-on-sample-size}
+
+Motulsky cites a paper by Andrew Gelman here, one of the most thought
+provoking - though sometimes just provoking -- statistics bloggers of
+the last decade. He blogs regularly at
+\href{http://andrewgelman.com/}{Statistical Modeling, Causal Inference,
+and Social Science} and writes non-technical pieces for a number of
+outlets, including
+\href{http://www.slate.com/authors.andrew_gelman.html}{Slate}. He is
+also prominent Bayesian.
+
+\subsection{We Have Incorrect Intuitive Feelings About
+Probability}\label{we-have-incorrect-intuitive-feelings-about-probability}
+
+\subsection{We Find it Hard to Combine
+Probabilities}\label{we-find-it-hard-to-combine-probabilities}
+
+\subsection{(We Avoid Thinking About Ambiguous
+Situations)}\label{we-avoid-thinking-about-ambiguous-situations}
+
+(This section appear in previous versions; I am not sure where/if it
+occurs in the 4th edition)
+
+\subsection{We Don't Do Bayesian Calculations
+Intuitively}\label{we-dont-do-bayesian-calculations-intuitively}
+
+\begin{quote}
+Motulsky doesn't define \textbf{Bayesian} here, though its not central
+to what he's talking about. In this example, ``Bayesian calculations''
+refers to a particular type of probability calculation using
+\textbf{Bayes Rule}. His example is a classic example of how probability
+calculations are used for diagnostic testing.
+\end{quote}
+
+\begin{quote}
+More generally, ``Bayesian''" refers to a particular way to use the
+mathematics of probability to make inference. All mathematicians agree
+on the basic rules of probability calculations. In contrast, when it
+comes to using the math of probablity to make inference from a sample to
+a population - that is, to do statistics - there is a huge rift between
+\textbf{Frequentists} and \textbf{Bayesians}.
+\end{quote}
+
+\subsection{We are Fooled By Multiple
+Comparisons}\label{we-are-fooled-by-multiple-comparisons}
+
+The study on astroglogical signs here is a great paper intended to ``To
+illustrate how multiple hypotheses testing can produce associations with
+no clinical plausibility'' (Austin et al 2006, Abstract). ``Multiple
+hypotheses testing'' means the same thing as ``multiple comparisons.''
+As Motulsky indicates, if you test multiple hypotheses or make multiple
+comparisons between things, sooner or later you'll find a strong
+association. This is why it important to make specific hypotheses prior
+to the beginning of a study - ideally even publically
+\textbf{pre-registering} them - and properly indicate which analyses
+were defined in advance and which are \textbf{exploratory analyses}.
+
+\textbf{Multiple Comparisons} is a big topic that Motulsky doesn't go
+into detail yet. He devotes several excellent chapters to this topic
+elsewhere. This issue of multiple comparisons is a big and controversial
+one. For a discussion of multiple comparisons
+
+\section{We tend to ignore alternative
+explanations}\label{we-tend-to-ignore-alternative-explanations}
+
+\section{We are fooled by regression to the
+mean}\label{we-are-fooled-by-regression-to-the-mean}
+
+\textbf{Regression to the mean} is a concept that isn't typically taught
+in intro stats courses, especially for ecology. For its relevance to
+ecology and evolution see the paper by Kelly and Price (2006)
+\href{https://www.journals.uchicago.edu/doi/abs/10.1086/497402}{``Correcting
+for Regression to the Mean in Behavior and Ecology''} in \emph{American
+Naturalist}.
+
+\section{We let our biases determine how we interpret
+data}\label{we-let-our-biases-determine-how-we-interpret-data}
+
+\section{We crave certainty, but statistics offers
+probability}\label{we-crave-certainty-but-statistics-offers-probability}
+
+\section{Further reading}\label{further-reading}
+
+\subsection{References}\label{references}
+
+Austin, Mamdani, Juurlink and Hux 2006. Testing multiple statistical
+hypotheses resulted in spurious associations: a study of astrological
+signs and health. Journal of Clinical Epidemiology 59:964--969
+\href{https://www.jclinepi.com/article/S0895-4356(06)00124-7/abstract?code=jce-site}{Open
+Access}
+
+\subsection{Annotated Bibliography}\label{annotated-bibliography}
+
+\subsubsection{Multiple comparisons}\label{multiple-comparisons}
+
+Bender \& Lange 2001. Adjusting for multiple testing---when and how?
+Journal of Clinical Epidemiology. 54:343--349.
+\href{https://www.jclinepi.com/article/S0895-4356(00)00314-0/abstract?code=jce-site}{Abstract}
+
+\begin{quote}
+\textbf{Multiple comparisons} is a thorny issue that Motulsky briefly
+introduces here in Chapter 1 and discusses in depth elsewhere.
+Throughout the book Motulsky focuses on the need for multiple
+comparisons procedures in general, and the most popular ones used; he
+doesn't go into the broader arguements about their use and the many ways
+they can be problematic. Bender \& Lange (2001) give a taste of the mess
+made by multiple comparisons issues. They note ``\ldots{}there seems to
+be a lack of knowledge about statistical procedures for multiple
+testing. For instance, multiple test adjustments have been equated with
+the Bonferroni procedure, which is the simplest, but frequently also an
+inefficient method \ldots{}'' (pg. 343). They discuss the various
+positions that have been taken for and against multiple comparisons in
+the biomedical sciences, and advance their particular perspective on the
+issue. Elsewhere in the book Motulsky discusses the Bonferonni
+correction under the heading ``The Traditional Approach to Correcting
+For Multiple Comparisons.'' He then outlines a more contemporary
+approach, the \textbf{False Discovery Rate (FDR)}. Bender \& Lange
+(2001) was written before the FDR became popular and instead briefly
+disucuss other alternatives, including Holm modificaiton to the
+Bonferroni procedures and advanced computational methods.
+\end{quote}
+
+\bibliography{book.bib}
+
+
+\end{document}
