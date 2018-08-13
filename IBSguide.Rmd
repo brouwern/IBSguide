@@ -1,0 +1,373 @@
+--- 
+title: "A Reading Guide to Intuitive Biostatistics"
+author: "Nathan Brouwer"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: brouwern/IBSguide
+description: "This is a reading guide to Harvey Motulsky's Intuitive Biostatistics: A Nonmathematical Guide to Statistical Thinking, 4th edition."
+---
+
+# Preface {-}
+
+Placeholder
+
+
+
+<!--chapter:end:index.Rmd-->
+
+
+# "Statistics & Probablity Are Not Intuitive" {#ch1}
+
+Placeholder
+
+
+## Commentary {-}
+## Vocabulary {-}
+### Motulsky vocab {-}
+### Additional vocab {-}
+### Key functions {-}
+## Chapter Notes {-}
+## We Tend to Jump to Conclusions
+## We Tend to Be Overconfident
+## We see Patterns in Random Data
+## We don't realize that coincidences are common
+## We don't expect variability to depend on sample size
+## We Have Incorrect Intuitive Feelings About Probability
+## We Find it Hard to Combine Probabilities
+## (We Avoid Thinking About Ambiguous Situations)
+## We Don't Do Bayesian Calculations Intuitively
+## We are Fooled By Multiple Comparisons
+## We tend to ignore alternative explanations
+## We are fooled by regression to the mean
+## We let our biases determine how we interpret data
+## We crave certainty, but statistics offers probability
+## Further reading
+## References
+## Annotated Bibliography
+### Multiple comparisons
+
+<!--chapter:end:01-stat_not_intuitive.Rmd-->
+
+
+# "The complexities of probability" {#ch2}
+
+Placeholder
+
+
+## Commentary {-}
+## Focal parts of chapter
+## Vocabulary {-}
+### Motulsky vocab {-}
+### Aditional vocab {-}
+### Key functions {-}
+## Chapter Notes {-}
+## Basics of probability
+## Probability as long-term frequency
+### Probabilities as predictions from a model
+### Probabilities based on data
+## Probabilities As Strength of Belief
+### Subjective probabilities
+### "Probabilities" used to quantify ignorance
+### Quantitative predictions of one-time events
+## Calculations with probabilities can be easier if you switch to calcualting with whole numbers
+## 0.8% = 0.008
+## (those with cancer)*(probablity of positive mammogram)
+## Common Mistakes: Probability
+### Mistake: Ignoring assumptions
+### Mistake: Trying to understand probability without clearly defining both the numerator & the denominator
+### Mistake: Reversing probability statements
+### Mistake: Believing the probability has a memory
+## Lingo
+### Probability vs. odds
+### Probability vs. statistics
+### Probability vs. likelihood
+## Probability In Statistics
+## Further reading
+### References
+### Annotated Bibliography
+#### Multiple comparisons
+
+<!--chapter:end:02-complexities_probability.Rmd-->
+
+# "Confidence Interval of a Proportion" {#ch4}
+
+## Preamble {-}
+
+### On proportions, frequencies, and percentages {-}
+Like many books, Motulsky starts of by discussing **proportional data.**  Proportional data can also sometiems be called **frequencies**; mathematically they are more precisely called **binomial proportions**.  They occur when you have a certain number of things happen, such as full-term births, and you count the frequency or calculate the proportion of a specific event, such as a child having brown eyes.  Mathematically the "thigns happening" are usually called "trials" and the outcome of interest are often called "success", though "events" or "outcomes" makes more sense to me.  In stats books you will often see the  terms "Bernouli trial.""
+
+Proportions are often conveyed in terms of **percentages**, such as "20% of child born in Pittsburgh have brown eyes."  Percentages are tricky in stats because you have to keep in mind whether the percentage is derived from counting up discrete events (babies born with blue eyes) or is a continuous quantity (the percentage of a child's face they've covered with splatter from the food they've eaten).
+
+
+### On confidence intervals versus p-values {-}
+Most books start with **p-values** then move on to **confidence intervals**; while the two things are intimately linked and derived from the same calculations, confidence intervals convey much more information.
+
+## Vocabulary {-}
+
+### Motulsky vocab {-}
+
+
+### Additional vocab {-}
+
+
+## Chapter Notes {-}
+
+## "Example: Deaths of Premature Babies""
+
+## "Example: Polling Voters"
+
+## "Assumptions: Confidence Interval of a Proportion"
+
+### "Assumption: Random (or representative) sample"
+
+### "Assumption: Independent observations"
+
+Proportional data can be tricky because the key to the statistics used to analyze them in most cases is that all of the events are **independent**.  For example, each non-twin child born in a hosptial on the first day of month is essentially an **independent trial**.  Each child has different parents, a different genstational environment, and most relevant if you are counting up the number with brown head, different genetics.  So, the hair color of one child born on the first day of the month has no impact on the hair color of another child; they are unlinked and unrelated.
+
+In contrast, there its possible that the fates of mothers while giving birth are not independnet.  FOr example, what if we want to know the number of women who originally intended to give birth vaginally but ended up having a cecarian (c-section)?  Each women is different, but they are likely to be attended to by the same attending physician, who can vary in their approach to delivery and when they recommend a c-section.  So if 20 women give birth on the first day of the month, they hair color of their babies are all independent data points, but whether these women had c-sections or not  is potentially not independent.
+
+### "Assumption: Accurate Data"
+
+
+## "What Does 95% Confidence Really Mean"
+
+**$\Box$ Figure 4.1: What would happen if you collected many samples and computed a 95% CI for each**
+
+This figure is **very important.**  The thought experiment where you hypothetically re-run your study or experiment many times is central to the concept of what **confidence intervals** and **p-values** are.  
+
+
+### "What is Special About 95%"
+
+$\Box$ Nothing.  Absolutely nothing.  This cannot be repeated enough.  THere is nothing sacred scientifically or mathematically about 95% or a p-value that is less than 0.05.  
+
+$\Box$ There has even recently been a call to try to get people to not call something "significant" unless is <0.005 (equivalent to using a 99.5 % CI).  This has resulted in a lot of discussion in journals, blogs, and twitter, the frequentists arguing with frequentists, some Bayesian offering their alternatives to signficance tests (eg Wagenmakers) and other Bayesian saying we need to get rid of hypothesis testing entirely (Gelman).
+
+Like most stats books Motulsky mentions the possiblity of calculating 90% CIs that are more lax, or 99% CIs that are more stringent.  Most books have you do exercises where you calcualte different CIs.  In the biological sciences I have never seen anything but a 95% CI.  I think in manufacturing applications of statistica and other fields perhaps this is more common. 
+
+$\Box$ There has been some discussion that is should be more common to think about what level of "confidence" you want or need to make a descision and adjucting your CI accordingly.  This is discussed in print and via the blogs by the pyschologist Daniel Lakens, and I believe Richard Morey.  
+
+### "What If The Assumption Are Violated"
+
+### "Are you quantifying the Event you Really Care About?"
+
+### Lingo
+
+#### CI versuse confidence limits
+
+"confidence limit" isn't used too much in practice.
+
+#### Estimate
+
+#### Confidence level.
+
+$\Box$ Again, there is nothing special about 95%.  
+
+
+### How It Works: CI of a Proportion
+
+#### Why are there several methods
+
+There are many ways to deal with binomial data in general, and in R.  The basic ones usually show up in an intro stats course are
+
+* Binomial test: binom.test()
+* Test for equal proportions: prop.test()
+* Chi^2 test: chisq.test
+
+All of these produce similar result and are probably mathematically related if you start to dig into them, which I haven't done lately.  
+
+This profusion of different tests is one annoying feature of the traditional way statistics is typically taught and the way most intro-level stats books are written.  In contemporary applided statistics, binomial data like this are likely to be analyzed using something called "logistic regression" or a "binomial general linear model".  A general linear model is often called a GLM for short.  Motulsky doesn't go all the way into developing GLMs but he is generally oriented in that direction, which is good.
+
+To be more precise, there are both
+
+* Multiple ways to analyze these data
+* Multiple ways to calcualte a confidence interval
+
+The confidence interval issue is what Motulsky focuses on.
+
+
+
+```{r}
+prop.dat <- read_excel("04-proportion_data.xlsx", 
+        sheet = "as.text", col_names = FALSE)
+names(prop.dat) <- c("A","B","C","D","E","F")
+
+prop.dat[c(1:6),c(1:2)]
+prop.dat[c(1:7),c(1:2)]
+
+
+```
+
+
+```{r}
+library(kableExtra)
+# Step 0: the data
+S <- 31   #S = successes = num. infants surviving to 6 months
+z <- 1.96 #z = 
+n <- 39   #n = number of trials = total num. infants in study
+
+z2 <- round(1.96^2,3)
+
+# Step 1: calculate the Wald-corrected proportion
+P.obs  <-  round(S/n,3)           #observe proportion
+P.corr <-  round((S+z)/(n+z^2),3) #corrected proportion
+
+numerator <- round(S+z,3)
+denominator <- round(n+z^2,3)
+
+P.corr <- round(numerator/denominator,3)
+
+# Compute half-width of the CI
+W.numerator   <- P.corr*(1-P.corr)
+W.denominator <- n+z^2
+W             <- z*sqrt(W.numerator/W.denominator)
+  
+  
+W <- round(z*sqrt(P.corr*(1-P.corr)/(n+z^2)),3)
+lower.CI <- P.corr - W
+upper.CI <- P.corr + W
+
+P.obs.calc  <- "=31/39"
+P.corr.calc <- "=(31+1.96)/(39+1.96^2)"
+
+
+df <- rbind(c("","A",    "B","C",             "D")
+            
+            c("1","",    "Data", "","               ","Calcualted.val"),
+            c("2","31"   ,"","P.observed   =", P.obs),
+            deceased   = c( "8"   ,"","P.corrected  =", P.corr),
+            n.total    = c("39"   ,"","W.numerator  =", numerator),
+            z          = c("1.96" ,"","W.denominator=", denominator),
+            z.squared  = c(z2 ,    "","W ="           , W),
+                         c("",     "", "CI.lower = "  , lower.CI),
+                         c("",     "", "CI.upper = "  , upper.CI))
+
+
+
+kable(data.frame(df))
+```
+
+
+
+
+
+
+
+
+We can code Motulsky's analysis using the Wald method like this:
+```{r}
+# Step 0: the data
+S <- 31   #S = successes = num. infants surviving to 6 months
+z <- 1.96 #z = 
+n <- 39   #n = number of trials = total num. infants in study
+
+# Step 1: calculate the Wald-corrected proportion
+P.obs  <-  S/n           #observe proportion
+P.corr <-  (S+z)/(n+z^2) #corrected proportion
+
+#or, approximately, since 1.96^2 requires a calcualte
+## here what he is doing is just rounding 1.96 up to 2.
+## this if any makes the confidence a bit wider and
+## therefore a bit more conservative
+## of course, 33/43 typically will require a calculator
+P.corr.alt <-  (S+2)/(n+4)
+
+#If you get confused by the parentheses you can always break things up
+
+numerator <- S+z
+denominator <- n+z^2
+
+P.corr <- numerator/denominator
+
+# Compute half-width of the CI
+W <- z*sqrt(P.corr*(1-P.corr)/(n+z^2))
+
+lower.CI <- P.corr - W
+upper.CI <- P.corr + W
+```
+
+
+Here is the oupt of the three "tests" can can be applied to these data.
+
+
+```{r compare.binom.tests, echo=FALSE}
+#packages to clean up the output
+library(tidyr)
+library(broom)
+library(pander)
+
+#Survival of 39 pre-mature infants born at 25 weeks of gestation surviving to 6 months
+success <- 31 #infants surviving to 6 months
+trials  <- 39 #total infants
+
+
+logitreg <- c(rep(1,31),rep(0,9))
+
+bt <- tidy(binom.test(31,39))
+pt <- tidy(prop.test(31,39))
+ct <- tidy(chisq.test(c(31,8)))
+
+df <- rbind(bt,pt,pt)
+df$method <- as.character(df$method)
+ct$method <- as.character(ct$method)
+df[3,c("statistic","p.value","parameter","method")] <- ct
+df[3,c("estimate","conf.low","conf.high","alternative")] <- NA
+
+df$method <- c("binom.test","prop.test","chi^2")
+pander(df[,-c(2,4,ncol(df))])
+
+```
+
+
+Here is the output using a binomial GLM
+```{r echo=FALSE}
+library(arm)
+glm. <- tidy(glm(logitreg ~ 1, family = "binomial"))[,-1]
+glm.[1] <- invlogit(glm.[1])
+pander(glm.[,-3])
+```
+
+
+
+#### Standard Wald method
+
+#### If the proportion is 0 or 100% (OPTIONAL)
+
+This section is **OPTIONAL**.  In practice W=we will always use software to do these calculations.
+
+
+### How to: Approximate CIs (OPTIONAL)
+
+Thess sections are **OPTIONAL**.  In practice we will always use software to do these calculations.  These are interesting tricks to know in case you see data presented without a confidence interval, which is common.
+
+#### Shortcut for proportion near 50% (OPTIONAL)
+
+#### Shortcut when the numerator is zero: The rule of three (OPTIONAL)
+
+#### SHortcut when the numerator is 1 or 2: THe rules of 5 and 7  (OPTIONAL)
+
+### Looking Forward: Parameters & Models
+
+$\Box$ Very important section.  
+
+**$\Box$ Figure 4.3.  Effect of sample size on the width of a CI**  This is a very important idea.  Sample size is key to increasing the confidence we have in a result
+
+**$\Box$ Figure 4.4 Asymmetrical CI**  Proportions, percentages, etc are all bounded between 0 and 1, or 0% and 100%.  Most methods of calculating confidence intervals for this type of data (but not all!) will produce assymmetric CI.  If you see a CI for this type of data that crosses 0% or 100%, there's a good chance the authors did not use an appropriate method for calculating the confidence intervals.  I see this most often when data are percentages, like mean percentage of the ground covered by an invasive species.  
+
+### Q & A
+
+All of these are good to consider.
+
+
+<!--chapter:end:04-CI_of_a_proportion.Rmd-->
+
+`r if (knitr:::is_html_output()) '
+# References {-}
+'`
+
+<!--chapter:end:06-references.Rmd-->
+

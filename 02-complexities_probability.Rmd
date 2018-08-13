@@ -1,8 +1,17 @@
-# Chapter 2: "The complexities of probability" {#ch2}
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+# "The complexities of probability" {#ch2}
 
 ## Commentary {-}
 
 Probability is central to statistics, but its inherently hard.  Most introductory stats books spend at least one chapter to lay out the foundations, which can seem tangential to the main task at hand - analzying data!  Advanced stats books typically go back to probability, often in calculations that are unfortunatley not within the comfort zone of most biologists.  Motulsky doesn't shirk the responsiblity of reviewing probability, but does so in a conversational style.
+
+## Focal parts of chapter
+
+The entire chapter should be read
 
 ## Vocabulary {-}
 
@@ -34,9 +43,13 @@ None
 
 ### Subjective probabilities
 
+The concept of *subjective probabilities* is a big, broad topic that relates to **Bayesian statistics**.  Motulsky is pointing towards the process of how oth personal belief and **prior scientific information** can inform our assessment and even formal analysis of a situation.  In Bayesian statistics, a **prior** is a formally stated and quantified belief about the topic of interest.  In practice its often stated as a **probability distribution.**
+
 ### "Probabilities" used to quantify ignorance
 
-This is  very important point.
+This is  very important point that relates to how we use end up applying probability and statistics.  Motulsky uses the example of an unborn child.  The child is developing and (except in very rare cases) is either XX or XY for its sex chromosomes.  The process of combining the maternal X and paternal chromosomes to put this X-X or X-Y pairing together is done.  As Motulsky discusses, we can still talk about the probablity of the child being XX or XY until the birth and we know what pairing occured.
+
+This is similar when we do an experiment and use statistics.  Say we're in the early phases of drug development and we don't know whether a drug performs any different than the control (eg a [placebo(https://en.wikipedia.org/wiki/Placebo)] ).  We can uses statistics to compare patients who recieved the drug and those that didn't.  In the early phases of drug developement it often isn't known if a drug works or fully the biological mechanisms by which it works.  In reality, the drug does or does not interact biological in humans, and those interactions are typically positive, negative, or neutral.  With a lot of work those details can be worked out; a single drug trial on a limited sample of patients only moves us a bit towards that.  What it accomplishes, and what the statistics help us do, is get a handle on how ignorant we remain of the details of how the drug works.
 
 ### Quantitative predictions of one-time events
 
@@ -51,6 +64,54 @@ Also see ["19 Lessons for Political Scientists From the 2016 Election"](http://w
 Among political-science orientated statisticians like Gelman the work of [FiveThirtyEight.com]() comes up a lot.  I'm not that familiar with it so I checked [Wikipedia](https://en.wikipedia.org/wiki/FiveThirtyEight): "FiveThirtyEight...is a website that focuses on opinion poll analysis, politics, economics, and sports blogging. The website...takes its name from the number of electors in the United States electoral college."
 
 ## Calculations with probabilities can be easier if you switch to calcualting with whole numbers
+
+Motulsky presents two version of the same word problem to show how the presentation of probabilities can impact how easily they can be understoon.  The first version of the problem is tricky and I didn't see how to get the answer at first.  The main hang up I think is the fact that it requires you to think in terms of **conditional probabilities**.  The problem states that 0.8% (not the proportion 0.8, which = 80%!) women are diagnosed with breast cancer.  The second sentence states "If a woman has breast cancer, the probability is 90 percent that she will have a positive mamogram."  This is a condition probability.  In words we'd say more formally "If a woman does have breast cancer, the probability that she has a positive mammogram is 0.9."  Stating it this way put the temporal sequence out of order, as does the origina sttatement.  A better way might be, "Among women with breast cancer, 90% had positive mammograms."  THe upshot is this: we need to think in terms of 90% of 0.8%; that is start with the 0;8% that have cancer and then take 90% of though.  
+
+I think this is also tricky because we're working accross and order of magnitude.  Its much easier to put in real numbers by starting with 1000 women recieving mammograms. 0.8%*1000 = 8 women in that group that actually have cancer.  8*90% = 7ish.  The women with cancer and the women with cancer and a positive mammogram are on the same order of magnitude.
+
+The next trick for solving the problem in terms of the first version of the problem is to figure out how many women have **false positive** mammograms.  That is, they don't have cancer but their mammogram comes back as positive and the need to go through further screen to determine that everythings actually ok.  The first version of the problem on page 17 states "If a women does not have breast cancer, the probability is 7 percent that she will have a positive mammogram."  So 7% of women will get a **false positive**.
+
+A common mistake with this problem that I almost did was to calcualte the number of women out of 1000 with false positives as 7%*1000.  However, the problem states "If a women does not have breast cancer, the probability is 7 percent."  We were already told that 0.8% of women *do* have cancer; we need to subtract them out.  So we get 1000-1000*0.8% = 992 women are cancer free.  Of those 992 cancer-free women, 7% will end up with false positive mammograms.  So 992*7% = 70.
+
+So, summarizing, we have 1000*8% = 8 women with cancer, but only 8*90% = 7 of those women with positive mammograms.  Since these women do indeed have cancer and the mammogram also indicates this, they are referred to as **true positives.**  We also have 992*7% = 70 women with false-positive mammograms.  7 true positives plus 70 false positives equals 77 total positive mammmograms.  
+
+To get the probablity that a women with a positive mammogram actually has cancer we take the total number of positive mammograms (77) the number of those with cancenr (7): 7/77 = 0.09 = 9%.
+
+Because this problem is difficult it comes up frequently when discussing statistics and medicine.
+
+
+As an aside, I'll show how these calculations could be written out in R.  I'll use "*" as in Excel for multiplication and "/" for division.  I'll store values for future use using the assignment operator "<-".  I'll also use the round() function to round things off as is done in the original problem.
+```{r}
+#number of cancer cases out of 1000
+## 0.8% = 0.008
+true.incidence <- 1000*0.008
+
+#number of "true positives""
+## (those with cancer)*(probablity of positive mammogram)
+true.positive <- true.incidence*0.9
+
+#exact value is 7.2; round it off to 7 as in the example
+true.positive
+true.positive <- round(true.positive)
+
+#cancer free individuals
+cancer.free <- 1000-true.incidence
+
+# false positives
+# 7% = 0.07
+false.positive <- cancer.free*0.07
+
+#to make the math easy they round up
+false.positive
+false.positive <- 70
+
+#total number of positive mammograms
+total.positive <- true.positive+false.positive
+
+#probability that a positive mammogram is a true indication of cancer
+true.positive/total.positive
+```
+
 
 ## Common Mistakes: Probability
 
