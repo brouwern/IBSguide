@@ -1,0 +1,103 @@
+# Chapter 2: "The complexities of probability" {#ch2}
+
+## Commentary {-}
+
+Probability is central to statistics, but its inherently hard.  Most introductory stats books spend at least one chapter to lay out the foundations, which can seem tangential to the main task at hand - analzying data!  Advanced stats books typically go back to probability, often in calculations that are unfortunatley not within the comfort zone of most biologists.  Motulsky doesn't shirk the responsiblity of reviewing probability, but does so in a conversational style.
+
+## Vocabulary {-}
+
+### Motulsky vocab {-}
+
+* probablity as long-term frequency
+* probability as subjective belief
+* model
+
+### Aditional vocab {-}
+
+### Key functions {-}
+
+None
+
+## Chapter Notes {-}
+
+## Basics of probability
+
+## Probability as long-term frequency
+
+### Probabilities as predictions from a model
+
+**model**
+
+### Probabilities based on data
+
+## Probabilities As Strength of Belief
+
+### Subjective probabilities
+
+### "Probabilities" used to quantify ignorance
+
+This is  very important point.
+
+### Quantitative predictions of one-time events
+
+At times, when there is a one-time event someone will say something like: "the probability is 50%: it either will happen or not."  This is a confusion of the fact that the outcomes are binary (yes/no) with the probability that one outcome will happen or not.
+
+The polling around the 2016 elections has provided lots of fodder for commentary on statistics and data analysis.  Andrew Gelman has blogged on this on his own site and also for Slate.  See
+["We Need to Move Beyond Election-Focused Polling"]
+(http://www.slate.com/articles/technology/future_tense/2017/09/what_is_the_future_of_polling.html) which has the tagline "Polling didn’t fail us in 2016, but what happened made polling’s flaws more apparent. Here’s how to fix that."
+
+Also see ["19 Lessons for Political Scientists From the 2016 Election"](http://www.slate.com/articles/news_and_politics/politics/2016/12/_19_lessons_for_political_scientists_from_the_2016_election.html).
+
+Among political-science orientated statisticians like Gelman the work of [FiveThirtyEight.com]() comes up a lot.  I'm not that familiar with it so I checked [Wikipedia](https://en.wikipedia.org/wiki/FiveThirtyEight): "FiveThirtyEight...is a website that focuses on opinion poll analysis, politics, economics, and sports blogging. The website...takes its name from the number of electors in the United States electoral college."
+
+## Calculations with probabilities can be easier if you switch to calcualting with whole numbers
+
+## Common Mistakes: Probability
+
+### Mistake: Ignoring assumptions
+
+### Mistake: Trying to understand probability without clearly defining both the numerator & the denominator
+
+### Mistake: Reversing probability statements
+
+### Mistake: Believing the probability has a memory
+
+**gambler's fallacy**
+
+## Lingo
+
+### Probability vs. odds
+
+### Probability vs. statistics
+
+This is a key idea that I don't think I've though about a lot:
+* probablity: general principals -> specific situation
+* statistics: general population <- specific dataset
+
+To relate to his earlier example, if we are interested in the probability of a child being born XY, you can start with a general model (how meiosis works) or data on large population (the CIA database) and make an inference about a specific situation: the birth of a particular child.
+
+### Probability vs. likelihood
+
+As Motulsky mentions, **likelihood** has a particular technical meaning in statistics.  While this his book doesn't devel into it, you don't have to spend much time doing analyses these days before encountering it.  The following topics all involve likelihoods in their current application:
+
+* logistic regression
+* analysis of count data with Poisson regression
+* generalized linear models (GLMs; of which logistic and Poisson reression are forms)
+* mixed models
+* generalized linear mixed models (GLMMs)
+* Phylogenetic methods (estimating phylogenetic trees; using phylogeneis in statistica analyses)
+* Bayesian methods
+
+## Probability In Statistics
+
+**Table 2.1** is a good summary.  A great question on a test would be to blank out some of the words and ask students to fill them in.
+
+
+
+## Further reading
+
+### References
+
+### Annotated Bibliography
+
+#### Multiple comparisons

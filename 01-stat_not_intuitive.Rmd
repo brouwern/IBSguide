@@ -1,61 +1,61 @@
-# "Statistics & Probablity Are Not Intuitive" {#intro1}
+# "Statistics & Probablity Are Not Intuitive" {#ch1}
 
 ## Commentary {-}
 In this introductory chapter Motulsky sketches out some major reasons why people struggle with statistics and probability.  This chapter assumpes some basic familiarity with statistical ideas.  Sometimes this chapter is a bit terse - its meant to highlight key ideas, not fully discuss or demonstate them.
 
 ## Vocabulary {-}
 
-### Motulsky vocab
+### Motulsky vocab {-}
 * sample
 * population
 * Bayesian
 * multiple comparisons
 * regression to the mean
 
-### Aditional vocab
+### Additional vocab {-}
 * Bayes theorem
 * pre-registration
 * exploratory analyses
 
-### Key functions
+### Key functions {-}
 
 None
 
 ## Chapter Notes {-}
 
-### We Tend to Jump to Conclusions
+## We Tend to Jump to Conclusions
 
 >Motulsky uses the phrase "**generalize from a sample to a population**" without defining what this means.  In general, this means to look at some subset of the world - either something experienced in real life or generated using a scientific study - and conclude that what was seen in the subset occurs elsewhere.  In the example he uses, his daughter experienced meeting doctors, and they all were male, so she generalized to the rest of the world that all doctors must be male.  While this example is trivial, anytime we generalize from sample to population (or from a part to the whole) we run the risk that our sample is biased.  It could be biased becauase we didn't take a good sample, such as relying just on personal experiencce.  Or it could be a rigorously collected scientific sample, but still be non-representative.  What if he wanted to prove his daughter wrong and so randomly selected 10 doctor's offices for a web search and looked up who the senior physician is.  If he happend to find my doctor's office, he'd see that its a women, Dr. Cathy Lamb.  However, it is possible that he could look up 10 doctor's and they could all still be male.  
 
-### We Tend to Be Overconfident
+## We Tend to Be Overconfident
 
 
-### We see Patterns in Random Data
+## We see Patterns in Random Data
 
-### We don't realize that coincidences are common
+## We don't realize that coincidences are common
 
 He doesn't use the specific term, but he is alluding to the concept of **hindsight bias**.  
 
-### We don't expect variability to depend on sample size
+## We don't expect variability to depend on sample size
 
 Motulsky cites a paper by Andrew Gelman here, one of the most thought provoking - though sometimes just provoking -- statistics bloggers of the last decade.  He blogs regularly at [Statistical Modeling, Causal Inference, and Social Science](http://andrewgelman.com/) and writes non-technical pieces for a number of outlets, including [Slate](http://www.slate.com/authors.andrew_gelman.html).  He is also prominent Bayesian. 
 
 
-### We Have Incorrect Intuitive Feelings About Probability
+## We Have Incorrect Intuitive Feelings About Probability
 
-### We Find it Hard to Combine Probabilities
+## We Find it Hard to Combine Probabilities
 
-### (We Avoid Thinking About Ambiguous Situations)
+## (We Avoid Thinking About Ambiguous Situations)
 
 (This section appear in previous versions; I am not sure where/if it occurs in the 4th edition)
 
-### We Don't Do Bayesian Calculations Intuitively
+## We Don't Do Bayesian Calculations Intuitively
 
 > Motulsky doesn't define **Bayesian** here, though its not central to what he's talking about.  In this example, "Bayesian calculations" refers to a particular type of probability calculation using **Bayes Rule**.  His example is a classic example of how probability calculations are used for diagnostic testing.
 
 >More generally, "Bayesian"" refers to a particular way to use the mathematics of probability to make inference.  All mathematicians agree on the basic rules of probability calculations.  In contrast, when it comes to using the math of probablity to make inference from a sample to a population - that is, to do statistics - there is a huge rift between **Frequentists** and **Bayesians**.  
 
-### We are Fooled By Multiple Comparisons
+## We are Fooled By Multiple Comparisons
 
 The study on astroglogical signs here is a great paper intended to "To illustrate how multiple hypotheses testing can produce associations with no clinical plausibility" (Austin et al 2006, Abstract). "Multiple hypotheses testing" means the same thing as "multiple comparisons."  As Motulsky indicates, if you test multiple hypotheses or make multiple comparisons between things, sooner or later you'll find a strong association.  This is why it important to make specific hypotheses prior to the beginning of a study - ideally even publically **pre-registering** them - and properly indicate which analyses were defined in advance and which are **exploratory analyses**.
 
@@ -73,15 +73,15 @@ The study on astroglogical signs here is a great paper intended to "To illustrat
 
 ## Further reading
 
-### References
+## References
 
 Austin, Mamdani, Juurlink and Hux 2006.  Testing multiple statistical hypotheses resulted in spurious associations: a study of astrological signs and health.  Journal of Clinical Epidemiology  59:964–969
 [Open Access](https://www.jclinepi.com/article/S0895-4356(06)00124-7/abstract?code=jce-site)
 
 
-### Annotated Bibliography
+## Annotated Bibliography
 
-#### Multiple comparisons
+### Multiple comparisons
 
 Bender & Lange 2001.  Adjusting for multiple testing—when and how?  Journal of Clinical Epidemiology. 54:343–349.  [Abstract](https://www.jclinepi.com/article/S0895-4356(00)00314-0/abstract?code=jce-site)
 

@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="intro1.html">
+<link rel="prev" href="intro1.html">
+<link rel="next" href="references-2.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -152,39 +152,131 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">A Reading Guide to Intuitive Biostatistics</h1>
-<h4 class="author"><em>Nathan Brouwer</em></h4>
-<h4 class="date"><em>2018-08-13</em></h4>
+<div id="intro2" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Chapter 2: “The complexities of probability”</h1>
+<div id="commentary-1" class="section level2 unnumbered">
+<h2>Commentary</h2>
+<p>Probability is central to statistics, but its inherently hard. Most introductory stats books spend at least one chapter to lay out the foundations, which can seem tangential to the main task at hand - analzying data! Advanced stats books typically go back to probability, often in calculations that are unfortunatley not within the comfort zone of most biologists. Motulsky doesn’t shirk the responsiblity of reviewing probability, but does so in a conversational style.</p>
 </div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p>This is a reading guide to Harvey Motulsky’s <a href="http://www.intuitivebiostatistics.com/">Intuitive Biostatistics: A Nonmathematical Guide to Statistical Thinking</a>, 4th edition. More information about the book can be found at the <a href="http://www.intuitivebiostatistics.com/">book’s website</a>, <a href="http://www.intuitivebiostatistics.com/" class="uri">http://www.intuitivebiostatistics.com/</a>, and it can be purchased from <a href="https://www.amazon.com/Intuitive-Biostatistics-Nonmathematical-Statistical-Thinking/dp/0190643560/ref=asap_bc?ie=UTF8">Amazon.com</a>. Motulsky is the CEO and Founder of <a href="https://www.graphpad.com/">GraphPad</a>, a user-friendly statistical software popular in some branches of the life sciences.</p>
-<p><em>Intutitive Biostatistics</em> is a fabulous book for researchers that need to understand or do basic statistics and either need a concise primer on the key issues and/or are turned off by the equations underlying the statistical methods. Instead of using math to explain statistical methods, Motulsky focuses on written explanations, real-world examples, and novel graphing approaches. An excellent aspect of this book is that it unpacks common misunderstandings that researchers have, such as how to interpret p-values (Chapter 17), and signposts bad practices that must be avoided (like p-hacking). Again, this is done by focusing on intuition, not math. Motulsky also presents best practices in plotting, data presentation, and data reporting, emphasizing the key aspect of adequate and accurate presentation of results.</p>
-<p>This reading guide serves several purposes:</p>
+<div id="vocabulary-1" class="section level2 unnumbered">
+<h2>Vocabulary</h2>
+<div id="motulsky-vocab-1" class="section level3 unnumbered">
+<h3>Motulsky vocab</h3>
 <ul>
-<li>Highlight the parts of the book I focus on in my teaching (and so will be on any tests!)</li>
-<li>Provide additional complementary examples</li>
-<li>Indicate extensions or alternatives</li>
-<li>Provide citations and links to resources for follow-up</li>
-<li>Indicate where others (including myself, though I am not a trained statistician) might disagree with Motulsky</li>
+<li>probablity as long-term frequency</li>
+<li>probability as subjective belief</li>
+<li>model</li>
 </ul>
-<p>Each part of the reading guide is essentially an outline of each chapter with commentary as needed. In some cases I have written a brief initial commentary to put the chapter in context. I will often indicate the Excel or R functions related to methods or calculations; for a fuller treatment see my other guide <em>An R Companion to Motulsky’s</em> Intuitive Biostatistics. At the end of each chapter are typically references, a list of R and Excel functions needed to carry out the analyses in the book, and study questions to consider.</p>
-<p>My most important notes and comments are generally in <strong>bold</strong> or bulleted. When I’ve riffed on an idea and its not necessarily key I’ve usually put in in a block quote, like the one below:</p>
-<blockquote>
-<p>For example, sometimes I’ve written about a section, and my text is almost as long as the original section!</p>
-</blockquote>
-<p>This is a work in progress and many sections are not yet annotated; feel free to contact me with suggestions or corrections.</p>
-<p>Nathan Brouwer <a href="mailto:brouwern@gmail.com">brouwern@gmail.com</a></p>
+</div>
+<div id="aditional-vocab" class="section level3 unnumbered">
+<h3>Aditional vocab</h3>
+</div>
+<div id="key-functions-1" class="section level3 unnumbered">
+<h3>Key functions</h3>
+<p>None</p>
+</div>
+</div>
+<div id="chapter-notes-1" class="section level2 unnumbered">
+<h2>Chapter Notes</h2>
+</div>
+<div id="basics-of-probability" class="section level2">
+<h2><span class="header-section-number">2.1</span> Basics of probability</h2>
+</div>
+<div id="probability-as-long-term-frequency" class="section level2">
+<h2><span class="header-section-number">2.2</span> Probability as long-term frequency</h2>
+<div id="probabilities-as-predictions-from-a-model" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Probabilities as predictions from a model</h3>
+<p><strong>model</strong></p>
+</div>
+<div id="probabilities-based-on-data" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Probabilities based on data</h3>
+</div>
+</div>
+<div id="probabilities-as-strength-of-belief" class="section level2">
+<h2><span class="header-section-number">2.3</span> Probabilities As Strength of Belief</h2>
+<div id="subjective-probabilities" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Subjective probabilities</h3>
+</div>
+<div id="probabilities-used-to-quantify-ignorance" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> “Probabilities” used to quantify ignorance</h3>
+<p>This is very important point.</p>
+</div>
+<div id="quantitative-predictions-of-one-time-events" class="section level3">
+<h3><span class="header-section-number">2.3.3</span> Quantitative predictions of one-time events</h3>
+<p>At times, when there is a one-time event someone will say something like: “the probability is 50%: it either will happen or not.” This is a confusion of the fact that the outcomes are binary (yes/no) with the probability that one outcome will happen or not.</p>
+<p>The polling around the 2016 elections has provided lots of fodder for commentary on statistics and data analysis. Andrew Gelman has blogged on this on his own site and also for Slate. See [“We Need to Move Beyond Election-Focused Polling”] (<a href="http://www.slate.com/articles/technology/future_tense/2017/09/what_is_the_future_of_polling.html" class="uri">http://www.slate.com/articles/technology/future_tense/2017/09/what_is_the_future_of_polling.html</a>) which has the tagline “Polling didn’t fail us in 2016, but what happened made polling’s flaws more apparent. Here’s how to fix that.”</p>
+<p>Also see <a href="http://www.slate.com/articles/news_and_politics/politics/2016/12/_19_lessons_for_political_scientists_from_the_2016_election.html">“19 Lessons for Political Scientists From the 2016 Election”</a>.</p>
+<p>Among political-science orientated statisticians like Gelman the work of <a href="">FiveThirtyEight.com</a> comes up a lot. I’m not that familiar with it so I checked <a href="https://en.wikipedia.org/wiki/FiveThirtyEight">Wikipedia</a>: “FiveThirtyEight…is a website that focuses on opinion poll analysis, politics, economics, and sports blogging. The website…takes its name from the number of electors in the United States electoral college.”</p>
+</div>
+</div>
+<div id="calculations-with-probabilities-can-be-easier-if-you-switch-to-calcualting-with-whole-numbers" class="section level2">
+<h2><span class="header-section-number">2.4</span> Calculations with probabilities can be easier if you switch to calcualting with whole numbers</h2>
+</div>
+<div id="common-mistakes-probability" class="section level2">
+<h2><span class="header-section-number">2.5</span> Common Mistakes: Probability</h2>
+<div id="mistake-ignoring-assumptions" class="section level3">
+<h3><span class="header-section-number">2.5.1</span> Mistake: Ignoring assumptions</h3>
+</div>
+<div id="mistake-trying-to-understand-probability-without-clearly-defining-both-the-numerator-the-denominator" class="section level3">
+<h3><span class="header-section-number">2.5.2</span> Mistake: Trying to understand probability without clearly defining both the numerator &amp; the denominator</h3>
+</div>
+<div id="mistake-reversing-probability-statements" class="section level3">
+<h3><span class="header-section-number">2.5.3</span> Mistake: Reversing probability statements</h3>
+</div>
+<div id="mistake-believing-the-probability-has-a-memory" class="section level3">
+<h3><span class="header-section-number">2.5.4</span> Mistake: Believing the probability has a memory</h3>
+<p><strong>gambler’s fallacy</strong></p>
+</div>
+</div>
+<div id="lingo" class="section level2">
+<h2><span class="header-section-number">2.6</span> Lingo</h2>
+<div id="probability-vs.odds" class="section level3">
+<h3><span class="header-section-number">2.6.1</span> Probability vs. odds</h3>
+</div>
+<div id="probability-vs.statistics" class="section level3">
+<h3><span class="header-section-number">2.6.2</span> Probability vs. statistics</h3>
+<p>This is a key idea that I don’t think I’ve though about a lot: * probablity: general principals -&gt; specific situation * statistics: general population &lt;- specific dataset</p>
+<p>To relate to his earlier example, if we are interested in the probability of a child being born XY, you can start with a general model (how meiosis works) or data on large population (the CIA database) and make an inference about a specific situation: the birth of a particular child.</p>
+</div>
+<div id="probability-vs.likelihood" class="section level3">
+<h3><span class="header-section-number">2.6.3</span> Probability vs. likelihood</h3>
+<p>As Motulsky mentions, <strong>likelihood</strong> has a particular technical meaning in statistics. While this his book doesn’t devel into it, you don’t have to spend much time doing analyses these days before encountering it. The following topics all involve likelihoods in their current application:</p>
+<ul>
+<li>logistic regression</li>
+<li>analysis of count data with Poisson regression</li>
+<li>generalized linear models (GLMs; of which logistic and Poisson reression are forms)</li>
+<li>mixed models</li>
+<li>generalized linear mixed models (GLMMs)</li>
+<li>Phylogenetic methods (estimating phylogenetic trees; using phylogeneis in statistica analyses)</li>
+<li>Bayesian methods</li>
+</ul>
+</div>
+</div>
+<div id="probability-in-statistics" class="section level2">
+<h2><span class="header-section-number">2.7</span> Probability In Statistics</h2>
+<p><strong>Table 2.1</strong> is a good summary. A great question on a test would be to blank out some of the words and ask students to fill them in.</p>
+</div>
+<div id="further-reading-1" class="section level2">
+<h2><span class="header-section-number">2.8</span> Further reading</h2>
+<div id="references-1" class="section level3">
+<h3><span class="header-section-number">2.8.1</span> References</h3>
+</div>
+<div id="annotated-bibliography-1" class="section level3">
+<h3><span class="header-section-number">2.8.2</span> Annotated Bibliography</h3>
+<div id="multiple-comparisons-1" class="section level4">
+<h4><span class="header-section-number">2.8.2.1</span> Multiple comparisons</h4>
 
+</div>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="intro1.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="intro1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -214,7 +306,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/brouwern/IBSguide/edit/master/index.Rmd",
+"link": "https://github.com/brouwern/IBSguide/edit/master/02-complexities_probability.Rmd",
 "text": "Edit"
 },
 "download": ["IBSguide.pdf", "IBSguide.epub"],
