@@ -31,6 +31,46 @@
 \urlstyle{same}  % don't use monospace font for urls
 \usepackage{natbib}
 \bibliographystyle{apalike}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
 \usepackage{longtable,booktabs}
 \usepackage{graphicx,grffile}
 \makeatletter
@@ -85,7 +125,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2018-08-13}
+    \date{2018-08-14}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -189,7 +229,7 @@ Nathan Brouwer
 \href{mailto:brouwern@gmail.com}{\nolinkurl{brouwern@gmail.com}}
 
 \chapter{\texorpdfstring{``Statistics \& Probablity Are Not
-Intuitive''}{Statistics \& Probablity Are Not Intuitive}}\label{intro1}
+Intuitive''}{Statistics \& Probablity Are Not Intuitive}}\label{ch1}
 
 \section*{Commentary}\label{commentary}
 \addcontentsline{toc}{section}{Commentary}
@@ -398,8 +438,8 @@ disucuss other alternatives, including Holm modificaiton to the
 Bonferroni procedures and advanced computational methods.
 \end{quote}
 
-\chapter{\texorpdfstring{Chapter 2: ``The complexities of
-probability''}{Chapter 2: The complexities of probability}}\label{intro2}
+\chapter{\texorpdfstring{``The complexities of
+probability''}{The complexities of probability}}\label{ch2}
 
 \section*{Commentary}\label{commentary-1}
 \addcontentsline{toc}{section}{Commentary}
@@ -411,6 +451,10 @@ analzying data! Advanced stats books typically go back to probability,
 often in calculations that are unfortunatley not within the comfort zone
 of most biologists. Motulsky doesn't shirk the responsiblity of
 reviewing probability, but does so in a conversational style.
+
+\section{Focal parts of chapter}\label{focal-parts-of-chapter}
+
+The entire chapter should be read
 
 \section*{Vocabulary}\label{vocabulary-1}
 \addcontentsline{toc}{section}{Vocabulary}
@@ -457,10 +501,39 @@ Belief}\label{probabilities-as-strength-of-belief}
 
 \subsection{Subjective probabilities}\label{subjective-probabilities}
 
+The concept of \emph{subjective probabilities} is a big, broad topic
+that relates to \textbf{Bayesian statistics}. Motulsky is pointing
+towards the process of how oth personal belief and \textbf{prior
+scientific information} can inform our assessment and even formal
+analysis of a situation. In Bayesian statistics, a \textbf{prior} is a
+formally stated and quantified belief about the topic of interest. In
+practice its often stated as a \textbf{probability distribution.}
+
 \subsection{\texorpdfstring{``Probabilities'' used to quantify
 ignorance}{Probabilities used to quantify ignorance}}\label{probabilities-used-to-quantify-ignorance}
 
-This is very important point.
+This is very important point that relates to how we use end up applying
+probability and statistics. Motulsky uses the example of an unborn
+child. The child is developing and (except in very rare cases) is either
+XX or XY for its sex chromosomes. The process of combining the maternal
+X and paternal chromosomes to put this X-X or X-Y pairing together is
+done. As Motulsky discusses, we can still talk about the probablity of
+the child being XX or XY until the birth and we know what pairing
+occured.
+
+This is similar when we do an experiment and use statistics. Say we're
+in the early phases of drug development and we don't know whether a drug
+performs any different than the control (eg a
+{[}placebo(\url{https://en.wikipedia.org/wiki/Placebo}){]} ). We can
+uses statistics to compare patients who recieved the drug and those that
+didn't. In the early phases of drug developement it often isn't known if
+a drug works or fully the biological mechanisms by which it works. In
+reality, the drug does or does not interact biological in humans, and
+those interactions are typically positive, negative, or neutral. With a
+lot of work those details can be worked out; a single drug trial on a
+limited sample of patients only moves us a bit towards that. What it
+accomplishes, and what the statistics help us do, is get a handle on how
+ignorant we remain of the details of how the drug works.
 
 \subsection{Quantitative predictions of one-time
 events}\label{quantitative-predictions-of-one-time-events}
@@ -494,6 +567,122 @@ States electoral college.''
 \section{Calculations with probabilities can be easier if you switch to
 calcualting with whole
 numbers}\label{calculations-with-probabilities-can-be-easier-if-you-switch-to-calcualting-with-whole-numbers}
+
+Motulsky presents two version of the same word problem to show how the
+presentation of probabilities can impact how easily they can be
+understoon. The first version of the problem is tricky and I didn't see
+how to get the answer at first. The main hang up I think is the fact
+that it requires you to think in terms of \textbf{conditional
+probabilities}. The problem states that 0.8\% (not the proportion 0.8,
+which = 80\%!) women are diagnosed with breast cancer. The second
+sentence states ``If a woman has breast cancer, the probability is 90
+percent that she will have a positive mamogram.'' This is a condition
+probability. In words we'd say more formally ``If a woman does have
+breast cancer, the probability that she has a positive mammogram is
+0.9.'' Stating it this way put the temporal sequence out of order, as
+does the origina sttatement. A better way might be, ``Among women with
+breast cancer, 90\% had positive mammograms.'' THe upshot is this: we
+need to think in terms of 90\% of 0.8\%; that is start with the 0;8\%
+that have cancer and then take 90\% of though.
+
+I think this is also tricky because we're working accross and order of
+magnitude. Its much easier to put in real numbers by starting with 1000
+women recieving mammograms. 0.8\%\emph{1000 = 8 women in that group that
+actually have cancer. 8}90\% = 7ish. The women with cancer and the women
+with cancer and a positive mammogram are on the same order of magnitude.
+
+The next trick for solving the problem in terms of the first version of
+the problem is to figure out how many women have \textbf{false positive}
+mammograms. That is, they don't have cancer but their mammogram comes
+back as positive and the need to go through further screen to determine
+that everythings actually ok. The first version of the problem on page
+17 states ``If a women does not have breast cancer, the probability is 7
+percent that she will have a positive mammogram.'' So 7\% of women will
+get a \textbf{false positive}.
+
+A common mistake with this problem that I almost did was to calcualte
+the number of women out of 1000 with false positives as 7\%\emph{1000.
+However, the problem states ``If a women does not have breast cancer,
+the probability is 7 percent.'' We were already told that 0.8\% of women
+}do* have cancer; we need to subtract them out. So we get
+1000-1000\emph{0.8\% = 992 women are cancer free. Of those 992
+cancer-free women, 7\% will end up with false positive mammograms. So
+992}7\% = 70.
+
+So, summarizing, we have 1000\emph{8\% = 8 women with cancer, but only
+8}90\% = 7 of those women with positive mammograms. Since these women do
+indeed have cancer and the mammogram also indicates this, they are
+referred to as \textbf{true positives.} We also have 992*7\% = 70 women
+with false-positive mammograms. 7 true positives plus 70 false positives
+equals 77 total positive mammmograms.
+
+To get the probablity that a women with a positive mammogram actually
+has cancer we take the total number of positive mammograms (77) the
+number of those with cancenr (7): 7/77 = 0.09 = 9\%.
+
+Because this problem is difficult it comes up frequently when discussing
+statistics and medicine.
+
+As an aside, I'll show how these calculations could be written out in R.
+I'll use ``*" as in Excel for multiplication and ``/'' for division.
+I'll store values for future use using the assignment operator
+``\textless{}-''. I'll also use the round() function to round things off
+as is done in the original problem.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#number of cancer cases out of 1000}
+\NormalTok{## 0.8% = 0.008}
+\NormalTok{true.incidence <-}\StringTok{ }\DecValTok{1000}\OperatorTok{*}\FloatTok{0.008}
+
+\CommentTok{#number of "true positives""}
+\NormalTok{## (those with cancer)*(probablity of positive mammogram)}
+\NormalTok{true.positive <-}\StringTok{ }\NormalTok{true.incidence}\OperatorTok{*}\FloatTok{0.9}
+
+\CommentTok{#exact value is 7.2; round it off to 7 as in the example}
+\NormalTok{true.positive}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 7.2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{true.positive <-}\StringTok{ }\KeywordTok{round}\NormalTok{(true.positive)}
+
+\CommentTok{#cancer free individuals}
+\NormalTok{cancer.free <-}\StringTok{ }\DecValTok{1000}\OperatorTok{-}\NormalTok{true.incidence}
+
+\CommentTok{# false positives}
+\CommentTok{# 7% = 0.07}
+\NormalTok{false.positive <-}\StringTok{ }\NormalTok{cancer.free}\OperatorTok{*}\FloatTok{0.07}
+
+\CommentTok{#to make the math easy they round up}
+\NormalTok{false.positive}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 69.44
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{false.positive <-}\StringTok{ }\DecValTok{70}
+
+\CommentTok{#total number of positive mammograms}
+\NormalTok{total.positive <-}\StringTok{ }\NormalTok{true.positive}\OperatorTok{+}\NormalTok{false.positive}
+
+\CommentTok{#probability that a positive mammogram is a true indication of cancer}
+\NormalTok{true.positive}\OperatorTok{/}\NormalTok{total.positive}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.09090909
+\end{verbatim}
 
 \section{Common Mistakes:
 Probability}\label{common-mistakes-probability}
@@ -569,6 +758,1091 @@ be to blank out some of the words and ask students to fill them in.
 \subsection{Annotated Bibliography}\label{annotated-bibliography-1}
 
 \subsubsection{Multiple comparisons}\label{multiple-comparisons-1}
+
+\chapter{\texorpdfstring{``Confidence Interval of a
+Proportion''}{Confidence Interval of a Proportion}}\label{ch4}
+
+\section*{Preamble}\label{preamble}
+\addcontentsline{toc}{section}{Preamble}
+
+\subsection*{On proportions, frequencies, and
+percentages}\label{on-proportions-frequencies-and-percentages}
+\addcontentsline{toc}{subsection}{On proportions, frequencies, and
+percentages}
+
+Like many books, Motulsky starts of by discussing \textbf{proportional
+data.} Proportional data can also sometimes be called
+\textbf{frequencies}; a useful, mathematically precise term is
+\textbf{binomial proportions}. They occur when you have a certain,
+discrete number of things happen, such as full-term births, and you
+count the frequency or calculate the proportion of a specific event,
+such as a child having brown eyes. Mathematically the ``things
+happening'' are often called \textbf{``trials''} and the outcome of
+interest are often called \textbf{``successes''}, though ``events'' or
+``outcomes'' makes more sense to me. In stats books you will often see
+the term \textbf{``Bernouli trial''} used to refer to a single
+\textbf{binomial} trial. Flipping a coin once is a Bernouli trial.
+
+Proportions are often conveyed in terms of \textbf{percentages}, such as
+``20\% of child born in Pittsburgh have brown eyes.'' Percentages are
+tricky in stats because you have to keep in mind whether the percentage
+is derived from counting up \textbf{discrete events} that can be counted
+with absolute precision (babies born with blue eyes) or is a continuous
+quantity (the percentage of a child's face they've covered with splatter
+from the food they've eaten).
+
+Another term commonly used is \textbf{binary data.} Binary indicates
+that an event can take on one of two values; in practice, the values
+``0'' and ``1'' are used when doing the underlying math even though
+``0'' might mean ``eyes not brown'' and 1 means ``eyes brown.''
+
+Proportional data are very common in biology: number of fruit flies that
+are virgin, number of flowers eaten by deer, number of tadpoles
+surviving a exposure to a toxin. Proportion data are also easy to work
+with and the math for calculating things like \textbf{confidence
+intervals} intervals and especially \textbf{p-values} is much easier
+than for \textbf{continuous varibles} such as the length of a fruit fly
+wing or the height of a plant.
+
+\subsection*{\texorpdfstring{On counting ``events'' versus counting
+things}{On counting events versus counting things}}\label{on-counting-events-versus-counting-things}
+\addcontentsline{toc}{subsection}{On counting ``events'' versus counting
+things}
+
+Imagine you work for the Demography Department at Magee Women's Hospital
+in Pittsburgh. Your job every day is to visit everyone room in the
+hospital and count two things: 1) the number of visitors in each room
+and 2)ikm 5444155203/the number of brown-eyed babies out of the total
+number of babies. The first task is so that the hopital can determine
+how many people are visiting and the second task is to determine the
+percentage of brown-eyed babies born to the hosptial.
+
+For both tasks you are counting, but there is a very important but
+subtle difference between these two tasks. For the first task, you are
+counting up the number of people in each room, which could vary from
+zero (un-occupied) to a potentially large number if many people are
+visiting a newborn. Each data point is a number, either zero or
+something larger.
+
+For the second task you can think of it as counting up the number of
+brown-eyed babies, and this count could take on many different values
+depending on how many babies are born. However, this count is
+\textbf{bounded} by the total number of babies born. Similarly, key to
+what you want to know is the number of brown-eyed babies out of the
+total number of babies; you are therefore setting up a proportion. The
+former example doesn't invovle a proportion and is simply an
+\textbf{un-bounded count}.
+
+I'm belaboring this because this because I have frequently seen where
+misunderstanding the different statistical uses of the term ``count''
+has resulted in biologists (to be fair, only ecologists so far)
+selecting an incorrect statistical procedure.
+
+\subsection*{On confidence intervals versus
+p-values}\label{on-confidence-intervals-versus-p-values}
+\addcontentsline{toc}{subsection}{On confidence intervals versus
+p-values}
+
+Most books start with \textbf{p-values} then move on to
+\textbf{confidence intervals}; while the two things are intimately
+linked and derived from the same calculations, confidence intervals
+convey much more information. Motulsky starts off with confidence
+intervals in this chapter.
+
+\section*{Vocabulary}\label{vocabulary-2}
+\addcontentsline{toc}{section}{Vocabulary}
+
+\subsection*{Motulsky vocab}\label{motulsky-vocab-2}
+\addcontentsline{toc}{subsection}{Motulsky vocab}
+
+\begin{itemize}
+\tightlist
+\item
+  Bias
+\item
+  Binomial variable
+\item
+  Binomial distribution
+\item
+  Confidence interval (CI)
+\item
+  Confidence level
+\item
+  Credible interval
+\item
+  Point estimate
+\item
+  Random sampling
+\item
+  Sampling error
+\item
+  Simulation
+\item
+  Uncertainty interval
+\end{itemize}
+
+\subsection*{Additional vocab}\label{additional-vocab-1}
+\addcontentsline{toc}{subsection}{Additional vocab}
+
+\begin{itemize}
+\tightlist
+\item
+  binary data
+\item
+  binomial proportion
+\item
+  frequency
+\item
+  proportion
+\end{itemize}
+
+\section*{Chapter Notes}\label{chapter-notes-2}
+\addcontentsline{toc}{section}{Chapter Notes}
+
+\section{\texorpdfstring{``Data Expressed as
+Proportions''}{Data Expressed as Proportions}}\label{data-expressed-as-proportions}
+
+\section{\texorpdfstring{``The Binomial Distribution: From Population to
+Sample''}{The Binomial Distribution: From Population to Sample}}\label{the-binomial-distribution-from-population-to-sample}
+
+\section{\texorpdfstring{``Example: Free Throws in
+Basketball''}{Example: Free Throws in Basketball}}\label{example-free-throws-in-basketball}
+
+\section{\texorpdfstring{(``Example: Deaths of Premature
+Babies'')}{(Example: Deaths of Premature Babies)}}\label{example-deaths-of-premature-babies}
+
+Alive vs.~dead is one of the most basic binary conditions in biology.
+
+\section{\texorpdfstring{``Example: Polling
+Voters''}{Example: Polling Voters}}\label{example-polling-voters}
+
+\section{\texorpdfstring{``Assumptions: Confidence Interval of a
+Proportion''}{Assumptions: Confidence Interval of a Proportion}}\label{assumptions-confidence-interval-of-a-proportion}
+
+\subsection{\texorpdfstring{``Assumption: Random (or representative)
+sample''}{Assumption: Random (or representative) sample}}\label{assumption-random-or-representative-sample}
+
+\subsection{\texorpdfstring{``Assumption: Independent
+observations''}{Assumption: Independent observations}}\label{assumption-independent-observations}
+
+Proportional data can be tricky because the key to the statistics used
+to analyze them in most cases is that all of the events are
+\textbf{independent}. For example, each non-twin child born in a
+hosptial on the first day of month is essentially an \textbf{independent
+trial}. Each child has different parents, a different gestational
+environment, and most relevant if you are counting up the number with
+brown hair, different genetics. So, the hair color of one child born on
+the first day of the month has no impact on the hair color of another
+child; they are unlinked and unrelated.
+
+In contrast, there its possible that the fates of mothers while giving
+birth are not independnet. For example, what if we want to know the
+number of women who originally intended to give birth vaginally but
+ended up having a cecarian (c-section)? Each women is different, but
+they are likely to be attended to by the same attending physician, who
+can vary in their approach to delivery and when they recommend a
+c-section. So if 20 women give birth on the first day of the month, they
+hair color of their babies are all independent data points, but whether
+these women had c-sections or not is potentially not independent.
+
+\section{\texorpdfstring{``Assumption: Accurate
+Data''}{Assumption: Accurate Data}}\label{assumption-accurate-data}
+
+\section{\texorpdfstring{``What Does 95\% Confidence Really
+Mean''}{What Does 95\% Confidence Really Mean}}\label{what-does-95-confidence-really-mean}
+
+\subsection{\texorpdfstring{``A
+simulation''}{A simulation}}\label{a-simulation}
+
+\textbf{{[} {]}} Figure 4.2: What would happen if you collected many
+samples and computed a 95\% CI for each
+
+This figure is \textbf{very important.} The thought experiment where you
+hypothetically re-run your study or experiment many times is central to
+the concept of what \textbf{confidence intervals} and \textbf{p-values}
+are.
+
+\subsection{\texorpdfstring{``95\% Change of
+What?''"}{95\% Change of What?"}}\label{change-of-what}
+
+\subsection{\texorpdfstring{``What is Special About
+95\%''}{What is Special About 95\%}}\label{what-is-special-about-95}
+
+\textbf{{[} {]}} Nothing. Absolutely nothing. This cannot be repeated
+enough. There is nothing sacred scientifically or mathematically about
+95\% or a p-value that is less than 0.05.
+
+\textbf{{[} {]}} This is so important I will repeate it again.
+\textbf{There is nothing sacred scientifically or mathematically about
+95\% or a p-value that is less than 0.05.}
+
+\textbf{{[} {]}} There has even recently been a call to try to get
+people to not call something \textbf{``significant''} unless is
+\textbf{\textless{}0.005} (equivalent to using a 99.5 \% CI). This has
+resulted in a lot of discussion in journals, blogs, and twitter, with
+\textbf{frequentists} arguing with frequentists, some \textbf{Bayesians}
+offering their alternatives to signficance tests (eg Wagenmakers) and
+other Bayesian saying we need to get rid of hypothesis testing entirely
+(Gelman). There are many interesting blog posts and published opinion
+pieces on this now.
+
+Like most stats books Motulsky mentions the possiblity of calculating
+90\% CIs that are more lax, or 99\% CIs that are more stringent. Most
+books have you do exercises where you calcualte different CIs. In the
+biological sciences I have never seen anything but a 95\% CI. I think in
+manufacturing applications of statistics and other fields perhaps this
+is more common.
+
+\textbf{{[} {]}} There has been some discussion that is should be more
+common to think about what level of ``confidence'' you want or need to
+make a descision and adjucting your CI accordingly. This is discussed in
+print and via the blogs by the pyschologist Daniel Lakens, and I believe
+Richard Morey.
+
+\subsection{\texorpdfstring{(``What If The Assumption Are
+Violated'')}{(What If The Assumption Are Violated)}}\label{what-if-the-assumption-are-violated}
+
+THis section appeared in previous editions of the book
+
+\section{\texorpdfstring{``Are You Quantifying the Event You Really Care
+About?''}{Are You Quantifying the Event You Really Care About?}}\label{are-you-quantifying-the-event-you-really-care-about}
+
+\section{Lingo}\label{lingo-1}
+
+\subsection{CI versuse confidence
+limits}\label{ci-versuse-confidence-limits}
+
+``confidence limit'' isn't used too much in practice.
+
+\subsection{Estimate}\label{estimate}
+
+\subsection{Confidence level.}\label{confidence-level.}
+
+\textbf{{[} {]}} Again, there is nothing special about 95\%.
+
+\subsection{Uncertainty Interval}\label{uncertainty-interval}
+
+\textbf{Uncertainty interval} is a proposed replacement term for
+confidence interval. I have never seen it used, except by those who have
+proposed it.
+
+\section{\texorpdfstring{``Calculating The CI of a
+Proportion''"}{Calculating The CI of a Proportion"}}\label{calculating-the-ci-of-a-proportion}
+
+\subsection{\texorpdfstring{``Several methods are commonly
+used''"}{Several methods are commonly used"}}\label{several-methods-are-commonly-used}
+
+There are many ways to deal with binomial data in general, and in R. The
+basic ones usually show up in an intro stats course are
+
+\begin{itemize}
+\tightlist
+\item
+  Binomial test: binom.test()
+\item
+  Test for equal proportions: prop.test()
+\item
+  Chi\^{}2 test: chisq.test()
+\end{itemize}
+
+All of these produce similar result and are probably mathematically
+related if you start to dig into them, which I haven't done lately.
+
+This profusion of different tests is one annoying feature of the
+traditional way statistics is typically taught and the way most
+intro-level stats books are written. In contemporary applided
+statistics, binomial data like this are likely to be analyzed using
+something called \textbf{``logistic regression''} or a
+\textbf{``binomial general linear model''}. A general linear model is
+often called a \textbf{GLM} for short. Motulsky doesn't go all the way
+into developing GLMs but he is generally oriented in that direction,
+which is good.
+
+To be more precise, there are both
+
+\begin{itemize}
+\tightlist
+\item
+  Multiple ways to analyze these data to get a p-value
+\item
+  Multiple ways to calcualte a confidence interval
+\end{itemize}
+
+The confidence interval issue is what Motulsky focuses on here. I will
+work through these calculations in R by hand and also how to use common
+functions to get them, which also yield p-values.
+
+\subsection{\texorpdfstring{``How to compute the modified Wald method by
+Hand''}{How to compute the modified Wald method by Hand}}\label{how-to-compute-the-modified-wald-method-by-hand}
+
+This is a good computational exercise and so we'll work through the
+details. For published papers use a computer to do the work!
+
+We'll work with the following quantities
+
+\begin{itemize}
+\tightlist
+\item
+  S = the observed number of ``successes''
+\item
+  n = number of binomial ``trials''
+\end{itemize}
+
+Is this the same as gets repeated below? What was I doing \ldots{} :(
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Step 0: the data}
+\NormalTok{S <-}\StringTok{ }\DecValTok{31}   \CommentTok{#S = successes = num. infants surviving to 6 months}
+\NormalTok{n <-}\StringTok{ }\DecValTok{39}   \CommentTok{#n = number of trials = total num. infants in study}
+\NormalTok{z <-}\StringTok{ }\FloatTok{1.96} \CommentTok{#z = }
+
+\CommentTok{#calculate z^2}
+\NormalTok{z2 <-}\StringTok{ }\FloatTok{1.96}\OperatorTok{^}\DecValTok{2}
+
+\CommentTok{#round it off to 3 decimal places}
+\NormalTok{z2 <-}\StringTok{ }\KeywordTok{round}\NormalTok{(z2, }\DecValTok{3}\NormalTok{)}
+
+\CommentTok{# Step 1: calculate the Wald-corrected proportion}
+\NormalTok{## observed proportion}
+\NormalTok{P.obs  <-}\StringTok{ }\NormalTok{S}\OperatorTok{/}\NormalTok{n}
+\NormalTok{P.obs  <-}\StringTok{  }\KeywordTok{round}\NormalTok{(P.obs, }\DecValTok{3}\NormalTok{)           }
+
+\NormalTok{## "corrected" proportion}
+\NormalTok{### Set up whole formula}
+\NormalTok{P.corr <-}\StringTok{  }\NormalTok{(S}\OperatorTok{+}\NormalTok{z)}\OperatorTok{/}\NormalTok{(n}\OperatorTok{+}\NormalTok{z}\OperatorTok{^}\DecValTok{2}\NormalTok{)}
+
+\NormalTok{### might be easier to see if done in steps}
+\NormalTok{numerator <-}\StringTok{ }\NormalTok{S}\OperatorTok{+}\NormalTok{z}
+\NormalTok{denominator <-}\StringTok{ }\NormalTok{n}\OperatorTok{+}\NormalTok{z}\OperatorTok{^}\DecValTok{2}
+\NormalTok{P.corr <-}\StringTok{ }\NormalTok{numerator}\OperatorTok{/}\NormalTok{denominator}
+
+\NormalTok{### round off}
+\NormalTok{P.corr <-}\StringTok{ }\KeywordTok{round}\NormalTok{(P.corr, }\DecValTok{3}\NormalTok{)}
+
+\CommentTok{# Compute half-width of the CI}
+\NormalTok{## In one step}
+\NormalTok{W <-}\StringTok{ }\NormalTok{z}\OperatorTok{*}\KeywordTok{sqrt}\NormalTok{(P.corr}\OperatorTok{*}\NormalTok{(}\DecValTok{1}\OperatorTok{-}\NormalTok{P.corr)}\OperatorTok{/}\NormalTok{(n}\OperatorTok{+}\NormalTok{z}\OperatorTok{^}\DecValTok{2}\NormalTok{))}
+
+\NormalTok{## in parts}
+\NormalTok{### calculate numerator and denominator}
+\NormalTok{W.numerator   <-}\StringTok{ }\NormalTok{P.corr}\OperatorTok{*}\NormalTok{(}\DecValTok{1}\OperatorTok{-}\NormalTok{P.corr)}
+\NormalTok{W.denominator <-}\StringTok{ }\NormalTok{n}\OperatorTok{+}\NormalTok{z}\OperatorTok{^}\DecValTok{2}
+
+\NormalTok{### calcualte W}
+\NormalTok{W             <-}\StringTok{ }\NormalTok{z}\OperatorTok{*}\KeywordTok{sqrt}\NormalTok{(W.numerator}\OperatorTok{/}\NormalTok{W.denominator)}
+  
+\NormalTok{## round W off }
+\NormalTok{W <-}\StringTok{ }\KeywordTok{round}\NormalTok{(W, }\DecValTok{3}\NormalTok{)}
+
+\CommentTok{# Calculate CI bounds}
+\NormalTok{lower.CI <-}\StringTok{ }\NormalTok{P.corr }\OperatorTok{-}\StringTok{ }\NormalTok{W}
+\NormalTok{upper.CI <-}\StringTok{ }\NormalTok{P.corr }\OperatorTok{+}\StringTok{ }\NormalTok{W}
+
+\NormalTok{P.obs.calc  <-}\StringTok{ "=31/39"}
+\NormalTok{P.corr.calc <-}\StringTok{ "=(31+1.96)/(39+1.96^2)"}
+\end{Highlighting}
+\end{Shaded}
+
+The calculations can be laid out in a table like this
+
+A
+
+B
+
+C
+
+D
+
+E
+
+Data
+
+Calcualted.val
+
+survived
+
+31
+
+P.observed =
+
+0.795
+
+deceased
+
+8
+
+P.corrected =
+
+0.769
+
+n.total
+
+39
+
+W.numerator =
+
+32.96
+
+z
+
+1.96
+
+W.denominator=
+
+42.8416
+
+z.squared
+
+3.842
+
+W =
+
+0.126
+
+CI.lower =
+
+0.643
+
+CI.upper =
+
+0.895
+
+We can code Motulsky's analysis using the \textbf{Wald method} like
+this:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Step 0: the data}
+\NormalTok{S <-}\StringTok{ }\DecValTok{31}   \CommentTok{#S = successes = num. infants surviving to 6 months}
+\NormalTok{z <-}\StringTok{ }\FloatTok{1.96} \CommentTok{#z = }
+\NormalTok{n <-}\StringTok{ }\DecValTok{39}   \CommentTok{#n = number of trials = total num. infants in study}
+
+\CommentTok{# Step 1: calculate the Wald-corrected proportion}
+\NormalTok{P.obs  <-}\StringTok{  }\NormalTok{S}\OperatorTok{/}\NormalTok{n           }\CommentTok{#observe proportion}
+\NormalTok{P.corr <-}\StringTok{  }\NormalTok{(S}\OperatorTok{+}\NormalTok{z)}\OperatorTok{/}\NormalTok{(n}\OperatorTok{+}\NormalTok{z}\OperatorTok{^}\DecValTok{2}\NormalTok{) }\CommentTok{#corrected proportion}
+
+\CommentTok{#or, approximately, since 1.96^2 requires a calcualte}
+\NormalTok{## here what he is doing is just rounding 1.96 up to 2.}
+\NormalTok{## this if any makes the confidence a bit wider and}
+\NormalTok{## therefore a bit more conservative}
+\NormalTok{## of course, 33/43 typically will require a calculator}
+\NormalTok{P.corr.alt <-}\StringTok{  }\NormalTok{(S}\OperatorTok{+}\DecValTok{2}\NormalTok{)}\OperatorTok{/}\NormalTok{(n}\OperatorTok{+}\DecValTok{4}\NormalTok{)}
+
+\CommentTok{#If you get confused by the parentheses you can always break things up}
+
+\NormalTok{numerator <-}\StringTok{ }\NormalTok{S}\OperatorTok{+}\NormalTok{z}
+\NormalTok{denominator <-}\StringTok{ }\NormalTok{n}\OperatorTok{+}\NormalTok{z}\OperatorTok{^}\DecValTok{2}
+
+\NormalTok{P.corr <-}\StringTok{ }\NormalTok{numerator}\OperatorTok{/}\NormalTok{denominator}
+
+\CommentTok{# Compute half-width of the CI}
+\NormalTok{W <-}\StringTok{ }\NormalTok{z}\OperatorTok{*}\KeywordTok{sqrt}\NormalTok{(P.corr}\OperatorTok{*}\NormalTok{(}\DecValTok{1}\OperatorTok{-}\NormalTok{P.corr)}\OperatorTok{/}\NormalTok{(n}\OperatorTok{+}\NormalTok{z}\OperatorTok{^}\DecValTok{2}\NormalTok{))}
+
+\NormalTok{lower.CI <-}\StringTok{ }\NormalTok{P.corr }\OperatorTok{-}\StringTok{ }\NormalTok{W}
+\NormalTok{upper.CI <-}\StringTok{ }\NormalTok{P.corr }\OperatorTok{+}\StringTok{ }\NormalTok{W}
+\end{Highlighting}
+\end{Shaded}
+
+Here is the output of the three statistical ``tests'' can can be applied
+to these data.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#packages to clean up the output}
+\KeywordTok{library}\NormalTok{(tidyr)}
+\KeywordTok{library}\NormalTok{(broom)}
+\KeywordTok{library}\NormalTok{(pander)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}ccccc@{}}
+\toprule
+\begin{minipage}[b]{0.13\columnwidth}\centering\strut
+estimate\strut
+\end{minipage} & \begin{minipage}[b]{0.14\columnwidth}\centering\strut
+p.value\strut
+\end{minipage} & \begin{minipage}[b]{0.13\columnwidth}\centering\strut
+conf.low\strut
+\end{minipage} & \begin{minipage}[b]{0.14\columnwidth}\centering\strut
+conf.high\strut
+\end{minipage} & \begin{minipage}[b]{0.14\columnwidth}\centering\strut
+method\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.13\columnwidth}\centering\strut
+0.7949\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+0.0002941\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
+0.6354\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+0.907\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+binom.test\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.13\columnwidth}\centering\strut
+0.7949\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+0.000427\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
+0.6306\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+0.9013\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+prop.test\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.13\columnwidth}\centering\strut
+NA\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+0.0002306\strut
+\end{minipage} & \begin{minipage}[t]{0.13\columnwidth}\centering\strut
+NA\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+NA\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\centering\strut
+chi\^{}2\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+Here is the output using a binomial GLM (aka logistic regression)
+
+\begin{longtable}[]{@{}ccc@{}}
+\toprule
+\begin{minipage}[b]{0.14\columnwidth}\centering\strut
+estimate\strut
+\end{minipage} & \begin{minipage}[b]{0.15\columnwidth}\centering\strut
+std.error\strut
+\end{minipage} & \begin{minipage}[b]{0.11\columnwidth}\centering\strut
+p.value\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.14\columnwidth}\centering\strut
+0.775\strut
+\end{minipage} & \begin{minipage}[t]{0.15\columnwidth}\centering\strut
+0.3786\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\centering\strut
+0.00109\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsection{Shortcut for proportion near 50\%
+(OPTIONAL)}\label{shortcut-for-proportion-near-50-optional}
+
+\subsection{Shortcut for proportion far from 50\%
+(OPTIONAL)}\label{shortcut-for-proportion-far-from-50-optional}
+
+\subsection{Shortcut when the numerator is zero: The rule of three
+(OPTIONAL)}\label{shortcut-when-the-numerator-is-zero-the-rule-of-three-optional}
+
+\section{\texorpdfstring{``Ambiguity if The Proportion Is 0\% or
+100\%''}{Ambiguity if The Proportion Is 0\% or 100\%}}\label{ambiguity-if-the-proportion-is-0-or-100}
+
+\section{\texorpdfstring{``An Alternative Approach: Bayesian Credible
+Intervals''}{An Alternative Approach: Bayesian Credible Intervals}}\label{an-alternative-approach-bayesian-credible-intervals}
+
+\section{\texorpdfstring{``Common Mistakes: CI of A
+Proportion''}{Common Mistakes: CI of A Proportion}}\label{common-mistakes-ci-of-a-proportion}
+
+\subsection{\texorpdfstring{``Mistake: Using 100 as the denominator when
+the value is a
+percentage''}{Mistake: Using 100 as the denominator when the value is a percentage}}\label{mistake-using-100-as-the-denominator-when-the-value-is-a-percentage}
+
+\subsection{\texorpdfstring{``Mistake: Computing binomial ICs from
+percentage change in a continous
+variable''}{Mistake: Computing binomial ICs from percentage change in a continous variable}}\label{mistake-computing-binomial-ics-from-percentage-change-in-a-continous-variable}
+
+\subsection{\texorpdfstring{``Mistake: Computating a CI from data that
+look like a proportion but really is
+not''}{Mistake: Computating a CI from data that look like a proportion but really is not}}\label{mistake-computating-a-ci-from-data-that-look-like-a-proportion-but-really-is-not}
+
+\subsection{\texorpdfstring{``Mistake: Interpretting a Bayesin credible
+interval wihtout knowing what prior probabilities (or probabilitiey
+distribuiton) were assumed for the
+analysis''}{Mistake: Interpretting a Bayesin credible interval wihtout knowing what prior probabilities (or probabilitiey distribuiton) were assumed for the analysis}}\label{mistake-interpretting-a-bayesin-credible-interval-wihtout-knowing-what-prior-probabilities-or-probabilitiey-distribuiton-were-assumed-for-the-analysis}
+
+\section{Q \& A}\label{q-a}
+
+All of these are good points
+
+\textbf{{[} {]} Figure 4.3. Effect of sample size on the width of a CI}
+This is a very important idea. Sample size is key to increasing the
+confidence we have in a result
+
+\textbf{{[} {]} Figure 4.4. Asymmetrical CI} Proportions, percentages,
+etc are all bounded between 0 and 1, or 0\% and 100\%. Most methods of
+calculating confidence intervals for this type of data (but not all!)
+will produce assymmetric CI. If you see a CI for this type of data that
+crosses 0\% or 100\%, there's a good chance the authors did not use an
+appropriate method for calculating the confidence intervals. I see this
+most often when data are percentages, like mean percentage of the ground
+covered by an invasive species.
+
+\chapter{\texorpdfstring{``Graphing Continous
+Data''}{Graphing Continous Data}}\label{graphing-continous-data}
+
+\section*{Commentary}\label{commentary-2}
+\addcontentsline{toc}{section}{Commentary}
+
+\section*{Vocabulary}\label{vocabulary-3}
+\addcontentsline{toc}{section}{Vocabulary}
+
+\subsection*{Motulsky vocab}\label{motulsky-vocab-3}
+\addcontentsline{toc}{subsection}{Motulsky vocab}
+
+\begin{itemize}
+\tightlist
+\item
+  Arithmetic mean
+\item
+  Bias
+\item
+  Box-and-wisker plot (boxplot)
+\item
+  Continous data
+\item
+  Dotplot (or scatter plot) (or beeswarm)
+\item
+  Error
+\item
+  Frequency distribution
+\item
+  Histogram
+\item
+  Interquartile range
+\item
+  Mean
+\item
+  Median
+\item
+  Mode
+\item
+  Outlier
+\item
+  Percentile
+\item
+  Quartile
+\item
+  Precision
+\item
+  Smoothed data
+\item
+  Trimmed mean
+\item
+  Violin plot
+\end{itemize}
+
+\subsection*{Additional vocab}\label{additional-vocab-2}
+\addcontentsline{toc}{subsection}{Additional vocab}
+
+\subsection*{Key functions}\label{key-functions-2}
+\addcontentsline{toc}{subsection}{Key functions}
+
+\begin{itemize}
+\tightlist
+\item
+  boxplot
+\item
+  beeswarm::beeswarm
+\item
+  stripplot
+\end{itemize}
+
+\section*{Chapter Notes}\label{chapter-notes-3}
+\addcontentsline{toc}{section}{Chapter Notes}
+
+\section{\texorpdfstring{``Continuous
+Data''}{Continuous Data}}\label{continuous-data}
+
+Ecological examples of contiunous data include: the mass of a lizard,
+the volume of bird feces, the length of a spider appendage, the height
+of a tree.
+
+Lab biology example of continuous data include: the concentration of
+protein in solution, the intensity of a band on a gel, the molecular
+weight of different salt ions.
+
+\section{\texorpdfstring{``The Mean and
+Median''}{The Mean and Median}}\label{the-mean-and-median}
+
+\begin{itemize}
+\tightlist
+\item
+  Median: Medians are useful because the provide a better idea of the
+  center of a distribution even if there are \textbf{outliers} or
+  \textbf{skew}. Medians are very useful to think about and plot in your
+  graphs, but suprisingly rarely comes into play for actual statistical
+  calculations. This is because the math related to medians causes
+  problems; means are much easier to work with. The field of
+  (\textbf{robust
+  statistics}){[}\url{https://en.wikipedia.org/wiki/Robust_statistics}{]}
+  frequently works with medians.
+  \href{https://en.wikipedia.org/wiki/Quantile_regression}{\textbf{Quantile
+  regression}} is one method that works particularly with medians.
+\item
+  The geometric mean: good to know about but results are rarely
+  presented in terms of geometric means. (An exception in ecology is
+  stochastic demography.)
+\item
+  Harmonic mean: like the geometric mean, results are rarely presented
+  this way.
+\item
+  Trimmed mean: not currently use much in biology, but potentially used.
+  Discussion of robust statistics sometimes include trimmed means.
+\item
+  Mode: Like the median, useful to think about but rarely used in
+  statistic computation.
+\end{itemize}
+
+\section{\texorpdfstring{``Lingo: Terms used to Explain
+Variability''}{Lingo: Terms used to Explain Variability}}\label{lingo-terms-used-to-explain-variability}
+
+\subsection{\texorpdfstring{``Biological
+variability''}{Biological variability}}\label{biological-variability}
+
+\subsection{\texorpdfstring{``Precision''}{Precision}}\label{precision}
+
+{[}?? do I agree with this way of framing things{]}
+
+\subsection{\texorpdfstring{``Bias''}{Bias}}\label{bias}
+
+\subsection{\texorpdfstring{``Accuracy''}{Accuracy}}\label{accuracy}
+
+\subsection{\texorpdfstring{``Error''}{Error}}\label{error}
+
+\section{\texorpdfstring{``Percentiles''}{Percentiles}}\label{percentiles}
+
+\section{\texorpdfstring{``Graphing Data to Show
+Variation''}{Graphing Data to Show Variation}}\label{graphing-data-to-show-variation}
+
+\subsection{\texorpdfstring{``Scatter
+plots''}{Scatter plots}}\label{scatter-plots}
+
+\textbf{Scatter plots} often refer to plots used when you have two
+numeric variables, like this
+\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-9-1.pdf}
+
+What Motulsky shows in Figure 7.1 is sometimes now called a
+\href{https://flowingdata.com/2016/09/08/beeswarm-plot-in-r-to-show-distributions/}{\textbf{beeswarm
+plot}}, a name I like. They can be made in R using the
+\href{http://www.cbs.dtu.dk/~eklund/beeswarm/}{beeswarm package}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{beeswarm}\NormalTok{(Sepal.Length }\OperatorTok{~}\StringTok{ }\NormalTok{Species, }
+         \DataTypeTok{data =}\NormalTok{ iris)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-10-1.pdf}
+
+A similar type of plot is a
+\href{http://www.clayford.net/statistics/tag/strip-charts/}{stripchart}.
+These work best when they are set up to not have their points
+overlapping, which is called \textbf{jittering}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{stripchart}\NormalTok{(Sepal.Length }\OperatorTok{~}\StringTok{ }\NormalTok{Species, }
+           \DataTypeTok{data =}\NormalTok{ iris, }
+           \DataTypeTok{vertical =} \OtherTok{TRUE}\NormalTok{, }
+           \DataTypeTok{method=}\StringTok{"jitter"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-11-1.pdf}
+
+A beeswarm plot is basically a jitter stripchart that has been well
+organized. And has a cooler name.
+
+\subsection{\texorpdfstring{``Box-and-whiskers
+plots''}{Box-and-whiskers plots}}\label{box-and-whiskers-plots}
+
+Usually just called a
+\href{https://en.wikipedia.org/wiki/Box_plot}{\textbf{boxplot}}.
+
+In base R they are made with the boxplot() command.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{boxplot}\NormalTok{(Sepal.Length }\OperatorTok{~}\StringTok{ }\NormalTok{Species, }
+           \DataTypeTok{data =}\NormalTok{ iris, }
+           \DataTypeTok{vertical =} \OtherTok{TRUE}\NormalTok{, }
+           \DataTypeTok{method=}\StringTok{"jitter"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-12-1.pdf}
+
+In ggplot they can be made like this with the qplot() function
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{qplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ iris, }
+      \DataTypeTok{y =}\NormalTok{ Sepal.Length,}
+      \DataTypeTok{x =}\NormalTok{ Species,}
+      \DataTypeTok{geom =} \StringTok{"boxplot"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-13-1.pdf}
+
+Or directly with ggplot() using geom\_boxplot()
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ iris,}
+       \KeywordTok{aes}\NormalTok{(}\DataTypeTok{y =}\NormalTok{ Sepal.Length,}
+           \DataTypeTok{x =}\NormalTok{ Species)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_boxplot}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-14-1.pdf}
+
+\subsection{\texorpdfstring{``Violin
+plots''}{Violin plots}}\label{violin-plots}
+
+Violin plot can be useful when you want more information than given by a
+boxplot but have too much data for a beeswarm. There's a package in R
+which implements
+\href{https://www.statmethods.net/graphs/boxplot.html}{violin plots} for
+basic R graphics. In ggplot you use geom\_violin().
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ iris,}
+       \KeywordTok{aes}\NormalTok{(}\DataTypeTok{y =}\NormalTok{ Sepal.Length,}
+           \DataTypeTok{x =}\NormalTok{ Species)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_violin}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-15-1.pdf}
+
+\section{\texorpdfstring{``Graphing
+Distributions''}{Graphing Distributions}}\label{graphing-distributions}
+
+\subsection{\texorpdfstring{``Frequency
+distributions''}{Frequency distributions}}\label{frequency-distributions}
+
+\subsection{\texorpdfstring{``Cumulative frequency distribution''
+(OPTIONAL)}{Cumulative frequency distribution (OPTIONAL)}}\label{cumulative-frequency-distribution-optional}
+
+Good to know about but not applicable to most entry-level stats.
+
+\section{\texorpdfstring{``Beware of Data
+Massage''}{Beware of Data Massage}}\label{beware-of-data-massage}
+
+\subsection{\texorpdfstring{``Beware of filtering out impossible
+values''}{Beware of filtering out impossible values}}\label{beware-of-filtering-out-impossible-values}
+
+\subsection{\texorpdfstring{``Beware of adjusting
+data''}{Beware of adjusting data}}\label{beware-of-adjusting-data}
+
+\subsection{\texorpdfstring{``Beware of
+smoothing''}{Beware of smoothing}}\label{beware-of-smoothing}
+
+\subsection{\texorpdfstring{``Beware of variable that are the ratio of
+two
+measurements''}{Beware of variable that are the ratio of two measurements}}\label{beware-of-variable-that-are-the-ratio-of-two-measurements}
+
+\subsection{\texorpdfstring{``Beware of normalized
+data''}{Beware of normalized data}}\label{beware-of-normalized-data}
+
+\subsection*{Beware of ratios of
+ratios}\label{beware-of-ratios-of-ratios}
+\addcontentsline{toc}{subsection}{Beware of ratios of ratios}
+
+Certo, et al. 2018. Divided We Fall: How Ratios Undermine Research in
+Strategic Management
+\url{http://journals.sagepub.com/doi/abs/10.1177/1094428118773455}
+
+Curran-Everett, D. 2013. Explorations in statistics: the analysis of
+ratios and normalized data.
+\href{https://www.physiology.org/doi/abs/10.1152/advan.00053.2013}{Advances
+in Physiology Education.}
+
+Motulsky doesn't mention this. It can be a problem, though. Some papers
+related to this topic:
+
+Karp et al. 2012. The fallacy of ratio correction to address confounding
+factors. Laboratory Animals 46: 245--252.
+
+Koch et al. 2015. Overcoming problems with the use of ratios as
+continuous characters for phylogenetic analyses. Zoologica Scripta.
+
+\section{Q \& A}\label{q-a-1}
+
+\section*{Further reading}\label{further-reading-2}
+\addcontentsline{toc}{section}{Further reading}
+
+\section*{References}\label{references-2}
+\addcontentsline{toc}{section}{References}
+
+\section*{Annotated Bibliography}\label{annotated-bibliography-2}
+\addcontentsline{toc}{section}{Annotated Bibliography}
+
+\chapter{\texorpdfstring{Chapter ``Types of
+Variables''}{Chapter Types of Variables}}\label{chapter-types-of-variables}
+
+\section*{Commentary}\label{commentary-3}
+\addcontentsline{toc}{section}{Commentary}
+
+\section*{Vocabulary}\label{vocabulary-4}
+\addcontentsline{toc}{section}{Vocabulary}
+
+\begin{itemize}
+\tightlist
+\item
+  Binomial variable
+\item
+  Continous variable
+\item
+  Discrete varible
+\item
+  Interval variable
+\item
+  Nominal variable
+\item
+  ordinal variable
+\item
+  Ratio variable
+\end{itemize}
+
+\subsection{Motulsky vocab}\label{motulsky-vocab-4}
+
+\subsection{Aditional vocab}\label{aditional-vocab-1}
+
+\subsection{Key functions}\label{key-functions-3}
+
+None
+
+\section*{Chapter Notes}\label{chapter-notes-4}
+\addcontentsline{toc}{section}{Chapter Notes}
+
+\section{\texorpdfstring{``Continous
+Variables''}{Continous Variables}}\label{continous-variables}
+
+\subsection{\texorpdfstring{``Interval
+variables''}{Interval variables}}\label{interval-variables}
+
+\subsection{\texorpdfstring{``Ratio
+variables''}{Ratio variables}}\label{ratio-variables}
+
+\section{\texorpdfstring{``Discrete
+Variables''}{Discrete Variables}}\label{discrete-variables}
+
+\subsection{\texorpdfstring{``Ordinal
+variables''}{Ordinal variables}}\label{ordinal-variables}
+
+\subsection{\texorpdfstring{``Nominal and binomial
+variables''}{Nominal and binomial variables}}\label{nominal-and-binomial-variables}
+
+\section{\texorpdfstring{``Why It
+Matters''}{Why It Matters}}\label{why-it-matters}
+
+\section{\texorpdfstring{``Not Quite As Distinct As They
+Seem''}{Not Quite As Distinct As They Seem}}\label{not-quite-as-distinct-as-they-seem}
+
+\section{Q\&A}\label{qa}
+
+\section*{Further reading}\label{further-reading-3}
+\addcontentsline{toc}{section}{Further reading}
+
+\section*{References}\label{references-3}
+\addcontentsline{toc}{section}{References}
+
+\section*{Annotated Bibliography}\label{annotated-bibliography-3}
+\addcontentsline{toc}{section}{Annotated Bibliography}
+
+\chapter{\texorpdfstring{Chapter ``Quantifying
+Scatter''}{Chapter Quantifying Scatter}}\label{chapter-quantifying-scatter}
+
+\section*{Commentary}\label{commentary-4}
+\addcontentsline{toc}{section}{Commentary}
+
+\section*{Vocabulary}\label{vocabulary-5}
+\addcontentsline{toc}{section}{Vocabulary}
+
+\subsection{Motulsky vocab}\label{motulsky-vocab-5}
+
+\subsection{Aditional vocab}\label{aditional-vocab-2}
+
+\subsection{Key functions}\label{key-functions-4}
+
+None
+
+\section*{Chapter Notes}\label{chapter-notes-5}
+\addcontentsline{toc}{section}{Chapter Notes}
+
+\section{\texorpdfstring{``Interpretting A Standard
+Deviation''}{Interpretting A Standard Deviation}}\label{interpretting-a-standard-deviation}
+
+\section{How It Works: Calculating
+SD"}\label{how-it-works-calculating-sd}
+
+\section{\texorpdfstring{``Why n-1?''}{Why n-1?}}\label{why-n-1}
+
+\subsection{\texorpdfstring{``When it somes makes sense to use n in the
+denominator''}{When it somes makes sense to use n in the denominator}}\label{when-it-somes-makes-sense-to-use-n-in-the-denominator}
+
+\subsection{\texorpdfstring{``Why it usually makes sense to use n-1 in
+the
+denominator''}{Why it usually makes sense to use n-1 in the denominator}}\label{why-it-usually-makes-sense-to-use-n-1-in-the-denominator}
+
+\subsection{\texorpdfstring{``The fine
+print''}{The fine print}}\label{the-fine-print}
+
+\section{\texorpdfstring{``Situations in Which n Can Seem
+Ambiguous''}{Situations in Which n Can Seem Ambiguous}}\label{situations-in-which-n-can-seem-ambiguous}
+
+\subsection{\texorpdfstring{``Replicate measurements within repae
+experiments''}{Replicate measurements within repae experiments}}\label{replicate-measurements-within-repae-experiments}
+
+\subsection{\texorpdfstring{``Eyes, ears and
+elbos''}{Eyes, ears and elbos}}\label{eyes-ears-and-elbos}
+
+\subsection{\texorpdfstring{``Representaitve
+experiments''}{Representaitve experiments}}\label{representaitve-experiments}
+
+\subsection{\texorpdfstring{``Trials with one
+subject''}{Trials with one subject}}\label{trials-with-one-subject}
+
+\section{\texorpdfstring{``SD and Sample
+Size''}{SD and Sample Size}}\label{sd-and-sample-size}
+
+\section{\texorpdfstring{``Other Ways to Quantify \& Display
+Variability''}{Other Ways to Quantify \& Display Variability}}\label{other-ways-to-quantify-display-variability}
+
+\subsection{\texorpdfstring{``Coefficient of
+variation''}{Coefficient of variation}}\label{coefficient-of-variation}
+
+\subsection{\texorpdfstring{``Variance''}{Variance}}\label{variance}
+
+\subsection{\texorpdfstring{``Interquartile
+range''}{Interquartile range}}\label{interquartile-range}
+
+\subsection{\texorpdfstring{``Five-number
+smmary''}{Five-number smmary}}\label{five-number-smmary}
+
+\subsection{\texorpdfstring{``Median absolute
+deviation''}{Median absolute deviation}}\label{median-absolute-deviation}
+
+\section{Q\&A}\label{qa-1}
+
+\section*{Further reading}\label{further-reading-4}
+\addcontentsline{toc}{section}{Further reading}
+
+\section*{References}\label{references-4}
+\addcontentsline{toc}{section}{References}
+
+\section*{Annotated Bibliography}\label{annotated-bibliography-4}
+\addcontentsline{toc}{section}{Annotated Bibliography}
 
 \bibliography{book.bib}
 
