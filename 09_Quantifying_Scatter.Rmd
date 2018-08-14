@@ -1,0 +1,65 @@
+# Chapter "Quantifying Scatter" 
+
+## Commentary {-}
+
+## Vocabulary {-}
+
+
+
+### Motulsky vocab
+
+### Aditional vocab
+
+### Key functions
+
+None
+
+## Chapter Notes {-}
+
+## "Interpretting A Standard Deviation"
+
+## How It Works: Calculating SD"
+
+## "Why n-1?"
+
+### "When it somes makes sense to use n in the denominator"
+
+### "Why it usually makes sense to use n-1 in the denominator"
+
+### "The fine print"
+
+## "Situations in Which n Can Seem Ambiguous"
+
+### "Replicate measurements within repae experiments"
+
+### "Eyes, ears and elbos"
+
+### "Representaitve experiments"
+
+### "Trials with one subject"
+
+## "SD and Sample Size"
+
+## "Other Ways to Quantify & Display Variability"
+
+### "Coefficient of variation"
+
+### "Variance"
+
+### "Interquartile range"
+
+### "Five-number smmary"
+
+### "Median absolute deviation"
+
+
+
+## Q&A
+
+
+## Further reading {-}
+
+## References {-}
+
+## Annotated Bibliography {-}
+

@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>A Reading Guide to Intuitive Biostatistics</title>
+  <meta name="description" content="This is a reading guide to Harvey Motulsky’s Intuitive Biostatistics: A Nonmathematical Guide to Statistical Thinking, 4th edition.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="A Reading Guide to Intuitive Biostatistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a reading guide to Harvey Motulsky’s Intuitive Biostatistics: A Nonmathematical Guide to Statistical Thinking, 4th edition." />
+  <meta name="github-repo" content="brouwern/IBSguide" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A Reading Guide to Intuitive Biostatistics" />
+  
+  <meta name="twitter:description" content="This is a reading guide to Harvey Motulsky’s Intuitive Biostatistics: A Nonmathematical Guide to Statistical Thinking, 4th edition." />
+  
+
+<meta name="author" content="Nathan Brouwer">
+
+
+<meta name="date" content="2018-08-13">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="ch2.html">
+<link rel="next" href="references-1.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Reading Guide to Intuitive Biostatistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="ch1.html"><a href="ch1.html"><i class="fa fa-check"></i><b>1</b> “Statistics &amp; Probablity Are Not Intuitive”</a><ul>
+<li class="chapter" data-level="" data-path="ch1.html"><a href="ch1.html#commentary"><i class="fa fa-check"></i>Commentary</a></li>
+<li class="chapter" data-level="" data-path="ch1.html"><a href="ch1.html#vocabulary"><i class="fa fa-check"></i>Vocabulary</a><ul>
+<li class="chapter" data-level="" data-path="ch1.html"><a href="ch1.html#motulsky-vocab"><i class="fa fa-check"></i>Motulsky vocab</a></li>
+<li class="chapter" data-level="" data-path="ch1.html"><a href="ch1.html#additional-vocab"><i class="fa fa-check"></i>Additional vocab</a></li>
+<li class="chapter" data-level="" data-path="ch1.html"><a href="ch1.html#key-functions"><i class="fa fa-check"></i>Key functions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="ch1.html"><a href="ch1.html#chapter-notes"><i class="fa fa-check"></i>Chapter Notes</a></li>
+<li class="chapter" data-level="1.1" data-path="ch1.html"><a href="ch1.html#we-tend-to-jump-to-conclusions"><i class="fa fa-check"></i><b>1.1</b> We Tend to Jump to Conclusions</a></li>
+<li class="chapter" data-level="1.2" data-path="ch1.html"><a href="ch1.html#we-tend-to-be-overconfident"><i class="fa fa-check"></i><b>1.2</b> We Tend to Be Overconfident</a></li>
+<li class="chapter" data-level="1.3" data-path="ch1.html"><a href="ch1.html#we-see-patterns-in-random-data"><i class="fa fa-check"></i><b>1.3</b> We see Patterns in Random Data</a></li>
+<li class="chapter" data-level="1.4" data-path="ch1.html"><a href="ch1.html#we-dont-realize-that-coincidences-are-common"><i class="fa fa-check"></i><b>1.4</b> We don’t realize that coincidences are common</a></li>
+<li class="chapter" data-level="1.5" data-path="ch1.html"><a href="ch1.html#we-dont-expect-variability-to-depend-on-sample-size"><i class="fa fa-check"></i><b>1.5</b> We don’t expect variability to depend on sample size</a></li>
+<li class="chapter" data-level="1.6" data-path="ch1.html"><a href="ch1.html#we-have-incorrect-intuitive-feelings-about-probability"><i class="fa fa-check"></i><b>1.6</b> We Have Incorrect Intuitive Feelings About Probability</a></li>
+<li class="chapter" data-level="1.7" data-path="ch1.html"><a href="ch1.html#we-find-it-hard-to-combine-probabilities"><i class="fa fa-check"></i><b>1.7</b> We Find it Hard to Combine Probabilities</a></li>
+<li class="chapter" data-level="1.8" data-path="ch1.html"><a href="ch1.html#we-avoid-thinking-about-ambiguous-situations"><i class="fa fa-check"></i><b>1.8</b> (We Avoid Thinking About Ambiguous Situations)</a></li>
+<li class="chapter" data-level="1.9" data-path="ch1.html"><a href="ch1.html#we-dont-do-bayesian-calculations-intuitively"><i class="fa fa-check"></i><b>1.9</b> We Don’t Do Bayesian Calculations Intuitively</a></li>
+<li class="chapter" data-level="1.10" data-path="ch1.html"><a href="ch1.html#we-are-fooled-by-multiple-comparisons"><i class="fa fa-check"></i><b>1.10</b> We are Fooled By Multiple Comparisons</a></li>
+<li class="chapter" data-level="1.11" data-path="ch1.html"><a href="ch1.html#we-tend-to-ignore-alternative-explanations"><i class="fa fa-check"></i><b>1.11</b> We tend to ignore alternative explanations</a></li>
+<li class="chapter" data-level="1.12" data-path="ch1.html"><a href="ch1.html#we-are-fooled-by-regression-to-the-mean"><i class="fa fa-check"></i><b>1.12</b> We are fooled by regression to the mean</a></li>
+<li class="chapter" data-level="1.13" data-path="ch1.html"><a href="ch1.html#we-let-our-biases-determine-how-we-interpret-data"><i class="fa fa-check"></i><b>1.13</b> We let our biases determine how we interpret data</a></li>
+<li class="chapter" data-level="1.14" data-path="ch1.html"><a href="ch1.html#we-crave-certainty-but-statistics-offers-probability"><i class="fa fa-check"></i><b>1.14</b> We crave certainty, but statistics offers probability</a></li>
+<li class="chapter" data-level="1.15" data-path="ch1.html"><a href="ch1.html#further-reading"><i class="fa fa-check"></i><b>1.15</b> Further reading</a></li>
+<li class="chapter" data-level="1.16" data-path="ch1.html"><a href="ch1.html#references"><i class="fa fa-check"></i><b>1.16</b> References</a></li>
+<li class="chapter" data-level="1.17" data-path="ch1.html"><a href="ch1.html#annotated-bibliography"><i class="fa fa-check"></i><b>1.17</b> Annotated Bibliography</a><ul>
+<li class="chapter" data-level="1.17.1" data-path="ch1.html"><a href="ch1.html#multiple-comparisons"><i class="fa fa-check"></i><b>1.17.1</b> Multiple comparisons</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="ch2.html"><a href="ch2.html"><i class="fa fa-check"></i><b>2</b> “The complexities of probability”</a><ul>
+<li class="chapter" data-level="" data-path="ch2.html"><a href="ch2.html#commentary-1"><i class="fa fa-check"></i>Commentary</a></li>
+<li class="chapter" data-level="2.1" data-path="ch2.html"><a href="ch2.html#focal-parts-of-chapter"><i class="fa fa-check"></i><b>2.1</b> Focal parts of chapter</a></li>
+<li class="chapter" data-level="" data-path="ch2.html"><a href="ch2.html#vocabulary-1"><i class="fa fa-check"></i>Vocabulary</a><ul>
+<li class="chapter" data-level="" data-path="ch2.html"><a href="ch2.html#motulsky-vocab-1"><i class="fa fa-check"></i>Motulsky vocab</a></li>
+<li class="chapter" data-level="" data-path="ch2.html"><a href="ch2.html#aditional-vocab"><i class="fa fa-check"></i>Aditional vocab</a></li>
+<li class="chapter" data-level="" data-path="ch2.html"><a href="ch2.html#key-functions-1"><i class="fa fa-check"></i>Key functions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="ch2.html"><a href="ch2.html#chapter-notes-1"><i class="fa fa-check"></i>Chapter Notes</a></li>
+<li class="chapter" data-level="2.2" data-path="ch2.html"><a href="ch2.html#basics-of-probability"><i class="fa fa-check"></i><b>2.2</b> Basics of probability</a></li>
+<li class="chapter" data-level="2.3" data-path="ch2.html"><a href="ch2.html#probability-as-long-term-frequency"><i class="fa fa-check"></i><b>2.3</b> Probability as long-term frequency</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="ch2.html"><a href="ch2.html#probabilities-as-predictions-from-a-model"><i class="fa fa-check"></i><b>2.3.1</b> Probabilities as predictions from a model</a></li>
+<li class="chapter" data-level="2.3.2" data-path="ch2.html"><a href="ch2.html#probabilities-based-on-data"><i class="fa fa-check"></i><b>2.3.2</b> Probabilities based on data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="ch2.html"><a href="ch2.html#probabilities-as-strength-of-belief"><i class="fa fa-check"></i><b>2.4</b> Probabilities As Strength of Belief</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="ch2.html"><a href="ch2.html#subjective-probabilities"><i class="fa fa-check"></i><b>2.4.1</b> Subjective probabilities</a></li>
+<li class="chapter" data-level="2.4.2" data-path="ch2.html"><a href="ch2.html#probabilities-used-to-quantify-ignorance"><i class="fa fa-check"></i><b>2.4.2</b> “Probabilities” used to quantify ignorance</a></li>
+<li class="chapter" data-level="2.4.3" data-path="ch2.html"><a href="ch2.html#quantitative-predictions-of-one-time-events"><i class="fa fa-check"></i><b>2.4.3</b> Quantitative predictions of one-time events</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="ch2.html"><a href="ch2.html#calculations-with-probabilities-can-be-easier-if-you-switch-to-calcualting-with-whole-numbers"><i class="fa fa-check"></i><b>2.5</b> Calculations with probabilities can be easier if you switch to calcualting with whole numbers</a></li>
+<li class="chapter" data-level="2.6" data-path="ch2.html"><a href="ch2.html#section"><i class="fa fa-check"></i><b>2.6</b> 0.8% = 0.008</a></li>
+<li class="chapter" data-level="2.7" data-path="ch2.html"><a href="ch2.html#those-with-cancerprobablity-of-positive-mammogram-common-mistakes-probability-mistake-ignoring-assumptions-mistake-trying-to-understand-probability-without-clearly-defining-both-the-numerator-the-denominator-mistake-reversing-probability-statements-mistake-believing-the-probability-has-a-memory-lingo-probability-vs.odds-probability-vs.statistics-probability-vs.likelihood-probability-in-statistics-further-reading-references-annotated-bibliography-multiple-comparisons"><i class="fa fa-check"></i><b>2.7</b> (those with cancer)*(probablity of positive mammogram) ## Common Mistakes: Probability ### Mistake: Ignoring assumptions ### Mistake: Trying to understand probability without clearly defining both the numerator &amp; the denominator ### Mistake: Reversing probability statements ### Mistake: Believing the probability has a memory ## Lingo ### Probability vs. odds ### Probability vs. statistics ### Probability vs. likelihood ## Probability In Statistics ## Further reading ### References ### Annotated Bibliography #### Multiple comparisons</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="ch4.html"><a href="ch4.html"><i class="fa fa-check"></i><b>3</b> “Confidence Interval of a Proportion”</a><ul>
+<li class="chapter" data-level="" data-path="ch4.html"><a href="ch4.html#preamble"><i class="fa fa-check"></i>Preamble</a><ul>
+<li class="chapter" data-level="" data-path="ch4.html"><a href="ch4.html#on-proportions-frequencies-and-percentages"><i class="fa fa-check"></i>On proportions, frequencies, and percentages</a></li>
+<li class="chapter" data-level="" data-path="ch4.html"><a href="ch4.html#on-counting-events-versus-counting-things"><i class="fa fa-check"></i>On counting “events” versus counting things</a></li>
+<li class="chapter" data-level="" data-path="ch4.html"><a href="ch4.html#on-confidence-intervals-versus-p-values"><i class="fa fa-check"></i>On confidence intervals versus p-values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="ch4.html"><a href="ch4.html#vocabulary-2"><i class="fa fa-check"></i>Vocabulary</a><ul>
+<li class="chapter" data-level="" data-path="ch4.html"><a href="ch4.html#motulsky-vocab-2"><i class="fa fa-check"></i>Motulsky vocab</a></li>
+<li class="chapter" data-level="" data-path="ch4.html"><a href="ch4.html#additional-vocab-1"><i class="fa fa-check"></i>Additional vocab</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="ch4.html"><a href="ch4.html#chapter-notes-2"><i class="fa fa-check"></i>Chapter Notes</a></li>
+<li class="chapter" data-level="3.1" data-path="ch4.html"><a href="ch4.html#data-expressed-as-proportions"><i class="fa fa-check"></i><b>3.1</b> “Data Expressed as Proportions”</a></li>
+<li class="chapter" data-level="3.2" data-path="ch4.html"><a href="ch4.html#the-binomial-distribution-from-population-to-sample"><i class="fa fa-check"></i><b>3.2</b> “The Binomial Distribution: From Population to Sample”</a></li>
+<li class="chapter" data-level="3.3" data-path="ch4.html"><a href="ch4.html#example-free-throws-in-basketball"><i class="fa fa-check"></i><b>3.3</b> “Example: Free Throws in Basketball”</a></li>
+<li class="chapter" data-level="3.4" data-path="ch4.html"><a href="ch4.html#example-deaths-of-premature-babies"><i class="fa fa-check"></i><b>3.4</b> (“Example: Deaths of Premature Babies”)</a></li>
+<li class="chapter" data-level="3.5" data-path="ch4.html"><a href="ch4.html#example-polling-voters"><i class="fa fa-check"></i><b>3.5</b> “Example: Polling Voters”</a></li>
+<li class="chapter" data-level="3.6" data-path="ch4.html"><a href="ch4.html#assumptions-confidence-interval-of-a-proportion"><i class="fa fa-check"></i><b>3.6</b> “Assumptions: Confidence Interval of a Proportion”</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="ch4.html"><a href="ch4.html#assumption-random-or-representative-sample"><i class="fa fa-check"></i><b>3.6.1</b> “Assumption: Random (or representative) sample”</a></li>
+<li class="chapter" data-level="3.6.2" data-path="ch4.html"><a href="ch4.html#assumption-independent-observations"><i class="fa fa-check"></i><b>3.6.2</b> “Assumption: Independent observations”</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="ch4.html"><a href="ch4.html#assumption-accurate-data"><i class="fa fa-check"></i><b>3.7</b> “Assumption: Accurate Data”</a></li>
+<li class="chapter" data-level="3.8" data-path="ch4.html"><a href="ch4.html#what-does-95-confidence-really-mean"><i class="fa fa-check"></i><b>3.8</b> “What Does 95% Confidence Really Mean”</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="ch4.html"><a href="ch4.html#a-simulation"><i class="fa fa-check"></i><b>3.8.1</b> “A simulation”</a></li>
+<li class="chapter" data-level="3.8.2" data-path="ch4.html"><a href="ch4.html#change-of-what"><i class="fa fa-check"></i><b>3.8.2</b> “95% Change of What?”&quot;</a></li>
+<li class="chapter" data-level="3.8.3" data-path="ch4.html"><a href="ch4.html#what-is-special-about-95"><i class="fa fa-check"></i><b>3.8.3</b> “What is Special About 95%”</a></li>
+<li class="chapter" data-level="3.8.4" data-path="ch4.html"><a href="ch4.html#what-if-the-assumption-are-violated"><i class="fa fa-check"></i><b>3.8.4</b> (“What If The Assumption Are Violated”)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="ch4.html"><a href="ch4.html#are-you-quantifying-the-event-you-really-care-about"><i class="fa fa-check"></i><b>3.9</b> “Are You Quantifying the Event You Really Care About?”</a></li>
+<li class="chapter" data-level="3.10" data-path="ch4.html"><a href="ch4.html#lingo"><i class="fa fa-check"></i><b>3.10</b> Lingo</a><ul>
+<li class="chapter" data-level="3.10.1" data-path="ch4.html"><a href="ch4.html#ci-versuse-confidence-limits"><i class="fa fa-check"></i><b>3.10.1</b> CI versuse confidence limits</a></li>
+<li class="chapter" data-level="3.10.2" data-path="ch4.html"><a href="ch4.html#estimate"><i class="fa fa-check"></i><b>3.10.2</b> Estimate</a></li>
+<li class="chapter" data-level="3.10.3" data-path="ch4.html"><a href="ch4.html#confidence-level."><i class="fa fa-check"></i><b>3.10.3</b> Confidence level.</a></li>
+<li class="chapter" data-level="3.10.4" data-path="ch4.html"><a href="ch4.html#uncertainty-interval"><i class="fa fa-check"></i><b>3.10.4</b> Uncertainty Interval</a></li>
+</ul></li>
+<li class="chapter" data-level="3.11" data-path="ch4.html"><a href="ch4.html#calculating-the-ci-of-a-proportion"><i class="fa fa-check"></i><b>3.11</b> “Calculating The CI of a Proportion”&quot;</a><ul>
+<li class="chapter" data-level="3.11.1" data-path="ch4.html"><a href="ch4.html#several-methods-are-commonly-used"><i class="fa fa-check"></i><b>3.11.1</b> “Several methods are commonly used”&quot;</a></li>
+<li class="chapter" data-level="3.11.2" data-path="ch4.html"><a href="ch4.html#how-to-compute-the-modified-wald-method-by-hand"><i class="fa fa-check"></i><b>3.11.2</b> “How to compute the modified Wald method by Hand”</a></li>
+<li class="chapter" data-level="3.11.3" data-path="ch4.html"><a href="ch4.html#shortcut-for-proportion-near-50-optional"><i class="fa fa-check"></i><b>3.11.3</b> Shortcut for proportion near 50% (OPTIONAL)</a></li>
+<li class="chapter" data-level="3.11.4" data-path="ch4.html"><a href="ch4.html#shortcut-for-proportion-far-from-50-optional"><i class="fa fa-check"></i><b>3.11.4</b> Shortcut for proportion far from 50% (OPTIONAL)</a></li>
+<li class="chapter" data-level="3.11.5" data-path="ch4.html"><a href="ch4.html#shortcut-when-the-numerator-is-zero-the-rule-of-three-optional"><i class="fa fa-check"></i><b>3.11.5</b> Shortcut when the numerator is zero: The rule of three (OPTIONAL)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.12" data-path="ch4.html"><a href="ch4.html#ambiguity-if-the-proportion-is-0-or-100"><i class="fa fa-check"></i><b>3.12</b> “Ambiguity if The Proportion Is 0% or 100%”</a></li>
+<li class="chapter" data-level="3.13" data-path="ch4.html"><a href="ch4.html#an-alternative-approach-bayesian-credible-intervals"><i class="fa fa-check"></i><b>3.13</b> “An Alternative Approach: Bayesian Credible Intervals”</a></li>
+<li class="chapter" data-level="3.14" data-path="ch4.html"><a href="ch4.html#common-mistakes-ci-of-a-proportion"><i class="fa fa-check"></i><b>3.14</b> “Common Mistakes: CI of A Proportion”</a><ul>
+<li class="chapter" data-level="3.14.1" data-path="ch4.html"><a href="ch4.html#mistake-using-100-as-the-denominator-when-the-value-is-a-percentage"><i class="fa fa-check"></i><b>3.14.1</b> “Mistake: Using 100 as the denominator when the value is a percentage”</a></li>
+<li class="chapter" data-level="3.14.2" data-path="ch4.html"><a href="ch4.html#mistake-computing-binomial-ics-from-percentage-change-in-a-continous-variable"><i class="fa fa-check"></i><b>3.14.2</b> “Mistake: Computing binomial ICs from percentage change in a continous variable”</a></li>
+<li class="chapter" data-level="3.14.3" data-path="ch4.html"><a href="ch4.html#mistake-computating-a-ci-from-data-that-look-like-a-proportion-but-really-is-not"><i class="fa fa-check"></i><b>3.14.3</b> “Mistake: Computating a CI from data that look like a proportion but really is not”</a></li>
+<li class="chapter" data-level="3.14.4" data-path="ch4.html"><a href="ch4.html#mistake-interpretting-a-bayesin-credible-interval-wihtout-knowing-what-prior-probabilities-or-probabilitiey-distribuiton-were-assumed-for-the-analysis"><i class="fa fa-check"></i><b>3.14.4</b> “Mistake: Interpretting a Bayesin credible interval wihtout knowing what prior probabilities (or probabilitiey distribuiton) were assumed for the analysis”</a></li>
+</ul></li>
+<li class="chapter" data-level="3.15" data-path="ch4.html"><a href="ch4.html#q-a"><i class="fa fa-check"></i><b>3.15</b> Q &amp; A</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/brouwern/IBSguide" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Reading Guide to Intuitive Biostatistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ch4" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> “Confidence Interval of a Proportion”</h1>
+<div id="preamble" class="section level2 unnumbered">
+<h2>Preamble</h2>
+<div id="on-proportions-frequencies-and-percentages" class="section level3 unnumbered">
+<h3>On proportions, frequencies, and percentages</h3>
+<p>Like many books, Motulsky starts of by discussing <strong>proportional data.</strong> Proportional data can also sometimes be called <strong>frequencies</strong>; a useful, mathematically precise term is <strong>binomial proportions</strong>. They occur when you have a certain, discrete number of things happen, such as full-term births, and you count the frequency or calculate the proportion of a specific event, such as a child having brown eyes. Mathematically the “things happening” are often called <strong>“trials”</strong> and the outcome of interest are often called <strong>“successes”</strong>, though “events” or “outcomes” makes more sense to me. In stats books you will often see the term <strong>“Bernouli trial”</strong> used to refer to a single <strong>binomial</strong> trial. Flipping a coin once is a Bernouli trial.</p>
+<p>Proportions are often conveyed in terms of <strong>percentages</strong>, such as “20% of child born in Pittsburgh have brown eyes.” Percentages are tricky in stats because you have to keep in mind whether the percentage is derived from counting up <strong>discrete events</strong> that can be counted with absolute precision (babies born with blue eyes) or is a continuous quantity (the percentage of a child’s face they’ve covered with splatter from the food they’ve eaten).</p>
+<p>Another term commonly used is <strong>binary data.</strong> Binary indicates that an event can take on one of two values; in practice, the values “0” and “1” are used when doing the underlying math even though “0” might mean “eyes not brown” and 1 means “eyes brown.”</p>
+<p>Proportional data are very common in biology: number of fruit flies that are virgin, number of flowers eaten by deer, number of tadpoles surviving a exposure to a toxin. Proportion data are also easy to work with and the math for calculating things like <strong>confidence intervals</strong> intervals and especially <strong>p-values</strong> is much easier than for <strong>continuous varibles</strong> such as the length of a fruit fly wing or the height of a plant.</p>
+</div>
+<div id="on-counting-events-versus-counting-things" class="section level3 unnumbered">
+<h3>On counting “events” versus counting things</h3>
+<p>Imagine you work for the Demography Department at Magee Women’s Hospital in Pittsburgh. Your job every day is to visit everyone room in the hospital and count two things: 1) the number of visitors in each room and 2)ikm 5444155203/the number of brown-eyed babies out of the total number of babies. The first task is so that the hopital can determine how many people are visiting and the second task is to determine the percentage of brown-eyed babies born to the hosptial.</p>
+<p>For both tasks you are counting, but there is a very important but subtle difference between these two tasks. For the first task, you are counting up the number of people in each room, which could vary from zero (un-occupied) to a potentially large number if many people are visiting a newborn. Each data point is a number, either zero or something larger.</p>
+<p>For the second task you can think of it as counting up the number of brown-eyed babies, and this count could take on many different values depending on how many babies are born. However, this count is <strong>bounded</strong> by the total number of babies born. Similarly, key to what you want to know is the number of brown-eyed babies out of the total number of babies; you are therefore setting up a proportion. The former example doesn’t invovle a proportion and is simply an <strong>un-bounded count</strong>.</p>
+<p>I’m belaboring this because this because I have frequently seen where misunderstanding the different statistical uses of the term “count” has resulted in biologists (to be fair, only ecologists so far) selecting an incorrect statistical procedure.</p>
+</div>
+<div id="on-confidence-intervals-versus-p-values" class="section level3 unnumbered">
+<h3>On confidence intervals versus p-values</h3>
+<p>Most books start with <strong>p-values</strong> then move on to <strong>confidence intervals</strong>; while the two things are intimately linked and derived from the same calculations, confidence intervals convey much more information. Motulsky starts off with confidence intervals in this chapter.</p>
+</div>
+</div>
+<div id="vocabulary-2" class="section level2 unnumbered">
+<h2>Vocabulary</h2>
+<div id="motulsky-vocab-2" class="section level3 unnumbered">
+<h3>Motulsky vocab</h3>
+<ul>
+<li>Bias</li>
+<li>Binomial variable</li>
+<li>Binomial distribution</li>
+<li>Confidence interval (CI)</li>
+<li>Confidence level</li>
+<li>Credible interval</li>
+<li>Point estimate</li>
+<li>Random sampling</li>
+<li>Sampling error</li>
+<li>Simulation</li>
+<li>Uncertainty interval</li>
+</ul>
+</div>
+<div id="additional-vocab-1" class="section level3 unnumbered">
+<h3>Additional vocab</h3>
+<ul>
+<li>binary data</li>
+<li>binomial proportion</li>
+<li>frequency</li>
+<li>proportion</li>
+</ul>
+</div>
+</div>
+<div id="chapter-notes-2" class="section level2 unnumbered">
+<h2>Chapter Notes</h2>
+</div>
+<div id="data-expressed-as-proportions" class="section level2">
+<h2><span class="header-section-number">3.1</span> “Data Expressed as Proportions”</h2>
+</div>
+<div id="the-binomial-distribution-from-population-to-sample" class="section level2">
+<h2><span class="header-section-number">3.2</span> “The Binomial Distribution: From Population to Sample”</h2>
+</div>
+<div id="example-free-throws-in-basketball" class="section level2">
+<h2><span class="header-section-number">3.3</span> “Example: Free Throws in Basketball”</h2>
+</div>
+<div id="example-deaths-of-premature-babies" class="section level2">
+<h2><span class="header-section-number">3.4</span> (“Example: Deaths of Premature Babies”)</h2>
+<p>Alive vs. dead is one of the most basic binary conditions in biology.</p>
+</div>
+<div id="example-polling-voters" class="section level2">
+<h2><span class="header-section-number">3.5</span> “Example: Polling Voters”</h2>
+</div>
+<div id="assumptions-confidence-interval-of-a-proportion" class="section level2">
+<h2><span class="header-section-number">3.6</span> “Assumptions: Confidence Interval of a Proportion”</h2>
+<div id="assumption-random-or-representative-sample" class="section level3">
+<h3><span class="header-section-number">3.6.1</span> “Assumption: Random (or representative) sample”</h3>
+</div>
+<div id="assumption-independent-observations" class="section level3">
+<h3><span class="header-section-number">3.6.2</span> “Assumption: Independent observations”</h3>
+<p>Proportional data can be tricky because the key to the statistics used to analyze them in most cases is that all of the events are <strong>independent</strong>. For example, each non-twin child born in a hosptial on the first day of month is essentially an <strong>independent trial</strong>. Each child has different parents, a different gestational environment, and most relevant if you are counting up the number with brown hair, different genetics. So, the hair color of one child born on the first day of the month has no impact on the hair color of another child; they are unlinked and unrelated.</p>
+<p>In contrast, there its possible that the fates of mothers while giving birth are not independnet. For example, what if we want to know the number of women who originally intended to give birth vaginally but ended up having a cecarian (c-section)? Each women is different, but they are likely to be attended to by the same attending physician, who can vary in their approach to delivery and when they recommend a c-section. So if 20 women give birth on the first day of the month, they hair color of their babies are all independent data points, but whether these women had c-sections or not is potentially not independent.</p>
+</div>
+</div>
+<div id="assumption-accurate-data" class="section level2">
+<h2><span class="header-section-number">3.7</span> “Assumption: Accurate Data”</h2>
+</div>
+<div id="what-does-95-confidence-really-mean" class="section level2">
+<h2><span class="header-section-number">3.8</span> “What Does 95% Confidence Really Mean”</h2>
+<div id="a-simulation" class="section level3">
+<h3><span class="header-section-number">3.8.1</span> “A simulation”</h3>
+<p><strong>[ ]</strong> Figure 4.2: What would happen if you collected many samples and computed a 95% CI for each</p>
+<p>This figure is <strong>very important.</strong> The thought experiment where you hypothetically re-run your study or experiment many times is central to the concept of what <strong>confidence intervals</strong> and <strong>p-values</strong> are.</p>
+</div>
+<div id="change-of-what" class="section level3">
+<h3><span class="header-section-number">3.8.2</span> “95% Change of What?”&quot;</h3>
+</div>
+<div id="what-is-special-about-95" class="section level3">
+<h3><span class="header-section-number">3.8.3</span> “What is Special About 95%”</h3>
+<p><strong>[ ]</strong> Nothing. Absolutely nothing. This cannot be repeated enough. There is nothing sacred scientifically or mathematically about 95% or a p-value that is less than 0.05.</p>
+<p><strong>[ ]</strong> This is so important I will repeate it again. <strong>There is nothing sacred scientifically or mathematically about 95% or a p-value that is less than 0.05.</strong></p>
+<p><strong>[ ]</strong> There has even recently been a call to try to get people to not call something <strong>“significant”</strong> unless is <strong>&lt;0.005</strong> (equivalent to using a 99.5 % CI). This has resulted in a lot of discussion in journals, blogs, and twitter, with <strong>frequentists</strong> arguing with frequentists, some <strong>Bayesians</strong> offering their alternatives to signficance tests (eg Wagenmakers) and other Bayesian saying we need to get rid of hypothesis testing entirely (Gelman). There are many interesting blog posts and published opinion pieces on this now.</p>
+<p>Like most stats books Motulsky mentions the possiblity of calculating 90% CIs that are more lax, or 99% CIs that are more stringent. Most books have you do exercises where you calcualte different CIs. In the biological sciences I have never seen anything but a 95% CI. I think in manufacturing applications of statistics and other fields perhaps this is more common.</p>
+<p><strong>[ ]</strong> There has been some discussion that is should be more common to think about what level of “confidence” you want or need to make a descision and adjucting your CI accordingly. This is discussed in print and via the blogs by the pyschologist Daniel Lakens, and I believe Richard Morey.</p>
+</div>
+<div id="what-if-the-assumption-are-violated" class="section level3">
+<h3><span class="header-section-number">3.8.4</span> (“What If The Assumption Are Violated”)</h3>
+<p>THis section appeared in previous editions of the book</p>
+</div>
+</div>
+<div id="are-you-quantifying-the-event-you-really-care-about" class="section level2">
+<h2><span class="header-section-number">3.9</span> “Are You Quantifying the Event You Really Care About?”</h2>
+</div>
+<div id="lingo" class="section level2">
+<h2><span class="header-section-number">3.10</span> Lingo</h2>
+<div id="ci-versuse-confidence-limits" class="section level3">
+<h3><span class="header-section-number">3.10.1</span> CI versuse confidence limits</h3>
+<p>“confidence limit” isn’t used too much in practice.</p>
+</div>
+<div id="estimate" class="section level3">
+<h3><span class="header-section-number">3.10.2</span> Estimate</h3>
+</div>
+<div id="confidence-level." class="section level3">
+<h3><span class="header-section-number">3.10.3</span> Confidence level.</h3>
+<p><strong>[ ]</strong> Again, there is nothing special about 95%.</p>
+</div>
+<div id="uncertainty-interval" class="section level3">
+<h3><span class="header-section-number">3.10.4</span> Uncertainty Interval</h3>
+<p><strong>Uncertainty interval</strong> is a proposed replacement term for confidence interval. I have never seen it used, except by those who have proposed it.</p>
+</div>
+</div>
+<div id="calculating-the-ci-of-a-proportion" class="section level2">
+<h2><span class="header-section-number">3.11</span> “Calculating The CI of a Proportion”&quot;</h2>
+<div id="several-methods-are-commonly-used" class="section level3">
+<h3><span class="header-section-number">3.11.1</span> “Several methods are commonly used”&quot;</h3>
+<p>There are many ways to deal with binomial data in general, and in R. The basic ones usually show up in an intro stats course are</p>
+<ul>
+<li>Binomial test: binom.test()</li>
+<li>Test for equal proportions: prop.test()</li>
+<li>Chi^2 test: chisq.test()</li>
+</ul>
+<p>All of these produce similar result and are probably mathematically related if you start to dig into them, which I haven’t done lately.</p>
+<p>This profusion of different tests is one annoying feature of the traditional way statistics is typically taught and the way most intro-level stats books are written. In contemporary applided statistics, binomial data like this are likely to be analyzed using something called <strong>“logistic regression”</strong> or a <strong>“binomial general linear model”</strong>. A general linear model is often called a <strong>GLM</strong> for short. Motulsky doesn’t go all the way into developing GLMs but he is generally oriented in that direction, which is good.</p>
+<p>To be more precise, there are both</p>
+<ul>
+<li>Multiple ways to analyze these data to get a p-value</li>
+<li>Multiple ways to calcualte a confidence interval</li>
+</ul>
+<p>The confidence interval issue is what Motulsky focuses on here. I will work through these calculations in R by hand and also how to use common functions to get them, which also yield p-values.</p>
+</div>
+<div id="how-to-compute-the-modified-wald-method-by-hand" class="section level3">
+<h3><span class="header-section-number">3.11.2</span> “How to compute the modified Wald method by Hand”</h3>
+<p>This is a good computational exercise and so we’ll work through the details. For published papers use a computer to do the work!</p>
+<p>We’ll work with the following quantities</p>
+<ul>
+<li>S = the observed number of “successes”</li>
+<li>n = number of binomial “trials”</li>
+</ul>
+<p>Is this the same as gets repeated below? What was I doing … :(</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Step 0: the data</span>
+S &lt;-<span class="st"> </span><span class="dv">31</span>   <span class="co">#S = successes = num. infants surviving to 6 months</span>
+n &lt;-<span class="st"> </span><span class="dv">39</span>   <span class="co">#n = number of trials = total num. infants in study</span>
+z &lt;-<span class="st"> </span><span class="fl">1.96</span> <span class="co">#z = </span>
+
+<span class="co">#calculate z^2</span>
+z2 &lt;-<span class="st"> </span><span class="fl">1.96</span><span class="op">^</span><span class="dv">2</span>
+
+<span class="co">#round it off to 3 decimal places</span>
+z2 &lt;-<span class="st"> </span><span class="kw">round</span>(z2, <span class="dv">3</span>)
+
+<span class="co"># Step 1: calculate the Wald-corrected proportion</span>
+## observed proportion
+P.obs  &lt;-<span class="st"> </span>S<span class="op">/</span>n
+P.obs  &lt;-<span class="st">  </span><span class="kw">round</span>(P.obs, <span class="dv">3</span>)           
+
+## &quot;corrected&quot; proportion
+### Set up whole formula
+P.corr &lt;-<span class="st">  </span>(S<span class="op">+</span>z)<span class="op">/</span>(n<span class="op">+</span>z<span class="op">^</span><span class="dv">2</span>)
+
+### might be easier to see if done in steps
+numerator &lt;-<span class="st"> </span>S<span class="op">+</span>z
+denominator &lt;-<span class="st"> </span>n<span class="op">+</span>z<span class="op">^</span><span class="dv">2</span>
+P.corr &lt;-<span class="st"> </span>numerator<span class="op">/</span>denominator
+
+### round off
+P.corr &lt;-<span class="st"> </span><span class="kw">round</span>(P.corr, <span class="dv">3</span>)
+
+<span class="co"># Compute half-width of the CI</span>
+## In one step
+W &lt;-<span class="st"> </span>z<span class="op">*</span><span class="kw">sqrt</span>(P.corr<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>P.corr)<span class="op">/</span>(n<span class="op">+</span>z<span class="op">^</span><span class="dv">2</span>))
+
+## in parts
+### calculate numerator and denominator
+W.numerator   &lt;-<span class="st"> </span>P.corr<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>P.corr)
+W.denominator &lt;-<span class="st"> </span>n<span class="op">+</span>z<span class="op">^</span><span class="dv">2</span>
+
+### calcualte W
+W             &lt;-<span class="st"> </span>z<span class="op">*</span><span class="kw">sqrt</span>(W.numerator<span class="op">/</span>W.denominator)
+  
+## round W off 
+W &lt;-<span class="st"> </span><span class="kw">round</span>(W, <span class="dv">3</span>)
+
+<span class="co"># Calculate CI bounds</span>
+lower.CI &lt;-<span class="st"> </span>P.corr <span class="op">-</span><span class="st"> </span>W
+upper.CI &lt;-<span class="st"> </span>P.corr <span class="op">+</span><span class="st"> </span>W
+
+P.obs.calc  &lt;-<span class="st"> &quot;=31/39&quot;</span>
+P.corr.calc &lt;-<span class="st"> &quot;=(31+1.96)/(39+1.96^2)&quot;</span></code></pre></div>
+The calculations can be laid out in a table like this
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+A
+</th>
+<th style="text-align:left;">
+B
+</th>
+<th style="text-align:left;">
+C
+</th>
+<th style="text-align:left;">
+D
+</th>
+<th style="text-align:left;">
+E
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Data
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+Calcualted.val
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+survived
+</td>
+<td style="text-align:left;">
+31
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+P.observed =
+</td>
+<td style="text-align:left;">
+0.795
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+deceased
+</td>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+P.corrected =
+</td>
+<td style="text-align:left;">
+0.769
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+n.total
+</td>
+<td style="text-align:left;">
+39
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+W.numerator =
+</td>
+<td style="text-align:left;">
+32.96
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+z
+</td>
+<td style="text-align:left;">
+1.96
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+W.denominator=
+</td>
+<td style="text-align:left;">
+42.8416
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+z.squared
+</td>
+<td style="text-align:left;">
+3.842
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+W =
+</td>
+<td style="text-align:left;">
+0.126
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+CI.lower =
+</td>
+<td style="text-align:left;">
+0.643
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+CI.upper =
+</td>
+<td style="text-align:left;">
+0.895
+</td>
+</tr>
+</tbody>
+</table>
+<p>We can code Motulsky’s analysis using the <strong>Wald method</strong> like this:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Step 0: the data</span>
+S &lt;-<span class="st"> </span><span class="dv">31</span>   <span class="co">#S = successes = num. infants surviving to 6 months</span>
+z &lt;-<span class="st"> </span><span class="fl">1.96</span> <span class="co">#z = </span>
+n &lt;-<span class="st"> </span><span class="dv">39</span>   <span class="co">#n = number of trials = total num. infants in study</span>
+
+<span class="co"># Step 1: calculate the Wald-corrected proportion</span>
+P.obs  &lt;-<span class="st">  </span>S<span class="op">/</span>n           <span class="co">#observe proportion</span>
+P.corr &lt;-<span class="st">  </span>(S<span class="op">+</span>z)<span class="op">/</span>(n<span class="op">+</span>z<span class="op">^</span><span class="dv">2</span>) <span class="co">#corrected proportion</span>
+
+<span class="co">#or, approximately, since 1.96^2 requires a calcualte</span>
+## here what he is doing is just rounding 1.96 up to 2.
+## this if any makes the confidence a bit wider and
+## therefore a bit more conservative
+## of course, 33/43 typically will require a calculator
+P.corr.alt &lt;-<span class="st">  </span>(S<span class="op">+</span><span class="dv">2</span>)<span class="op">/</span>(n<span class="op">+</span><span class="dv">4</span>)
+
+<span class="co">#If you get confused by the parentheses you can always break things up</span>
+
+numerator &lt;-<span class="st"> </span>S<span class="op">+</span>z
+denominator &lt;-<span class="st"> </span>n<span class="op">+</span>z<span class="op">^</span><span class="dv">2</span>
+
+P.corr &lt;-<span class="st"> </span>numerator<span class="op">/</span>denominator
+
+<span class="co"># Compute half-width of the CI</span>
+W &lt;-<span class="st"> </span>z<span class="op">*</span><span class="kw">sqrt</span>(P.corr<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>P.corr)<span class="op">/</span>(n<span class="op">+</span>z<span class="op">^</span><span class="dv">2</span>))
+
+lower.CI &lt;-<span class="st"> </span>P.corr <span class="op">-</span><span class="st"> </span>W
+upper.CI &lt;-<span class="st"> </span>P.corr <span class="op">+</span><span class="st"> </span>W</code></pre></div>
+<p>Here is the output of the three statistical “tests” can can be applied to these data.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#packages to clean up the output</span>
+<span class="kw">library</span>(tidyr)
+<span class="kw">library</span>(broom)
+<span class="kw">library</span>(pander)</code></pre></div>
+<table style="width:81%;">
+<colgroup>
+<col width="15%" />
+<col width="16%" />
+<col width="15%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">estimate</th>
+<th align="center">p.value</th>
+<th align="center">conf.low</th>
+<th align="center">conf.high</th>
+<th align="center">method</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0.7949</td>
+<td align="center">0.0002941</td>
+<td align="center">0.6354</td>
+<td align="center">0.907</td>
+<td align="center">binom.test</td>
+</tr>
+<tr class="even">
+<td align="center">0.7949</td>
+<td align="center">0.000427</td>
+<td align="center">0.6306</td>
+<td align="center">0.9013</td>
+<td align="center">prop.test</td>
+</tr>
+<tr class="odd">
+<td align="center">NA</td>
+<td align="center">0.0002306</td>
+<td align="center">NA</td>
+<td align="center">NA</td>
+<td align="center">chi^2</td>
+</tr>
+</tbody>
+</table>
+<p>Here is the output using a binomial GLM (aka logistic regression)</p>
+<pre><code>## Warning: package &#39;arm&#39; was built under R version 3.5.1</code></pre>
+<pre><code>## Loading required package: MASS</code></pre>
+<pre><code>## Loading required package: Matrix</code></pre>
+<pre><code>## 
+## Attaching package: &#39;Matrix&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:tidyr&#39;:
+## 
+##     expand</code></pre>
+<pre><code>## Loading required package: lme4</code></pre>
+<pre><code>## Warning: package &#39;lme4&#39; was built under R version 3.5.1</code></pre>
+<pre><code>## 
+## arm (Version 1.10-1, built: 2018-4-12)</code></pre>
+<pre><code>## Working directory is C:/Users/lisanjie/Documents/1_R/git/git-teaching/teaching_2018_2019/2018_fall/biostats_fall_2018/4_biostats_bks_pkg/IBS/IBSguide</code></pre>
+<table style="width:44%;">
+<colgroup>
+<col width="15%" />
+<col width="16%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">estimate</th>
+<th align="center">std.error</th>
+<th align="center">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0.775</td>
+<td align="center">0.3786</td>
+<td align="center">0.00109</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="shortcut-for-proportion-near-50-optional" class="section level3">
+<h3><span class="header-section-number">3.11.3</span> Shortcut for proportion near 50% (OPTIONAL)</h3>
+</div>
+<div id="shortcut-for-proportion-far-from-50-optional" class="section level3">
+<h3><span class="header-section-number">3.11.4</span> Shortcut for proportion far from 50% (OPTIONAL)</h3>
+</div>
+<div id="shortcut-when-the-numerator-is-zero-the-rule-of-three-optional" class="section level3">
+<h3><span class="header-section-number">3.11.5</span> Shortcut when the numerator is zero: The rule of three (OPTIONAL)</h3>
+</div>
+</div>
+<div id="ambiguity-if-the-proportion-is-0-or-100" class="section level2">
+<h2><span class="header-section-number">3.12</span> “Ambiguity if The Proportion Is 0% or 100%”</h2>
+</div>
+<div id="an-alternative-approach-bayesian-credible-intervals" class="section level2">
+<h2><span class="header-section-number">3.13</span> “An Alternative Approach: Bayesian Credible Intervals”</h2>
+</div>
+<div id="common-mistakes-ci-of-a-proportion" class="section level2">
+<h2><span class="header-section-number">3.14</span> “Common Mistakes: CI of A Proportion”</h2>
+<div id="mistake-using-100-as-the-denominator-when-the-value-is-a-percentage" class="section level3">
+<h3><span class="header-section-number">3.14.1</span> “Mistake: Using 100 as the denominator when the value is a percentage”</h3>
+</div>
+<div id="mistake-computing-binomial-ics-from-percentage-change-in-a-continous-variable" class="section level3">
+<h3><span class="header-section-number">3.14.2</span> “Mistake: Computing binomial ICs from percentage change in a continous variable”</h3>
+</div>
+<div id="mistake-computating-a-ci-from-data-that-look-like-a-proportion-but-really-is-not" class="section level3">
+<h3><span class="header-section-number">3.14.3</span> “Mistake: Computating a CI from data that look like a proportion but really is not”</h3>
+</div>
+<div id="mistake-interpretting-a-bayesin-credible-interval-wihtout-knowing-what-prior-probabilities-or-probabilitiey-distribuiton-were-assumed-for-the-analysis" class="section level3">
+<h3><span class="header-section-number">3.14.4</span> “Mistake: Interpretting a Bayesin credible interval wihtout knowing what prior probabilities (or probabilitiey distribuiton) were assumed for the analysis”</h3>
+</div>
+</div>
+<div id="q-a" class="section level2">
+<h2><span class="header-section-number">3.15</span> Q &amp; A</h2>
+<p>All of these are good points</p>
+<p><strong>[ ] Figure 4.3. Effect of sample size on the width of a CI</strong> This is a very important idea. Sample size is key to increasing the confidence we have in a result</p>
+<p><strong>[ ] Figure 4.4. Asymmetrical CI</strong> Proportions, percentages, etc are all bounded between 0 and 1, or 0% and 100%. Most methods of calculating confidence intervals for this type of data (but not all!) will produce assymmetric CI. If you see a CI for this type of data that crosses 0% or 100%, there’s a good chance the authors did not use an appropriate method for calculating the confidence intervals. I see this most often when data are percentages, like mean percentage of the ground covered by an invasive species.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="ch2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/brouwern/IBSguide/edit/master/04-CI_of_a_proportion.Rmd",
+"text": "Edit"
+},
+"download": ["IBSguide.pdf", "IBSguide.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

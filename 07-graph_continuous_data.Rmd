@@ -1,0 +1,183 @@
+```{r echo = F}
+knitr::opts_chunk$set(fig.width=6, fig.height=4)
+library(beeswarm)
+library(ggplot2)
+library(cowplot)
+```
+
+# "Graphing Continous Data"
+
+## Commentary {-}
+
+## Vocabulary {-}
+
+### Motulsky vocab {-}
+
+* Arithmetic mean
+* Bias
+* Box-and-wisker plot (boxplot)
+* Continous data
+* Dotplot (or scatter plot) (or beeswarm)
+* Error
+* Frequency distribution
+* Histogram
+* Interquartile range
+* Mean
+* Median
+* Mode
+* Outlier
+* Percentile
+* Quartile
+* Precision
+* Smoothed data
+* Trimmed mean
+* Violin plot
+
+### Additional vocab {-}
+
+### Key functions {-}
+
+* boxplot
+* beeswarm::beeswarm
+* stripplot
+
+## Chapter Notes {-}
+
+## "Continuous Data"
+
+Ecological examples of contiunous data include: the mass of a lizard, the volume of bird feces, the length of a spider appendage, the height of a tree.
+
+Lab biology example of continuous data include: the concentration of protein in solution, the intensity of a band on a gel, the molecular weight of different salt ions.
+
+## "The Mean and Median"
+
+* Median: Medians are useful because the provide a better idea of the center of a distribution even if there are **outliers** or **skew**.  Medians are very useful to think about and plot in your graphs, but suprisingly rarely comes into play for actual statistical calculations.  This is because the math related to medians causes problems; means are much easier to work with.  The field of (**robust statistics**)[https://en.wikipedia.org/wiki/Robust_statistics] frequently works with medians.  [**Quantile regression**](https://en.wikipedia.org/wiki/Quantile_regression) is one method that works particularly with medians.
+* The geometric mean: good to know about but results are rarely presented in terms of geometric means.  (An exception in ecology is stochastic demography.)
+* Harmonic mean: like the geometric mean, results are rarely presented this way.
+* Trimmed mean: not currently use much in biology, but potentially used.  Discussion of robust statistics sometimes include trimmed means.
+* Mode: Like the median, useful to think about but rarely used in statistic computation.
+
+## "Lingo: Terms used to Explain Variability"
+
+### "Biological variability"
+
+### "Precision"
+
+[?? do I agree with this way of framing things]
+
+### "Bias"
+
+### "Accuracy"
+
+### "Error"
+
+## "Percentiles"
+
+## "Graphing Data to Show Variation"
+
+### "Scatter plots"
+
+**Scatter plots** often refer to plots used when you have two numeric variables, like this
+```{r, echo = F}
+plot(Sepal.Length ~ Sepal.Width, data = iris)
+```
+
+What Motulsky shows in Figure 7.1 is sometimes now called a [**beeswarm plot**](https://flowingdata.com/2016/09/08/beeswarm-plot-in-r-to-show-distributions/), a name I like.  They can be made in R using the [beeswarm package](http://www.cbs.dtu.dk/~eklund/beeswarm/).
+
+```{r}
+beeswarm(Sepal.Length ~ Species, 
+         data = iris)
+```
+
+A similar type of plot is a [stripchart](http://www.clayford.net/statistics/tag/strip-charts/).  These work best when they are set up to not have their points overlapping, which is called **jittering**.
+
+```{r}
+stripchart(Sepal.Length ~ Species, 
+           data = iris, 
+           vertical = TRUE, 
+           method="jitter")
+```
+
+A beeswarm plot is basically a jitter stripchart that has been well organized.  And has a cooler name.
+
+### "Box-and-whiskers plots"
+
+Usually just called a [**boxplot**](https://en.wikipedia.org/wiki/Box_plot).
+
+In base R they are made with the boxplot() command.
+```{r}
+boxplot(Sepal.Length ~ Species, 
+           data = iris, 
+           vertical = TRUE, 
+           method="jitter")
+```
+
+In ggplot they can be made like this with the qplot() function
+```{r}
+qplot(data = iris, 
+      y = Sepal.Length,
+      x = Species,
+      geom = "boxplot")
+```
+
+Or directly with ggplot() using geom_boxplot()
+```{r}
+ggplot(data = iris,
+       aes(y = Sepal.Length,
+           x = Species)) +
+  geom_boxplot()
+```
+
+
+### "Violin plots"
+
+Violin plot can be useful when you want more information than given by a boxplot but have too much data for a beeswarm.  There's a package in R which implements [violin plots](https://www.statmethods.net/graphs/boxplot.html) for basic R graphics.  In ggplot you use geom_violin().
+
+```{r}
+ggplot(data = iris,
+       aes(y = Sepal.Length,
+           x = Species)) +
+  geom_violin()
+```
+
+## "Graphing Distributions"
+
+### "Frequency distributions"
+
+### "Cumulative frequency distribution" (OPTIONAL)
+
+Good to know about but not applicable to most entry-level stats.
+
+## "Beware of Data Massage"
+
+### "Beware of filtering out impossible values"
+
+### "Beware of adjusting data"
+
+### "Beware of smoothing"
+
+### "Beware of variable that are the ratio of two measurements"
+
+### "Beware of normalized data"
+
+### Beware of ratios of ratios {-}
+
+Certo, et al.  2018.  Divided We Fall: How Ratios Undermine Research in Strategic Management
+http://journals.sagepub.com/doi/abs/10.1177/1094428118773455
+
+Curran-Everett, D.  2013.  Explorations in statistics: the analysis of ratios and normalized data.  [Advances in Physiology Education.](https://www.physiology.org/doi/abs/10.1152/advan.00053.2013)
+
+Motulsky doesn't mention this.  It can be a problem, though.  Some papers related to this topic:
+
+Karp et al.  2012.  The fallacy of ratio correction to address confounding factors. Laboratory Animals 46: 245–252.
+
+Koch et al.  2015.  Overcoming problems with the use of ratios as continuous characters for phylogenetic analyses. Zoologica Scripta.
+
+## Q & A
+
+## Further reading {-}
+
+## References {-}
+
+## Annotated Bibliography {-}
+

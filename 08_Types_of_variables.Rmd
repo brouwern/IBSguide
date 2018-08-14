@@ -1,0 +1,49 @@
+# Chapter "Types of Variables" 
+
+## Commentary {-}
+
+## Vocabulary {-}
+
+* Binomial variable
+* Continous variable
+* Discrete varible
+* Interval variable
+* Nominal variable
+* ordinal variable
+* Ratio variable
+
+### Motulsky vocab
+
+### Aditional vocab
+
+### Key functions
+
+None
+
+## Chapter Notes {-}
+
+## "Continous Variables"
+
+### "Interval variables"
+
+### "Ratio variables"
+
+## "Discrete Variables"
+
+### "Ordinal variables"
+
+### "Nominal and binomial variables"
+
+## "Why It Matters"
+
+## "Not Quite As Distinct As They Seem"
+
+## Q&A
+
+
+## Further reading {-}
+
+## References {-}
+
+## Annotated Bibliography {-}
+
