@@ -1,0 +1,246 @@
+```{r echo = F}
+knitr::opts_chunk$set(fig.width=6, fig.height=4)
+library(ggplot2)
+library(cowplot)
+library(zoo)
+```
+
+# "Error Bars"
+
+## Commentary {-}
+
+>"...the standard deviation is a measure of the variability of a set of observations, whereas the
+ standard error is a measure of the precision of an estimate...in relation to its unknown true value." (Altman 1980 "Statistics and ethics in medical research VI: Presentation of results".  BMJ)
+
+## Vocabulary {-}
+
+### Motulsky vocab {-}
+
+### Aditional vocab {-}
+
+### Key functions {-}
+
+
+## Chapter Notes {-}
+
+## [ ] "SD VERSUS SEM"
+
+### [ ] "What is the SD"
+
+[ ] The **standard deviation** is a measure of variability.  The larger the standard deviation is, the more variation there is within a sample.  When variation is large within a **sample**, its likely that there is lots of variation within the **population** that was sampled.  The standard deviation does not directly inform your opinion about the **sample mean.**
+
+#### The SD in Excel {-}
+
+In Excel they distinquish between the population standard deviation, STDEV.P(), and the **sample standard deviation**, STDEV.S().  In practice you almost never are working with a population.  
+
+#### The SD in R {-}
+
+The standard deviation is calcualted in R using the function sd()
+```{r}
+some.data <- c(1,4,5,6)
+sd(some.data)
+```
+
+The standard deviation is the square root of the variance.
+```{r}
+# the variance of some.data
+var(some.data)
+
+#square root of the variance of some.data
+sqrt(var(some.data))
+
+#the standard deviation = the square root of the variance
+sd(some.data) == sqrt(var(some.data))
+```
+
+
+### [ ] "What is the SEM?"
+
+### [ ] "The SEM does not quanitfy variablity among variables"
+
+### [ ] "The SEM quantifies how precisely you know the population mean"
+
+[ ] Challenge question: how would you describe the difference between the **population mean** and the **same mean?**
+
+#### [ ] SEM Summary {-}
+
+>"The standard deviation (often SD) is a measure of variability. When we calculate the standard deviation of a sample, we are using it as an estimate of the variability of the population from which the sample was drawn ... So, if we want to say how widely scattered some measurements are, we use the standard deviation.  If we want to indicate the uncertainty around the estimate of the mean measurement, we quote the standard error of the mean. " Altman (2013)
+
+**standard error of the mean (SEM)** or just **standard error (SE)** is a measure of **precision.**  The **standard error does not tell you anything about variation in your sample or the population.**  The standard error tells you about how precisely you have estimated your mean (Note that standard errors can also be calcualted for other things.)  A large standard error means the mean has been estimately with low precision.  A small standard error means that the mean has been estimate precisely.  Precision is increased by either little variation in the population or a larger sample size.
+
+### [ ] "How to compute the SD from the SEM"
+
+If you are given a SEM and sample size, you can **back calculate** the standard deviation.  You should always make your same size clear for your statistical tests (or, equivalently, the **degrees of freedom**, which we'll talk about later) so people can calculate the SD if they want it.
+
+## [ ] "WHICH KIND OF ERROR BAR SHOULD I PLOT"
+
+### [ ] "Goal: To Show the variation among the values"
+
+### [ ] "Goal: To show how precisely you have determined the population mean"
+
+[ ] If this is your goal, you should just plot the 95% CI.  Or better yet, plot both!  I like plots like this
+
+```{r echo = FALSE}
+library(coefplot)
+library(cowplot)
+x <- 1:nrow(iris)
+set.seed(seed = 10)
+i <- sample(x,size = nrow(iris)/15,replace = F)
+iris.sub <- iris[i,]
+notv <- which(iris.sub$Species != "virginica")
+coefplot(lm(Sepal.Length ~-1 + Species, 
+         data = iris.sub[notv,]),
+         pointSize = 10,
+         lwdInner = 5,
+         lwdOuter = 2) +
+  xlim(min(iris.sub[notv,"Sepal.Length"])*0.99,
+       max(iris.sub[notv,"Sepal.Length"])*1.01) +
+  coord_flip() +
+  ggtitle("") + ylab("")
+```
+
+### [ ] "Goal: To create persuaive propaganda"
+
+"Because they are shorter than the 95% CI" is *not* a good reason to use SEM.
+
+## [ ] "THE APPEARANCE OF ERROR BARS"
+
+I personally don't like bar plots (eg right side of figure 14.1 on page 121) and see no reason not to just use a dot with error bars for the mean, and to include the raw data whenever possible.
+
+For a middle of the road opinion on bar plot see Ben Bolker: 
+"Dynamite plots: unmitigated evil?" http://emdbolker.wikidot.com/blog:dynamite
+
+For people who realy don't like them
+http://biostat.mc.vanderbilt.edu/wiki/Main/DynamitePlots
+
+I think this sums up one of the main reasons barplots are bad:
+"bar graphs that boil down data points to a single mean often fail to convey the nuances of the numbers"
+https://www.nature.com/news/bar-graphs-criticized-for-misrepresenting-data-1.17383
+
+I really don't like barplots that only include the upper error bar (as in figure 14.2).  I see no reason why you should do this.
+
+## [!] "HOW ARE SD AND SEM RELATED TO SAMPLE SIZE""
+
+### [ ] "If you increase the sample size, is the SEM expected to get larger, get smaller, or stay about the same?"
+
+[ ] This would make a great test question.
+
+### [ ] "If you increase the sample size, is the SD expected to get larger, get smaller, or stay about the same?"
+
+[ ] This would make a great test question.
+
+#### Simulating SEM/SD changes with sample size
+
+```{r, echo = F}
+n.max <- 100
+mean. <- 100
+sd.   <- 20
+
+df <- data.frame(
+  n = 3:n.max,
+  mean = NA,
+  sd = NA,
+  se = NA)
+
+df$rollmean <- rollmean(df$mean,k = 5,fill = NA)
+
+for(i in 1:nrow(df)){
+  x <- rnorm(n = df$n[i],mean = mean.,sd = sd.)
+  df$mean[i] <- mean(x)
+  df$sd[i]   <- sd(x)
+  df$se[i]   <- sd(x)/sqrt(i)
+}
+
+#mean
+gg.mean.all <- ggplot(data = df,
+       aes(y = mean,
+           x = n)) +
+  geom_point() +
+  geom_line() +
+  geom_hline(yintercept = mean.,
+             linetype = 2)  +
+  xlab("Sample size (n)")
+
+
+#sd
+gg.sd.all <- ggplot(data = df,
+       aes(y = sd,
+           x = n)) +
+  geom_point() +
+  geom_line() +
+  geom_hline(yintercept = sd.,
+             linetype = 2) +
+  xlab("Same size (n)") +
+  ylab("Standard deviation (SD)")
+
+#se
+gg.se.all <- ggplot(data = df,
+       aes(y = se,
+           x = n)) +
+  geom_point() +
+  geom_line() +
+  #geom_smooth(se = F) +
+  xlab("Sample size (n)") +
+  ylab("Standard error (SE)")
+
+gg.mean.all.50 <-gg.mean.all+ xlim(0,50)
+gg.sd.all.50   <-gg.sd.all + xlim(0,50)
+
+```
+
+The mean and SD look like this
+```{r, echo = F}
+plot_grid(gg.mean.all, gg.sd.all)
+
+```
+
+The SE looks like this
+```{r, echo = F}
+gg.se.all
+```
+
+## "GEOMETRIC SD ERROR BARS" (SKIP)
+
+## [ ] "COMMON MISTAKES: ERROR BARS"
+
+### [ ] "Mistake: Plotting mean & error bar instead of plotting a frequency distribution"
+
+For more on this see
+Weissgerber.  2015.  Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm.  PLoS.  http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128&fullSite
+
+### [ ] "Mistkae: Assuming that all distributions are Gaussian"
+
+Pop quiz: **Gaussian** is the same as __________________
+
+### [ ] "Mistake: Plotting a mean & error bar w/o defining how the error bars were computed."
+
+A figure legend should always state what the error bars are.  Even better, put an annotation within the plot itself.
+
+## [ ] Q&A
+ 
+## Further reading {-}
+
+The difference between SD and SEM are a perrenial topic.  If things are clear check out one of these resources.  Better yet, print one out an post in on your lab bulletin board - chances are other people are fuzzy on it too!
+
+"Standard deviation versus standard error" http://thestatsgeek.com/2013/06/30/standard-deviation-versus-standard-error/
+
+"Basic stats:Standard deviation vs Standard error"
+https://datascienceplus.com/standard-deviation-vs-standard-error/
+
+Altman 2005.  Standard deviations and standard errors
+BMJ 331 doi: https://doi.org/10.1136/bmj.331.7521.903 (Published 13 October 2005)
+
+Klaus 2015.  Statistical relevance—relevant statistics, part II: presenting experimental data.  EMBO Journal.  http://emboj.embopress.org/content/early/2016/07/18/embj.201694659?casa_token=h0I6nRzyLsYAAAAA%3AvvaeRts7NpFZwgiDctKC7z0qbvvd7OTJ1d-XgsW1mvg7BJPpOvVnTuwGNjLP0r1DWvbVJ9gGfkfqg6I
+
+Cummings et al.  2007.  
+Error bars in experimental biology.  Journal of Cell Biology.  http://jcb.rupress.org/content/177/1/7.short
+
+Munger 2007.  Most researchers don’t understand error bars.  Cognitive Daily.  http://scienceblogs.com/cognitivedaily/2007/03/29/most-researchers-dont-understa/
+
+Wullschleger et al.  2014.  High Incorrect Use of the Standard Error of the Mean (SEM) in Original Articles in Three Cardiovascular Journals Evaluated for 2012.  PLoS BIology.  http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0110364  
+
+
+## References {-}
+
+## Annotated Bibliography {-}
+
