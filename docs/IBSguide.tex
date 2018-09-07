@@ -125,7 +125,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2018-08-14}
+    \date{2018-09-07}
 
 \usepackage{booktabs}
 \usepackage{amsthm}
@@ -135,6 +135,20 @@
   \thm@postskip=\thm@preskip
 }
 \makeatother
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -759,6 +773,41 @@ be to blank out some of the words and ask students to fill them in.
 
 \subsubsection{Multiple comparisons}\label{multiple-comparisons-1}
 
+\chapter{\texorpdfstring{``From sample to
+popluation''}{From sample to popluation}}\label{ch3}
+
+\section*{Commentary}\label{commentary-2}
+\addcontentsline{toc}{section}{Commentary}
+
+\section*{Vocabulary}\label{vocabulary-2}
+\addcontentsline{toc}{section}{Vocabulary}
+
+\subsection*{Motulsky vocab}\label{motulsky-vocab-2}
+\addcontentsline{toc}{subsection}{Motulsky vocab}
+
+\subsection*{Aditional vocab}\label{aditional-vocab-1}
+\addcontentsline{toc}{subsection}{Aditional vocab}
+
+\section*{Key functions}\label{key-functions-2}
+\addcontentsline{toc}{section}{Key functions}
+
+None
+
+\section*{Chapter Notes}\label{chapter-notes-2}
+\addcontentsline{toc}{section}{Chapter Notes}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-1}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-2}
+
+\section*{Further reading}\label{further-reading-2}
+\addcontentsline{toc}{section}{Further reading}
+
+\section*{References}\label{references-2}
+\addcontentsline{toc}{section}{References}
+
 \chapter{\texorpdfstring{``Confidence Interval of a
 Proportion''}{Confidence Interval of a Proportion}}\label{ch4}
 
@@ -849,10 +898,10 @@ linked and derived from the same calculations, confidence intervals
 convey much more information. Motulsky starts off with confidence
 intervals in this chapter.
 
-\section*{Vocabulary}\label{vocabulary-2}
+\section*{Vocabulary}\label{vocabulary-3}
 \addcontentsline{toc}{section}{Vocabulary}
 
-\subsection*{Motulsky vocab}\label{motulsky-vocab-2}
+\subsection*{Motulsky vocab}\label{motulsky-vocab-3}
 \addcontentsline{toc}{subsection}{Motulsky vocab}
 
 \begin{itemize}
@@ -896,7 +945,7 @@ intervals in this chapter.
   proportion
 \end{itemize}
 
-\section*{Chapter Notes}\label{chapter-notes-2}
+\section*{Chapter Notes}\label{chapter-notes-3}
 \addcontentsline{toc}{section}{Chapter Notes}
 
 \section{\texorpdfstring{``Data Expressed as
@@ -1146,67 +1195,27 @@ Is this the same as gets repeated below? What was I doing \ldots{} :(
 
 The calculations can be laid out in a table like this
 
-A
-
-B
-
-C
-
-D
-
-E
-
-Data
-
-Calcualted.val
-
-survived
-
-31
-
-P.observed =
-
-0.795
-
-deceased
-
-8
-
-P.corrected =
-
-0.769
-
-n.total
-
-39
-
-W.numerator =
-
-32.96
-
-z
-
-1.96
-
-W.denominator=
-
-42.8416
-
-z.squared
-
-3.842
-
-W =
-
-0.126
-
-CI.lower =
-
-0.643
-
-CI.upper =
-
-0.895
+\begin{tabular}{l|l|l|l|l}
+\hline
+A & B & C & D & E\\
+\hline
+ & Data &  &  & Calcualted.val\\
+\hline
+survived & 31 &  & P.observed   = & 0.795\\
+\hline
+deceased & 8 &  & P.corrected  = & 0.769\\
+\hline
+n.total & 39 &  & W.numerator  = & 32.96\\
+\hline
+z & 1.96 &  & W.denominator= & 42.8416\\
+\hline
+z.squared & 3.842 &  & W = & 0.126\\
+\hline
+ &  &  & CI.lower = & 0.643\\
+\hline
+ &  &  & CI.upper = & 0.895\\
+\hline
+\end{tabular}
 
 We can code Motulsky's analysis using the \textbf{Wald method} like
 this:
@@ -1309,6 +1318,38 @@ chi\^{}2\strut
 
 Here is the output using a binomial GLM (aka logistic regression)
 
+\begin{verbatim}
+## Loading required package: MASS
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: Matrix
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'Matrix'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:tidyr':
+## 
+##     expand
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: lme4
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## arm (Version 1.10-1, built: 2018-4-12)
+\end{verbatim}
+
+\begin{verbatim}
+## Working directory is C:/Users/lisanjie/Documents/1_R/git/git-teaching/teaching_2018_2019/2018_fall/biostats_fall_2018/4_biostats_bks_pkg/IBS/IBSguide
+\end{verbatim}
+
 \begin{longtable}[]{@{}ccc@{}}
 \toprule
 \begin{minipage}[b]{0.14\columnwidth}\centering\strut
@@ -1382,16 +1423,101 @@ appropriate method for calculating the confidence intervals. I see this
 most often when data are percentages, like mean percentage of the ground
 covered by an invasive species.
 
+\chapter{\texorpdfstring{``Confidence Interval of Survival
+Data''}{Confidence Interval of Survival Data}}\label{ch5}
+
+This part of the reading guide has not been written.
+
+\section*{Commentary}\label{commentary-3}
+\addcontentsline{toc}{section}{Commentary}
+
+\section*{Vocabulary}\label{vocabulary-4}
+\addcontentsline{toc}{section}{Vocabulary}
+
+\subsection*{Motulsky vocab}\label{motulsky-vocab-4}
+\addcontentsline{toc}{subsection}{Motulsky vocab}
+
+\subsection*{Aditional vocab}\label{aditional-vocab-2}
+\addcontentsline{toc}{subsection}{Aditional vocab}
+
+\section*{Key functions}\label{key-functions-3}
+\addcontentsline{toc}{section}{Key functions}
+
+None
+
+\section*{Chapter Notes}\label{chapter-notes-4}
+\addcontentsline{toc}{section}{Chapter Notes}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-3}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-4}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-5}
+
+\section*{Further reading}\label{further-reading-3}
+\addcontentsline{toc}{section}{Further reading}
+
+\section*{References}\label{references-3}
+\addcontentsline{toc}{section}{References}
+
+\chapter{\texorpdfstring{``COnfidence interval of Counted Data (Poisson
+Distribution)''}{COnfidence interval of Counted Data (Poisson Distribution)}}\label{ch6}
+
+This part of the reading guide has not yet been created.
+
+\section*{Commentary}\label{commentary-4}
+\addcontentsline{toc}{section}{Commentary}
+
+\section*{Vocabulary}\label{vocabulary-5}
+\addcontentsline{toc}{section}{Vocabulary}
+
+\subsection*{Motulsky vocab}\label{motulsky-vocab-5}
+\addcontentsline{toc}{subsection}{Motulsky vocab}
+
+\subsection*{Aditional vocab}\label{aditional-vocab-3}
+\addcontentsline{toc}{subsection}{Aditional vocab}
+
+\section*{Key functions}\label{key-functions-4}
+\addcontentsline{toc}{section}{Key functions}
+
+None
+
+\section*{Chapter Notes}\label{chapter-notes-5}
+\addcontentsline{toc}{section}{Chapter Notes}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-6}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-7}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-8}
+
+\section*{Further reading}\label{further-reading-4}
+\addcontentsline{toc}{section}{Further reading}
+
+\section*{References}\label{references-4}
+\addcontentsline{toc}{section}{References}
+
+\begin{verbatim}
+## 
+## Attaching package: 'cowplot'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:ggplot2':
+## 
+##     ggsave
+\end{verbatim}
+
 \chapter{\texorpdfstring{``Graphing Continous
 Data''}{Graphing Continous Data}}\label{graphing-continous-data}
 
-\section*{Commentary}\label{commentary-2}
+\section*{Commentary}\label{commentary-5}
 \addcontentsline{toc}{section}{Commentary}
 
-\section*{Vocabulary}\label{vocabulary-3}
+\section*{Vocabulary}\label{vocabulary-6}
 \addcontentsline{toc}{section}{Vocabulary}
 
-\subsection*{Motulsky vocab}\label{motulsky-vocab-3}
+\subsection*{Motulsky vocab}\label{motulsky-vocab-6}
 \addcontentsline{toc}{subsection}{Motulsky vocab}
 
 \begin{itemize}
@@ -1439,7 +1565,7 @@ Data''}{Graphing Continous Data}}\label{graphing-continous-data}
 \subsection*{Additional vocab}\label{additional-vocab-2}
 \addcontentsline{toc}{subsection}{Additional vocab}
 
-\subsection*{Key functions}\label{key-functions-2}
+\subsection*{Key functions}\label{key-functions-5}
 \addcontentsline{toc}{subsection}{Key functions}
 
 \begin{itemize}
@@ -1452,7 +1578,7 @@ Data''}{Graphing Continous Data}}\label{graphing-continous-data}
   stripplot
 \end{itemize}
 
-\section*{Chapter Notes}\label{chapter-notes-3}
+\section*{Chapter Notes}\label{chapter-notes-6}
 \addcontentsline{toc}{section}{Chapter Notes}
 
 \section{\texorpdfstring{``Continuous
@@ -1524,7 +1650,7 @@ plots''}{Scatter plots}}\label{scatter-plots}
 
 \textbf{Scatter plots} often refer to plots used when you have two
 numeric variables, like this
-\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-9-1.pdf}
+\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-12-1.pdf}
 
 What Motulsky shows in Figure 7.1 is sometimes now called a
 \href{https://flowingdata.com/2016/09/08/beeswarm-plot-in-r-to-show-distributions/}{\textbf{beeswarm
@@ -1538,7 +1664,7 @@ plot}}, a name I like. They can be made in R using the
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-10-1.pdf}
+\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-13-1.pdf}
 
 A similar type of plot is a
 \href{http://www.clayford.net/statistics/tag/strip-charts/}{stripchart}.
@@ -1554,7 +1680,7 @@ overlapping, which is called \textbf{jittering}.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-11-1.pdf}
+\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-14-1.pdf}
 
 A beeswarm plot is basically a jitter stripchart that has been well
 organized. And has a cooler name.
@@ -1576,7 +1702,7 @@ In base R they are made with the boxplot() command.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-12-1.pdf}
+\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-15-1.pdf}
 
 In ggplot they can be made like this with the qplot() function
 
@@ -1589,7 +1715,7 @@ In ggplot they can be made like this with the qplot() function
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-13-1.pdf}
+\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-16-1.pdf}
 
 Or directly with ggplot() using geom\_boxplot()
 
@@ -1602,7 +1728,7 @@ Or directly with ggplot() using geom\_boxplot()
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-14-1.pdf}
+\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-17-1.pdf}
 
 \subsection{\texorpdfstring{``Violin
 plots''}{Violin plots}}\label{violin-plots}
@@ -1622,7 +1748,7 @@ basic R graphics. In ggplot you use geom\_violin().
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-15-1.pdf}
+\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-18-1.pdf}
 
 \section{\texorpdfstring{``Graphing
 Distributions''}{Graphing Distributions}}\label{graphing-distributions}
@@ -1678,10 +1804,10 @@ continuous characters for phylogenetic analyses. Zoologica Scripta.
 
 \section{Q \& A}\label{q-a-1}
 
-\section*{Further reading}\label{further-reading-2}
+\section*{Further reading}\label{further-reading-5}
 \addcontentsline{toc}{section}{Further reading}
 
-\section*{References}\label{references-2}
+\section*{References}\label{references-5}
 \addcontentsline{toc}{section}{References}
 
 \section*{Annotated Bibliography}\label{annotated-bibliography-2}
@@ -1690,10 +1816,10 @@ continuous characters for phylogenetic analyses. Zoologica Scripta.
 \chapter{\texorpdfstring{Chapter ``Types of
 Variables''}{Chapter Types of Variables}}\label{chapter-types-of-variables}
 
-\section*{Commentary}\label{commentary-3}
+\section*{Commentary}\label{commentary-6}
 \addcontentsline{toc}{section}{Commentary}
 
-\section*{Vocabulary}\label{vocabulary-4}
+\section*{Vocabulary}\label{vocabulary-7}
 \addcontentsline{toc}{section}{Vocabulary}
 
 \begin{itemize}
@@ -1714,15 +1840,15 @@ Variables''}{Chapter Types of Variables}}\label{chapter-types-of-variables}
   Ratio variable
 \end{itemize}
 
-\subsection{Motulsky vocab}\label{motulsky-vocab-4}
+\subsection{Motulsky vocab}\label{motulsky-vocab-7}
 
-\subsection{Aditional vocab}\label{aditional-vocab-1}
+\subsection{Aditional vocab}\label{aditional-vocab-4}
 
-\subsection{Key functions}\label{key-functions-3}
+\subsection{Key functions}\label{key-functions-6}
 
 None
 
-\section*{Chapter Notes}\label{chapter-notes-4}
+\section*{Chapter Notes}\label{chapter-notes-7}
 \addcontentsline{toc}{section}{Chapter Notes}
 
 \section{\texorpdfstring{``Continous
@@ -1751,10 +1877,10 @@ Seem''}{Not Quite As Distinct As They Seem}}\label{not-quite-as-distinct-as-they
 
 \section{Q\&A}\label{qa}
 
-\section*{Further reading}\label{further-reading-3}
+\section*{Further reading}\label{further-reading-6}
 \addcontentsline{toc}{section}{Further reading}
 
-\section*{References}\label{references-3}
+\section*{References}\label{references-6}
 \addcontentsline{toc}{section}{References}
 
 \section*{Annotated Bibliography}\label{annotated-bibliography-3}
@@ -1763,21 +1889,21 @@ Seem''}{Not Quite As Distinct As They Seem}}\label{not-quite-as-distinct-as-they
 \chapter{\texorpdfstring{Chapter ``Quantifying
 Scatter''}{Chapter Quantifying Scatter}}\label{chapter-quantifying-scatter}
 
-\section*{Commentary}\label{commentary-4}
+\section*{Commentary}\label{commentary-7}
 \addcontentsline{toc}{section}{Commentary}
 
-\section*{Vocabulary}\label{vocabulary-5}
+\section*{Vocabulary}\label{vocabulary-8}
 \addcontentsline{toc}{section}{Vocabulary}
 
-\subsection{Motulsky vocab}\label{motulsky-vocab-5}
+\subsection{Motulsky vocab}\label{motulsky-vocab-8}
 
-\subsection{Aditional vocab}\label{aditional-vocab-2}
+\subsection{Aditional vocab}\label{aditional-vocab-5}
 
-\subsection{Key functions}\label{key-functions-4}
+\subsection{Key functions}\label{key-functions-7}
 
 None
 
-\section*{Chapter Notes}\label{chapter-notes-5}
+\section*{Chapter Notes}\label{chapter-notes-8}
 \addcontentsline{toc}{section}{Chapter Notes}
 
 \section{\texorpdfstring{``Interpretting A Standard
@@ -1835,14 +1961,570 @@ deviation''}{Median absolute deviation}}\label{median-absolute-deviation}
 
 \section{Q\&A}\label{qa-1}
 
-\section*{Further reading}\label{further-reading-4}
+\section*{Further reading}\label{further-reading-7}
 \addcontentsline{toc}{section}{Further reading}
 
-\section*{References}\label{references-4}
+\section*{References}\label{references-7}
 \addcontentsline{toc}{section}{References}
 
 \section*{Annotated Bibliography}\label{annotated-bibliography-4}
 \addcontentsline{toc}{section}{Annotated Bibliography}
+
+\chapter{\texorpdfstring{``The Gausian
+Distribution''}{The Gausian Distribution}}\label{ch10}
+
+\section*{Commentary}\label{commentary-8}
+\addcontentsline{toc}{section}{Commentary}
+
+\section*{Vocabulary}\label{vocabulary-9}
+\addcontentsline{toc}{section}{Vocabulary}
+
+\subsection*{Motulsky vocab}\label{motulsky-vocab-9}
+\addcontentsline{toc}{subsection}{Motulsky vocab}
+
+\subsection*{Aditional vocab}\label{aditional-vocab-6}
+\addcontentsline{toc}{subsection}{Aditional vocab}
+
+\section*{Key functions}\label{key-functions-8}
+\addcontentsline{toc}{section}{Key functions}
+
+None
+
+\section*{Chapter Notes}\label{chapter-notes-9}
+\addcontentsline{toc}{section}{Chapter Notes}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-9}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-10}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-11}
+
+\section*{Further reading}\label{further-reading-8}
+\addcontentsline{toc}{section}{Further reading}
+
+\section*{References}\label{references-8}
+\addcontentsline{toc}{section}{References}
+
+\chapter{\texorpdfstring{``The Lognormal Distribution and Geometric
+Mean''}{The Lognormal Distribution and Geometric Mean}}\label{ch11}
+
+\section*{Commentary}\label{commentary-9}
+\addcontentsline{toc}{section}{Commentary}
+
+\section*{Vocabulary}\label{vocabulary-10}
+\addcontentsline{toc}{section}{Vocabulary}
+
+\subsection*{Motulsky vocab}\label{motulsky-vocab-10}
+\addcontentsline{toc}{subsection}{Motulsky vocab}
+
+\subsection*{Aditional vocab}\label{aditional-vocab-7}
+\addcontentsline{toc}{subsection}{Aditional vocab}
+
+\section*{Key functions}\label{key-functions-9}
+\addcontentsline{toc}{section}{Key functions}
+
+None
+
+\section*{Chapter Notes}\label{chapter-notes-10}
+\addcontentsline{toc}{section}{Chapter Notes}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-12}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-13}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-14}
+
+\section*{Further reading}\label{further-reading-9}
+\addcontentsline{toc}{section}{Further reading}
+
+\section*{References}\label{references-9}
+\addcontentsline{toc}{section}{References}
+
+\chapter{\texorpdfstring{``Confidence Interval of a
+Mean''}{Confidence Interval of a Mean}}\label{ch12}
+
+\section*{Commentary}\label{commentary-10}
+\addcontentsline{toc}{section}{Commentary}
+
+\section*{Vocabulary}\label{vocabulary-11}
+\addcontentsline{toc}{section}{Vocabulary}
+
+\subsection*{Motulsky vocab}\label{motulsky-vocab-11}
+\addcontentsline{toc}{subsection}{Motulsky vocab}
+
+\subsection*{Aditional vocab}\label{aditional-vocab-8}
+\addcontentsline{toc}{subsection}{Aditional vocab}
+
+\section*{Key functions}\label{key-functions-10}
+\addcontentsline{toc}{section}{Key functions}
+
+None
+
+\section*{Chapter Notes}\label{chapter-notes-11}
+\addcontentsline{toc}{section}{Chapter Notes}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-15}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-16}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-17}
+
+\section*{Further reading}\label{further-reading-10}
+\addcontentsline{toc}{section}{Further reading}
+
+\section*{References}\label{references-10}
+\addcontentsline{toc}{section}{References}
+
+\chapter{\texorpdfstring{``The Theory of Confidence
+Intervals''}{The Theory of Confidence Intervals}}\label{ch13}
+
+\section*{Commentary}\label{commentary-11}
+\addcontentsline{toc}{section}{Commentary}
+
+\section*{Vocabulary}\label{vocabulary-12}
+\addcontentsline{toc}{section}{Vocabulary}
+
+\subsection*{Motulsky vocab}\label{motulsky-vocab-12}
+\addcontentsline{toc}{subsection}{Motulsky vocab}
+
+\subsection*{Aditional vocab}\label{aditional-vocab-9}
+\addcontentsline{toc}{subsection}{Aditional vocab}
+
+\section*{Key functions}\label{key-functions-11}
+\addcontentsline{toc}{section}{Key functions}
+
+None
+
+\section*{Chapter Notes}\label{chapter-notes-12}
+\addcontentsline{toc}{section}{Chapter Notes}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-18}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-19}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-20}
+
+\section*{Further reading}\label{further-reading-11}
+\addcontentsline{toc}{section}{Further reading}
+
+\section*{References}\label{references-11}
+\addcontentsline{toc}{section}{References}
+
+\begin{verbatim}
+## 
+## Attaching package: 'zoo'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     as.Date, as.Date.numeric
+\end{verbatim}
+
+\chapter{\texorpdfstring{``Error Bars''}{Error Bars}}\label{error-bars}
+
+\section*{Commentary}\label{commentary-12}
+\addcontentsline{toc}{section}{Commentary}
+
+\begin{quote}
+``\ldots{}the standard deviation is a measure of the variability of a
+set of observations, whereas the standard error is a measure of the
+precision of an estimate\ldots{}in relation to its unknown true value.''
+(Altman 1980 ``Statistics and ethics in medical research VI:
+Presentation of results''. BMJ)
+\end{quote}
+
+\section*{Vocabulary}\label{vocabulary-13}
+\addcontentsline{toc}{section}{Vocabulary}
+
+\subsection*{Motulsky vocab}\label{motulsky-vocab-13}
+\addcontentsline{toc}{subsection}{Motulsky vocab}
+
+\subsection*{Aditional vocab}\label{aditional-vocab-10}
+\addcontentsline{toc}{subsection}{Aditional vocab}
+
+\subsection*{Key functions}\label{key-functions-12}
+\addcontentsline{toc}{subsection}{Key functions}
+
+\section*{Chapter Notes}\label{chapter-notes-13}
+\addcontentsline{toc}{section}{Chapter Notes}
+
+\section{\texorpdfstring{{[} {]} ``SD VERSUS
+SEM''}{{[} {]} SD VERSUS SEM}}\label{sd-versus-sem}
+
+\subsection{\texorpdfstring{{[} {]} ``What is the
+SD''}{{[} {]} What is the SD}}\label{what-is-the-sd}
+
+{[} {]} The \textbf{standard deviation} is a measure of variability. The
+larger the standard deviation is, the more variation there is within a
+sample. When variation is large within a \textbf{sample}, its likely
+that there is lots of variation within the \textbf{population} that was
+sampled. The standard deviation does not directly inform your opinion
+about the \textbf{sample mean.}
+
+\subsubsection*{The SD in Excel}\label{the-sd-in-excel}
+\addcontentsline{toc}{subsubsection}{The SD in Excel}
+
+In Excel they distinquish between the population standard deviation,
+STDEV.P(), and the \textbf{sample standard deviation}, STDEV.S(). In
+practice you almost never are working with a population.
+
+\subsubsection*{The SD in R}\label{the-sd-in-r}
+\addcontentsline{toc}{subsubsection}{The SD in R}
+
+The standard deviation is calcualted in R using the function sd()
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{some.data <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{6}\NormalTok{)}
+\KeywordTok{sd}\NormalTok{(some.data)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2.160247
+\end{verbatim}
+
+The standard deviation is the square root of the variance.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# the variance of some.data}
+\KeywordTok{var}\NormalTok{(some.data)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 4.666667
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#square root of the variance of some.data}
+\KeywordTok{sqrt}\NormalTok{(}\KeywordTok{var}\NormalTok{(some.data))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2.160247
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#the standard deviation = the square root of the variance}
+\KeywordTok{sd}\NormalTok{(some.data) }\OperatorTok{==}\StringTok{ }\KeywordTok{sqrt}\NormalTok{(}\KeywordTok{var}\NormalTok{(some.data))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+
+\subsection{\texorpdfstring{{[} {]} ``What is the
+SEM?''}{{[} {]} What is the SEM?}}\label{what-is-the-sem}
+
+\subsection{\texorpdfstring{{[} {]} ``The SEM does not quanitfy
+variablity among
+variables''}{{[} {]} The SEM does not quanitfy variablity among variables}}\label{the-sem-does-not-quanitfy-variablity-among-variables}
+
+\subsection{\texorpdfstring{{[} {]} ``The SEM quantifies how precisely
+you know the population
+mean''}{{[} {]} The SEM quantifies how precisely you know the population mean}}\label{the-sem-quantifies-how-precisely-you-know-the-population-mean}
+
+{[} {]} Challenge question: how would you describe the difference
+between the \textbf{population mean} and the \textbf{same mean?}
+
+\subsubsection*{{[} {]} SEM Summary}\label{sem-summary}
+\addcontentsline{toc}{subsubsection}{{[} {]} SEM Summary}
+
+\begin{quote}
+``The standard deviation (often SD) is a measure of variability. When we
+calculate the standard deviation of a sample, we are using it as an
+estimate of the variability of the population from which the sample was
+drawn \ldots{} So, if we want to say how widely scattered some
+measurements are, we use the standard deviation. If we want to indicate
+the uncertainty around the estimate of the mean measurement, we quote
+the standard error of the mean.'' Altman (2013)
+\end{quote}
+
+\textbf{standard error of the mean (SEM)} or just \textbf{standard error
+(SE)} is a measure of \textbf{precision.} The \textbf{standard error
+does not tell you anything about variation in your sample or the
+population.} The standard error tells you about how precisely you have
+estimated your mean (Note that standard errors can also be calcualted
+for other things.) A large standard error means the mean has been
+estimately with low precision. A small standard error means that the
+mean has been estimate precisely. Precision is increased by either
+little variation in the population or a larger sample size.
+
+\subsection{\texorpdfstring{{[} {]} ``How to compute the SD from the
+SEM''}{{[} {]} How to compute the SD from the SEM}}\label{how-to-compute-the-sd-from-the-sem}
+
+If you are given a SEM and sample size, you can \textbf{back calculate}
+the standard deviation. You should always make your same size clear for
+your statistical tests (or, equivalently, the \textbf{degrees of
+freedom}, which we'll talk about later) so people can calculate the SD
+if they want it.
+
+\section{\texorpdfstring{{[} {]} ``WHICH KIND OF ERROR BAR SHOULD I
+PLOT''}{{[} {]} WHICH KIND OF ERROR BAR SHOULD I PLOT}}\label{which-kind-of-error-bar-should-i-plot}
+
+\subsection{\texorpdfstring{{[} {]} ``Goal: To Show the variation among
+the
+values''}{{[} {]} Goal: To Show the variation among the values}}\label{goal-to-show-the-variation-among-the-values}
+
+\subsection{\texorpdfstring{{[} {]} ``Goal: To show how precisely you
+have determined the population
+mean''}{{[} {]} Goal: To show how precisely you have determined the population mean}}\label{goal-to-show-how-precisely-you-have-determined-the-population-mean}
+
+{[} {]} If this is your goal, you should just plot the 95\% CI. Or
+better yet, plot both! I like plots like this
+
+\begin{verbatim}
+## 
+## Attaching package: 'coefplot'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:arm':
+## 
+##     coefplot, coefplot.default, invlogit
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: Removed 1 rows containing missing values (geom_vline).
+\end{verbatim}
+
+\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-26-1.pdf}
+
+\subsection{\texorpdfstring{{[} {]} ``Goal: To create persuaive
+propaganda''}{{[} {]} Goal: To create persuaive propaganda}}\label{goal-to-create-persuaive-propaganda}
+
+``Because they are shorter than the 95\% CI'' is \emph{not} a good
+reason to use SEM.
+
+\section{\texorpdfstring{{[} {]} ``THE APPEARANCE OF ERROR
+BARS''}{{[} {]} THE APPEARANCE OF ERROR BARS}}\label{the-appearance-of-error-bars}
+
+I personally don't like bar plots (eg right side of figure 14.1 on page
+121) and see no reason not to just use a dot with error bars for the
+mean, and to include the raw data whenever possible.
+
+For a middle of the road opinion on bar plot see Ben Bolker: ``Dynamite
+plots: unmitigated evil?''
+\url{http://emdbolker.wikidot.com/blog:dynamite}
+
+For people who realy don't like them
+\url{http://biostat.mc.vanderbilt.edu/wiki/Main/DynamitePlots}
+
+I think this sums up one of the main reasons barplots are bad: ``bar
+graphs that boil down data points to a single mean often fail to convey
+the nuances of the numbers''
+\url{https://www.nature.com/news/bar-graphs-criticized-for-misrepresenting-data-1.17383}
+
+I really don't like barplots that only include the upper error bar (as
+in figure 14.2). I see no reason why you should do this.
+
+\section{\texorpdfstring{{[}!{]} ``HOW ARE SD AND SEM RELATED TO SAMPLE
+SIZE''"}{{[}!{]} HOW ARE SD AND SEM RELATED TO SAMPLE SIZE"}}\label{how-are-sd-and-sem-related-to-sample-size}
+
+\subsection{\texorpdfstring{{[} {]} ``If you increase the sample size,
+is the SEM expected to get larger, get smaller, or stay about the
+same?''}{{[} {]} If you increase the sample size, is the SEM expected to get larger, get smaller, or stay about the same?}}\label{if-you-increase-the-sample-size-is-the-sem-expected-to-get-larger-get-smaller-or-stay-about-the-same}
+
+{[} {]} This would make a great test question.
+
+\subsection{\texorpdfstring{{[} {]} ``If you increase the sample size,
+is the SD expected to get larger, get smaller, or stay about the
+same?''}{{[} {]} If you increase the sample size, is the SD expected to get larger, get smaller, or stay about the same?}}\label{if-you-increase-the-sample-size-is-the-sd-expected-to-get-larger-get-smaller-or-stay-about-the-same}
+
+{[} {]} This would make a great test question.
+
+\subsubsection{Simulating SEM/SD changes with sample
+size}\label{simulating-semsd-changes-with-sample-size}
+
+The mean and SD look like this
+\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-28-1.pdf}
+
+The SE looks like this
+\includegraphics{IBSguide_files/figure-latex/unnamed-chunk-29-1.pdf}
+
+\section{\texorpdfstring{``GEOMETRIC SD ERROR BARS''
+(SKIP)}{GEOMETRIC SD ERROR BARS (SKIP)}}\label{geometric-sd-error-bars-skip}
+
+\section{\texorpdfstring{{[} {]} ``COMMON MISTAKES: ERROR
+BARS''}{{[} {]} COMMON MISTAKES: ERROR BARS}}\label{common-mistakes-error-bars}
+
+\subsection{\texorpdfstring{{[} {]} ``Mistake: Plotting mean \& error
+bar instead of plotting a frequency
+distribution''}{{[} {]} Mistake: Plotting mean \& error bar instead of plotting a frequency distribution}}\label{mistake-plotting-mean-error-bar-instead-of-plotting-a-frequency-distribution}
+
+For more on this see Weissgerber. 2015. Beyond Bar and Line Graphs: Time
+for a New Data Presentation Paradigm. PLoS.
+\url{http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128\&fullSite}
+
+\subsection{\texorpdfstring{{[} {]} ``Mistake: Assuming that all
+distributions are
+Gaussian''}{{[} {]} Mistake: Assuming that all distributions are Gaussian}}\label{mistake-assuming-that-all-distributions-are-gaussian}
+
+Pop quiz: \textbf{Gaussian} is the same as
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\subsection{\texorpdfstring{{[} {]} ``Mistake: Plotting a mean \& error
+bar w/o defining how the error bars were
+computed.''}{{[} {]} Mistake: Plotting a mean \& error bar w/o defining how the error bars were computed.}}\label{mistake-plotting-a-mean-error-bar-wo-defining-how-the-error-bars-were-computed.}
+
+A figure legend should always state what the error bars are. Even
+better, put an annotation within the plot itself.
+
+\section{{[} {]} Q\&A}\label{qa-2}
+
+\section*{Further reading}\label{further-reading-12}
+\addcontentsline{toc}{section}{Further reading}
+
+The difference between SD and SEM are a perrenial topic. If things are
+clear check out one of these resources. Better yet, print one out an
+post in on your lab bulletin board - chances are other people are fuzzy
+on it too!
+
+``Standard deviation versus standard error''
+\url{http://thestatsgeek.com/2013/06/30/standard-deviation-versus-standard-error/}
+
+``Basic stats:Standard deviation vs Standard error''
+\url{https://datascienceplus.com/standard-deviation-vs-standard-error/}
+
+Altman 2005. Standard deviations and standard errors BMJ 331 doi:
+\url{https://doi.org/10.1136/bmj.331.7521.903} (Published 13 October
+2005)
+
+Klaus 2015. Statistical relevance---relevant statistics, part II:
+presenting experimental data. EMBO Journal.
+\url{http://emboj.embopress.org/content/early/2016/07/18/embj.201694659?casa_token=h0I6nRzyLsYAAAAA\%3AvvaeRts7NpFZwgiDctKC7z0qbvvd7OTJ1d-XgsW1mvg7BJPpOvVnTuwGNjLP0r1DWvbVJ9gGfkfqg6I}
+
+Cummings et al. 2007.\\
+Error bars in experimental biology. Journal of Cell Biology.
+\url{http://jcb.rupress.org/content/177/1/7.short}
+
+Munger 2007. Most researchers don't understand error bars. Cognitive
+Daily.
+\url{http://scienceblogs.com/cognitivedaily/2007/03/29/most-researchers-dont-understa/}
+
+Wullschleger et al. 2014. High Incorrect Use of the Standard Error of
+the Mean (SEM) in Original Articles in Three Cardiovascular Journals
+Evaluated for 2012. PLoS BIology.
+\url{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0110364}
+
+\section*{References}\label{references-12}
+\addcontentsline{toc}{section}{References}
+
+\section*{Annotated Bibliography}\label{annotated-bibliography-5}
+\addcontentsline{toc}{section}{Annotated Bibliography}
+
+\chapter{\texorpdfstring{``Introducing
+P-Values''}{Introducing P-Values}}\label{ch15}
+
+\section*{Commentary}\label{commentary-13}
+\addcontentsline{toc}{section}{Commentary}
+
+\section*{Vocabulary}\label{vocabulary-14}
+\addcontentsline{toc}{section}{Vocabulary}
+
+\subsection*{Motulsky vocab}\label{motulsky-vocab-14}
+\addcontentsline{toc}{subsection}{Motulsky vocab}
+
+\subsection*{Aditional vocab}\label{aditional-vocab-11}
+\addcontentsline{toc}{subsection}{Aditional vocab}
+
+\section*{Key functions}\label{key-functions-13}
+\addcontentsline{toc}{section}{Key functions}
+
+None
+
+\section*{Chapter Notes}\label{chapter-notes-14}
+\addcontentsline{toc}{section}{Chapter Notes}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-21}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-22}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-23}
+
+\section*{Further reading}\label{further-reading-13}
+\addcontentsline{toc}{section}{Further reading}
+
+\section*{References}\label{references-13}
+\addcontentsline{toc}{section}{References}
+
+\chapter{\texorpdfstring{``Statistical Significance and Hypothesis
+Testing''}{Statistical Significance and Hypothesis Testing}}\label{ch16}
+
+\section*{Commentary}\label{commentary-14}
+\addcontentsline{toc}{section}{Commentary}
+
+\section*{Vocabulary}\label{vocabulary-15}
+\addcontentsline{toc}{section}{Vocabulary}
+
+\subsection*{Motulsky vocab}\label{motulsky-vocab-15}
+\addcontentsline{toc}{subsection}{Motulsky vocab}
+
+\subsection*{Aditional vocab}\label{aditional-vocab-12}
+\addcontentsline{toc}{subsection}{Aditional vocab}
+
+\section*{Key functions}\label{key-functions-14}
+\addcontentsline{toc}{section}{Key functions}
+
+None
+
+\section*{Chapter Notes}\label{chapter-notes-15}
+\addcontentsline{toc}{section}{Chapter Notes}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-24}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-25}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-26}
+
+\section*{Further reading}\label{further-reading-14}
+\addcontentsline{toc}{section}{Further reading}
+
+\section*{References}\label{references-14}
+\addcontentsline{toc}{section}{References}
+
+\chapter{\texorpdfstring{``COmparing Groups with Confidence Intervals
+and P
+Values''}{COmparing Groups with Confidence Intervals and P Values}}\label{ch17}
+
+\section*{Commentary}\label{commentary-15}
+\addcontentsline{toc}{section}{Commentary}
+
+\section*{Vocabulary}\label{vocabulary-16}
+\addcontentsline{toc}{section}{Vocabulary}
+
+\subsection*{Motulsky vocab}\label{motulsky-vocab-16}
+\addcontentsline{toc}{subsection}{Motulsky vocab}
+
+\subsection*{Aditional vocab}\label{aditional-vocab-13}
+\addcontentsline{toc}{subsection}{Aditional vocab}
+
+\section*{Key functions}\label{key-functions-15}
+\addcontentsline{toc}{section}{Key functions}
+
+None
+
+\section*{Chapter Notes}\label{chapter-notes-16}
+\addcontentsline{toc}{section}{Chapter Notes}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-27}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-28}
+
+\section{\texorpdfstring{{[} {]} ``''}{{[} {]} }}\label{section-29}
+
+\section*{Further reading}\label{further-reading-15}
+\addcontentsline{toc}{section}{Further reading}
+
+\section*{References}\label{references-15}
+\addcontentsline{toc}{section}{References}
 
 \bibliography{book.bib}
 

@@ -1,0 +1,30 @@
+```{r echo = F}
+knitr::opts_chunk$set(fig.width=6, fig.height=4)
+```
+
+
+# "Statistical Significance and Hypothesis Testing" {#ch16}
+
+## Commentary {-}
+
+## Vocabulary {-}
+
+### Motulsky vocab {-}
+
+### Aditional vocab {-}
+
+## Key functions {-}
+
+None
+
+## Chapter Notes {-}
+
+## [ ] ""
+
+## [ ] ""
+
+## [ ] ""
+
+## Further reading {-}
+ 
+## References {-}

@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="chapter-types-of-variables.html">
-<link rel="next" href="ch10.html">
+<link rel="prev" href="ch13.html">
+<link rel="next" href="ch15.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -514,91 +514,160 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="chapter-quantifying-scatter" class="section level1">
-<h1><span class="header-section-number">Chapter 9</span> Chapter “Quantifying Scatter”</h1>
-<div id="commentary-7" class="section level2 unnumbered">
+<div id="error-bars" class="section level1">
+<h1><span class="header-section-number">Chapter 14</span> “Error Bars”</h1>
+<div id="commentary-12" class="section level2 unnumbered">
 <h2>Commentary</h2>
+<blockquote>
+<p>“…the standard deviation is a measure of the variability of a set of observations, whereas the standard error is a measure of the precision of an estimate…in relation to its unknown true value.” (Altman 1980 “Statistics and ethics in medical research VI: Presentation of results”. BMJ)</p>
+</blockquote>
 </div>
-<div id="vocabulary-8" class="section level2 unnumbered">
+<div id="vocabulary-13" class="section level2 unnumbered">
 <h2>Vocabulary</h2>
-<div id="motulsky-vocab-8" class="section level3">
-<h3><span class="header-section-number">9.0.1</span> Motulsky vocab</h3>
+<div id="motulsky-vocab-13" class="section level3 unnumbered">
+<h3>Motulsky vocab</h3>
 </div>
-<div id="aditional-vocab-5" class="section level3">
-<h3><span class="header-section-number">9.0.2</span> Aditional vocab</h3>
+<div id="aditional-vocab-10" class="section level3 unnumbered">
+<h3>Aditional vocab</h3>
 </div>
-<div id="key-functions-7" class="section level3">
-<h3><span class="header-section-number">9.0.3</span> Key functions</h3>
-<p>None</p>
+<div id="key-functions-12" class="section level3 unnumbered">
+<h3>Key functions</h3>
 </div>
 </div>
-<div id="chapter-notes-8" class="section level2 unnumbered">
+<div id="chapter-notes-13" class="section level2 unnumbered">
 <h2>Chapter Notes</h2>
 </div>
-<div id="interpretting-a-standard-deviation" class="section level2">
-<h2><span class="header-section-number">9.1</span> “Interpretting A Standard Deviation”</h2>
+<div id="sd-versus-sem" class="section level2">
+<h2><span class="header-section-number">14.1</span> [ ] “SD VERSUS SEM”</h2>
+<div id="what-is-the-sd" class="section level3">
+<h3><span class="header-section-number">14.1.1</span> [ ] “What is the SD”</h3>
+<p>[ ] The <strong>standard deviation</strong> is a measure of variability. The larger the standard deviation is, the more variation there is within a sample. When variation is large within a <strong>sample</strong>, its likely that there is lots of variation within the <strong>population</strong> that was sampled. The standard deviation does not directly inform your opinion about the <strong>sample mean.</strong></p>
+<div id="the-sd-in-excel" class="section level4 unnumbered">
+<h4>The SD in Excel</h4>
+<p>In Excel they distinquish between the population standard deviation, STDEV.P(), and the <strong>sample standard deviation</strong>, STDEV.S(). In practice you almost never are working with a population.</p>
 </div>
-<div id="how-it-works-calculating-sd" class="section level2">
-<h2><span class="header-section-number">9.2</span> How It Works: Calculating SD&quot;</h2>
-</div>
-<div id="why-n-1" class="section level2">
-<h2><span class="header-section-number">9.3</span> “Why n-1?”</h2>
-<div id="when-it-somes-makes-sense-to-use-n-in-the-denominator" class="section level3">
-<h3><span class="header-section-number">9.3.1</span> “When it somes makes sense to use n in the denominator”</h3>
-</div>
-<div id="why-it-usually-makes-sense-to-use-n-1-in-the-denominator" class="section level3">
-<h3><span class="header-section-number">9.3.2</span> “Why it usually makes sense to use n-1 in the denominator”</h3>
-</div>
-<div id="the-fine-print" class="section level3">
-<h3><span class="header-section-number">9.3.3</span> “The fine print”</h3>
-</div>
-</div>
-<div id="situations-in-which-n-can-seem-ambiguous" class="section level2">
-<h2><span class="header-section-number">9.4</span> “Situations in Which n Can Seem Ambiguous”</h2>
-<div id="replicate-measurements-within-repae-experiments" class="section level3">
-<h3><span class="header-section-number">9.4.1</span> “Replicate measurements within repae experiments”</h3>
-</div>
-<div id="eyes-ears-and-elbos" class="section level3">
-<h3><span class="header-section-number">9.4.2</span> “Eyes, ears and elbos”</h3>
-</div>
-<div id="representaitve-experiments" class="section level3">
-<h3><span class="header-section-number">9.4.3</span> “Representaitve experiments”</h3>
-</div>
-<div id="trials-with-one-subject" class="section level3">
-<h3><span class="header-section-number">9.4.4</span> “Trials with one subject”</h3>
+<div id="the-sd-in-r" class="section level4 unnumbered">
+<h4>The SD in R</h4>
+<p>The standard deviation is calcualted in R using the function sd()</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">some.data &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>)
+<span class="kw">sd</span>(some.data)</code></pre></div>
+<pre><code>## [1] 2.160247</code></pre>
+<p>The standard deviation is the square root of the variance.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># the variance of some.data</span>
+<span class="kw">var</span>(some.data)</code></pre></div>
+<pre><code>## [1] 4.666667</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#square root of the variance of some.data</span>
+<span class="kw">sqrt</span>(<span class="kw">var</span>(some.data))</code></pre></div>
+<pre><code>## [1] 2.160247</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#the standard deviation = the square root of the variance</span>
+<span class="kw">sd</span>(some.data) <span class="op">==</span><span class="st"> </span><span class="kw">sqrt</span>(<span class="kw">var</span>(some.data))</code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
 </div>
 </div>
-<div id="sd-and-sample-size" class="section level2">
-<h2><span class="header-section-number">9.5</span> “SD and Sample Size”</h2>
+<div id="what-is-the-sem" class="section level3">
+<h3><span class="header-section-number">14.1.2</span> [ ] “What is the SEM?”</h3>
 </div>
-<div id="other-ways-to-quantify-display-variability" class="section level2">
-<h2><span class="header-section-number">9.6</span> “Other Ways to Quantify &amp; Display Variability”</h2>
-<div id="coefficient-of-variation" class="section level3">
-<h3><span class="header-section-number">9.6.1</span> “Coefficient of variation”</h3>
+<div id="the-sem-does-not-quanitfy-variablity-among-variables" class="section level3">
+<h3><span class="header-section-number">14.1.3</span> [ ] “The SEM does not quanitfy variablity among variables”</h3>
 </div>
-<div id="variance" class="section level3">
-<h3><span class="header-section-number">9.6.2</span> “Variance”</h3>
-</div>
-<div id="interquartile-range" class="section level3">
-<h3><span class="header-section-number">9.6.3</span> “Interquartile range”</h3>
-</div>
-<div id="five-number-smmary" class="section level3">
-<h3><span class="header-section-number">9.6.4</span> “Five-number smmary”</h3>
-</div>
-<div id="median-absolute-deviation" class="section level3">
-<h3><span class="header-section-number">9.6.5</span> “Median absolute deviation”</h3>
+<div id="the-sem-quantifies-how-precisely-you-know-the-population-mean" class="section level3">
+<h3><span class="header-section-number">14.1.4</span> [ ] “The SEM quantifies how precisely you know the population mean”</h3>
+<p>[ ] Challenge question: how would you describe the difference between the <strong>population mean</strong> and the <strong>same mean?</strong></p>
+<div id="sem-summary" class="section level4 unnumbered">
+<h4>[ ] SEM Summary</h4>
+<blockquote>
+<p>“The standard deviation (often SD) is a measure of variability. When we calculate the standard deviation of a sample, we are using it as an estimate of the variability of the population from which the sample was drawn … So, if we want to say how widely scattered some measurements are, we use the standard deviation. If we want to indicate the uncertainty around the estimate of the mean measurement, we quote the standard error of the mean.” Altman (2013)</p>
+</blockquote>
+<p><strong>standard error of the mean (SEM)</strong> or just <strong>standard error (SE)</strong> is a measure of <strong>precision.</strong> The <strong>standard error does not tell you anything about variation in your sample or the population.</strong> The standard error tells you about how precisely you have estimated your mean (Note that standard errors can also be calcualted for other things.) A large standard error means the mean has been estimately with low precision. A small standard error means that the mean has been estimate precisely. Precision is increased by either little variation in the population or a larger sample size.</p>
 </div>
 </div>
-<div id="qa-1" class="section level2">
-<h2><span class="header-section-number">9.7</span> Q&amp;A</h2>
+<div id="how-to-compute-the-sd-from-the-sem" class="section level3">
+<h3><span class="header-section-number">14.1.5</span> [ ] “How to compute the SD from the SEM”</h3>
+<p>If you are given a SEM and sample size, you can <strong>back calculate</strong> the standard deviation. You should always make your same size clear for your statistical tests (or, equivalently, the <strong>degrees of freedom</strong>, which we’ll talk about later) so people can calculate the SD if they want it.</p>
 </div>
-<div id="further-reading-7" class="section level2 unnumbered">
+</div>
+<div id="which-kind-of-error-bar-should-i-plot" class="section level2">
+<h2><span class="header-section-number">14.2</span> [ ] “WHICH KIND OF ERROR BAR SHOULD I PLOT”</h2>
+<div id="goal-to-show-the-variation-among-the-values" class="section level3">
+<h3><span class="header-section-number">14.2.1</span> [ ] “Goal: To Show the variation among the values”</h3>
+</div>
+<div id="goal-to-show-how-precisely-you-have-determined-the-population-mean" class="section level3">
+<h3><span class="header-section-number">14.2.2</span> [ ] “Goal: To show how precisely you have determined the population mean”</h3>
+<p>[ ] If this is your goal, you should just plot the 95% CI. Or better yet, plot both! I like plots like this</p>
+<pre><code>## 
+## Attaching package: &#39;coefplot&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:arm&#39;:
+## 
+##     coefplot, coefplot.default, invlogit</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_vline).</code></pre>
+<p><img src="IBSguide_files/figure-html/unnamed-chunk-26-1.png" width="576" /></p>
+</div>
+<div id="goal-to-create-persuaive-propaganda" class="section level3">
+<h3><span class="header-section-number">14.2.3</span> [ ] “Goal: To create persuaive propaganda”</h3>
+<p>“Because they are shorter than the 95% CI” is <em>not</em> a good reason to use SEM.</p>
+</div>
+</div>
+<div id="the-appearance-of-error-bars" class="section level2">
+<h2><span class="header-section-number">14.3</span> [ ] “THE APPEARANCE OF ERROR BARS”</h2>
+<p>I personally don’t like bar plots (eg right side of figure 14.1 on page 121) and see no reason not to just use a dot with error bars for the mean, and to include the raw data whenever possible.</p>
+<p>For a middle of the road opinion on bar plot see Ben Bolker: “Dynamite plots: unmitigated evil?” <a href="http://emdbolker.wikidot.com/blog:dynamite" class="uri">http://emdbolker.wikidot.com/blog:dynamite</a></p>
+<p>For people who realy don’t like them <a href="http://biostat.mc.vanderbilt.edu/wiki/Main/DynamitePlots" class="uri">http://biostat.mc.vanderbilt.edu/wiki/Main/DynamitePlots</a></p>
+<p>I think this sums up one of the main reasons barplots are bad: “bar graphs that boil down data points to a single mean often fail to convey the nuances of the numbers” <a href="https://www.nature.com/news/bar-graphs-criticized-for-misrepresenting-data-1.17383" class="uri">https://www.nature.com/news/bar-graphs-criticized-for-misrepresenting-data-1.17383</a></p>
+<p>I really don’t like barplots that only include the upper error bar (as in figure 14.2). I see no reason why you should do this.</p>
+</div>
+<div id="how-are-sd-and-sem-related-to-sample-size" class="section level2">
+<h2><span class="header-section-number">14.4</span> [!] “HOW ARE SD AND SEM RELATED TO SAMPLE SIZE”&quot;</h2>
+<div id="if-you-increase-the-sample-size-is-the-sem-expected-to-get-larger-get-smaller-or-stay-about-the-same" class="section level3">
+<h3><span class="header-section-number">14.4.1</span> [ ] “If you increase the sample size, is the SEM expected to get larger, get smaller, or stay about the same?”</h3>
+<p>[ ] This would make a great test question.</p>
+</div>
+<div id="if-you-increase-the-sample-size-is-the-sd-expected-to-get-larger-get-smaller-or-stay-about-the-same" class="section level3">
+<h3><span class="header-section-number">14.4.2</span> [ ] “If you increase the sample size, is the SD expected to get larger, get smaller, or stay about the same?”</h3>
+<p>[ ] This would make a great test question.</p>
+<div id="simulating-semsd-changes-with-sample-size" class="section level4">
+<h4><span class="header-section-number">14.4.2.1</span> Simulating SEM/SD changes with sample size</h4>
+<p>The mean and SD look like this <img src="IBSguide_files/figure-html/unnamed-chunk-28-1.png" width="576" /></p>
+<p>The SE looks like this <img src="IBSguide_files/figure-html/unnamed-chunk-29-1.png" width="576" /></p>
+</div>
+</div>
+</div>
+<div id="geometric-sd-error-bars-skip" class="section level2">
+<h2><span class="header-section-number">14.5</span> “GEOMETRIC SD ERROR BARS” (SKIP)</h2>
+</div>
+<div id="common-mistakes-error-bars" class="section level2">
+<h2><span class="header-section-number">14.6</span> [ ] “COMMON MISTAKES: ERROR BARS”</h2>
+<div id="mistake-plotting-mean-error-bar-instead-of-plotting-a-frequency-distribution" class="section level3">
+<h3><span class="header-section-number">14.6.1</span> [ ] “Mistake: Plotting mean &amp; error bar instead of plotting a frequency distribution”</h3>
+<p>For more on this see Weissgerber. 2015. Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm. PLoS. <a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128&amp;fullSite" class="uri">http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128&amp;fullSite</a></p>
+</div>
+<div id="mistake-assuming-that-all-distributions-are-gaussian" class="section level3">
+<h3><span class="header-section-number">14.6.2</span> [ ] “Mistake: Assuming that all distributions are Gaussian”</h3>
+<p>Pop quiz: <strong>Gaussian</strong> is the same as __________________</p>
+</div>
+<div id="mistake-plotting-a-mean-error-bar-wo-defining-how-the-error-bars-were-computed." class="section level3">
+<h3><span class="header-section-number">14.6.3</span> [ ] “Mistake: Plotting a mean &amp; error bar w/o defining how the error bars were computed.”</h3>
+<p>A figure legend should always state what the error bars are. Even better, put an annotation within the plot itself.</p>
+</div>
+</div>
+<div id="qa-2" class="section level2">
+<h2><span class="header-section-number">14.7</span> [ ] Q&amp;A</h2>
+</div>
+<div id="further-reading-12" class="section level2 unnumbered">
 <h2>Further reading</h2>
+<p>The difference between SD and SEM are a perrenial topic. If things are clear check out one of these resources. Better yet, print one out an post in on your lab bulletin board - chances are other people are fuzzy on it too!</p>
+<p>“Standard deviation versus standard error” <a href="http://thestatsgeek.com/2013/06/30/standard-deviation-versus-standard-error/" class="uri">http://thestatsgeek.com/2013/06/30/standard-deviation-versus-standard-error/</a></p>
+<p>“Basic stats:Standard deviation vs Standard error” <a href="https://datascienceplus.com/standard-deviation-vs-standard-error/" class="uri">https://datascienceplus.com/standard-deviation-vs-standard-error/</a></p>
+<p>Altman 2005. Standard deviations and standard errors BMJ 331 doi: <a href="https://doi.org/10.1136/bmj.331.7521.903" class="uri">https://doi.org/10.1136/bmj.331.7521.903</a> (Published 13 October 2005)</p>
+<p>Klaus 2015. Statistical relevance—relevant statistics, part II: presenting experimental data. EMBO Journal. <a href="http://emboj.embopress.org/content/early/2016/07/18/embj.201694659?casa_token=h0I6nRzyLsYAAAAA%3AvvaeRts7NpFZwgiDctKC7z0qbvvd7OTJ1d-XgsW1mvg7BJPpOvVnTuwGNjLP0r1DWvbVJ9gGfkfqg6I">http://emboj.embopress.org/content/early/2016/07/18/embj.201694659?casa_token=h0I6nRzyLsYAAAAA%3AvvaeRts7NpFZwgiDctKC7z0qbvvd7OTJ1d-XgsW1mvg7BJPpOvVnTuwGNjLP0r1DWvbVJ9gGfkfqg6I</a></p>
+<p>Cummings et al. 2007.<br />
+Error bars in experimental biology. Journal of Cell Biology. <a href="http://jcb.rupress.org/content/177/1/7.short" class="uri">http://jcb.rupress.org/content/177/1/7.short</a></p>
+<p>Munger 2007. Most researchers don’t understand error bars. Cognitive Daily. <a href="http://scienceblogs.com/cognitivedaily/2007/03/29/most-researchers-dont-understa/" class="uri">http://scienceblogs.com/cognitivedaily/2007/03/29/most-researchers-dont-understa/</a></p>
+<p>Wullschleger et al. 2014. High Incorrect Use of the Standard Error of the Mean (SEM) in Original Articles in Three Cardiovascular Journals Evaluated for 2012. PLoS BIology. <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0110364" class="uri">http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0110364</a></p>
 </div>
-<div id="references-7" class="section level2 unnumbered">
+<div id="references-12" class="section level2 unnumbered">
 <h2>References</h2>
 </div>
-<div id="annotated-bibliography-4" class="section level2 unnumbered">
+<div id="annotated-bibliography-5" class="section level2 unnumbered">
 <h2>Annotated Bibliography</h2>
 
 </div>
@@ -608,8 +677,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="chapter-types-of-variables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ch10.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ch13.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ch15.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -639,7 +708,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/brouwern/IBSguide/edit/master/09_Quantifying_Scatter.Rmd",
+"link": "https://github.com/brouwern/IBSguide/edit/master/14-Error_bars.Rmd",
 "text": "Edit"
 },
 "download": ["IBSguide.pdf", "IBSguide.epub"],

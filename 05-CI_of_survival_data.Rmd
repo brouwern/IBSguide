@@ -1,0 +1,32 @@
+```{r echo = F}
+knitr::opts_chunk$set(fig.width=6, fig.height=4)
+```
+
+
+# "Confidence Interval of Survival Data" {#ch5}
+
+This part of the reading guide has not been written.
+
+## Commentary {-}
+
+## Vocabulary {-}
+
+### Motulsky vocab {-}
+
+### Aditional vocab {-}
+
+## Key functions {-}
+
+None
+
+## Chapter Notes {-}
+
+## [ ] ""
+
+## [ ] ""
+
+## [ ] ""
+
+## Further reading {-}
+ 
+## References {-}

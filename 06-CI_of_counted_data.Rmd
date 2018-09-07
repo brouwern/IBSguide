@@ -1,0 +1,32 @@
+```{r echo = F}
+knitr::opts_chunk$set(fig.width=6, fig.height=4)
+```
+
+
+# "COnfidence interval of Counted Data (Poisson Distribution)" {#ch6}
+
+This part of the reading guide has not yet been created.
+
+## Commentary {-}
+
+## Vocabulary {-}
+
+### Motulsky vocab {-}
+
+### Aditional vocab {-}
+
+## Key functions {-}
+
+None
+
+## Chapter Notes {-}
+
+## [ ] ""
+
+## [ ] ""
+
+## [ ] ""
+
+## Further reading {-}
+ 
+## References {-}
